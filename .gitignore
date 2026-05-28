@@ -1,0 +1,55 @@
+# --- ML / fine-tuning outputs (your try/ notebook) ---
+try/Qwen/
+**/checkpoint-*/
+**/runs/
+**/wandb/
+**/mlruns/
+**/lightning_logs/
+**/tensorboard/
+
+# Unsloth JIT cache (regenerated on import)
+unsloth_compiled_cache/
+**/unsloth_compiled_cache/
+
+# Model weight formats (avoid committing adapters/checkpoints)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+
+# Hugging Face / PEFT artifacts when saved in-repo
+**/adapter_config.json
+# Optional: ignore full model dirs if you ever save under the repo
+# **/models/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# --- Logs & temp ---
+*.log
+logs/
+tmp/
+temp/
+.cache/
