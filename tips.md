@@ -1,3 +1,5 @@
+Go to proj2-scratch.ipynb to see the plan first.
+
 You can look at what's going at this the rapidfireai link. For example:
 
 ```
@@ -11,11 +13,13 @@ To ensure it runs as long as possible add this before Always to the config file
 ```
 
 To check if you actually have 24 hours 
+
 ```{bash}
 kubectl describe pod vscode-dsmlp
 ```
 
 You can find that Label looks like:
+
 ```
 Name:                 vscode-dsmlp
 Namespace:            ...
@@ -39,6 +43,8 @@ IP:                   10.40.158.160
 ```
 
 To check GPU, run
+
 ```{bash}
 nvidia-smi
 ```
+
