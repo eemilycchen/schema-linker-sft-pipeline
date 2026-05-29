@@ -48,3 +48,7 @@ To check GPU, run
 nvidia-smi
 ```
 
+To check disk storage
+```{bash}
+du -sh /*
+```
