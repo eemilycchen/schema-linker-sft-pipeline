@@ -69,14 +69,45 @@ def serialize_schema_full(schema: dict) -> str:
         lines.append(f"{tname}(\n  " + ",\n  ".join(col_parts) + "\n)")
     return "\n".join(lines)
 
-
+# before with 0.2533
+"""
+before with 0.2533 
 SYSTEM_PROMPT = (
-    "You are a schema-linking assistant. Given a natural-language question and a database schema, "
-    "output ONLY a JSON object mapping each referenced table name to the list of referenced column names. "
-    "If a table is referenced but no specific columns are needed (e.g. SELECT COUNT(*)), map it to []. "
-    "Do not output any explanation, markdown, or extra text — only the JSON object."
+      "You are a schema-linking assistant. Given a database schema and a question, "
+      "output ONLY a JSON object where the keys are table names and the values are lists of column names.\n\n"
+      "Example Output Format:\n" 
+      "{\n"
+      '  "singer": ["singer_id", "name", "birth_year"],\n'
+      '  "concert": []\n'
+      "}\n\n"
+      "If a table is referenced but no specific columns are needed, map it to an empty list []. "
+      "Do not output any explanation, markdown, or extra text — only the JSON object."
+  )
+New one: 0.18
+SYSTEM_PROMPT = (
+    "You are a schema-linking assistant. Given a database schema and a question, "
+    "identify which tables and columns from the schema are needed to answer the question.\n\n"
+    "Rules:\n"
+    "1. Use ONLY table names that appear exactly in the provided schema — do not invent or paraphrase table names.\n"
+    "2. Only include tables that are actually needed to answer the question — do not list all tables.\n"
+    "3. Column values must always be a JSON array of strings, even if empty: [] not null or a string.\n"
+    "4. Output ONLY the JSON object — no explanation, no markdown.\n\n"
+    "Example: for schema `singer(singer_id, name)  concert(concert_id, theme)` and question "
+    "'What are the names of singers?', output:\n"
+    '{"singer": ["name"]}'
 )
-
+"""
+SYSTEM_PROMPT = (
+      "You are a schema-linking assistant. Given a database schema and a question, "
+      "output ONLY a JSON object where the keys are table names and the values are lists of column names.\n\n"
+      "Example Output Format:\n" 
+      "{\n"
+      '  "singer": ["singer_id", "name", "birth_year"],\n'
+      '  "concert": []\n'
+      "}\n\n"
+      "If a table is referenced but no specific columns are needed, map it to an empty list []. "
+      "Do not output any explanation, markdown, or extra text — only the JSON object."
+)
 
 def sort_schema_links(schema_links: dict | None) -> dict:
     """Sort tables/columns; tolerate None column lists."""
@@ -91,7 +122,28 @@ def sort_schema_links(schema_links: dict | None) -> dict:
 
 
 # fixing the format issues by preventing double format
-def format_row(row: dict, schema_style: str = "minimal") -> dict:
+def _truncate_schema_to_budget(schema_s: str, question: str, tokenizer, max_length: int = 2048) -> str:
+    """Trim schema lines so the full prompt fits within max_length tokens."""
+    lines = schema_s.split("\n")
+    overhead_msgs = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user",   "content": f"Database schema:\n\n\nQuestion: {question}"},
+    ]
+    overhead = len(tokenizer.encode(
+        tokenizer.apply_chat_template(overhead_msgs, tokenize=False, add_generation_prompt=True)
+    ))
+    budget = max_length - overhead - 64  # 64 buffer for completion tokens
+    kept, used = [], 0
+    for line in lines:
+        line_toks = len(tokenizer.encode(line))
+        if used + line_toks > budget:
+            break
+        kept.append(line)
+        used += line_toks
+    return "\n".join(kept) if kept else "\n".join(lines[:5])
+
+
+def format_row(row: dict, schema_style: str = "minimal", tokenizer=None, max_length: int = 2048) -> dict:
     """
     Convert one train/val example to {prompt, completion} chat format.
 
@@ -111,6 +163,8 @@ def format_row(row: dict, schema_style: str = "minimal") -> dict:
 
     serialize = serialize_schema_minimal if schema_style == "minimal" else serialize_schema_full
     schema_s = serialize(load_schema(row["db_id"]))
+    if tokenizer is not None:
+        schema_s = _truncate_schema_to_budget(schema_s, row["question"], tokenizer, max_length)
     user_msg = f"Database schema:\n{schema_s}\n\nQuestion: {row['question']}"
     target = json.dumps(sort_schema_links(links), ensure_ascii=False)
 
@@ -125,9 +179,9 @@ def format_row(row: dict, schema_style: str = "minimal") -> dict:
     }
 
 
-def make_formatting_func(schema_style: str = "minimal") -> Callable[[dict], dict]:
+def make_formatting_func(schema_style: str = "minimal", tokenizer=None, max_length: int = 2048) -> Callable[[dict], dict]:
     """Picklable formatter for RFModelConfig.formatting_func."""
-    return partial(format_row, schema_style=schema_style)
+    return partial(format_row, schema_style=schema_style, tokenizer=tokenizer, max_length=max_length)
 
 
 # Convenience aliases
