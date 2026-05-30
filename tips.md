@@ -50,7 +50,7 @@ nvidia-smi
 
 To check disk storage
 ```{bash}
-du -sh /*
+du -sh ~/.cache/* 2>/dev/null | sort -rh | head -20
 ```
 
 how to run main.py
@@ -60,7 +60,7 @@ python main.py \
       --input validation_input.json \
       --output preds_run1.json \
       --schemas_dir schemas/ \
-      --checkpoint_path /home/emc001/schema-linker-sft-pipeline/try/logs/proj2-debug-2config-20260529-2330/runs/1/checkpoints/final_checkpoint \
+      --checkpoint_path /home/emc001/schema-linker-sft-pipeline/try/logs/proj2-debug-2config-20260530-1216/runs/1/checkpoints/final_checkpoint \
       --model_name Qwen/Qwen2.5-0.5B-Instruct  # or 1.5B depending on which run
 
 # run 2
@@ -68,7 +68,7 @@ python main.py \
     --input validation_input.json \
     --output preds_run2.json \
     --schemas_dir schemas/ \
-    --checkpoint_path /home/emc001/schema-linker-sft-pipeline/try/logs/proj2-debug-2config-20260529-2330/runs/2/checkpoints/final_checkpoint \
+    --checkpoint_path /home/emc001/schema-linker-sft-pipeline/try/logs/proj2-debug-2config-20260530-1216/runs/2/checkpoints/final_checkpoint \
     --model_name Qwen/Qwen2.5-1.5B-Instruct
 ```
 
