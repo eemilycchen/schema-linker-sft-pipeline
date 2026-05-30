@@ -52,3 +52,27 @@ To check disk storage
 ```{bash}
 du -sh /*
 ```
+
+how to run main.py
+```{bash}
+# run 1
+python main.py \
+      --input validation_input.json \
+      --output preds_run1.json \
+      --schemas_dir schemas/ \
+      --checkpoint_path /home/emc001/schema-linker-sft-pipeline/try/logs/proj2-debug-2config-20260529-2330/runs/1/checkpoints/final_checkpoint \
+      --model_name Qwen/Qwen2.5-0.5B-Instruct  # or 1.5B depending on which run
+
+# run 2
+  python main.py \
+    --input validation_input.json \
+    --output preds_run2.json \
+    --schemas_dir schemas/ \
+    --checkpoint_path /home/emc001/schema-linker-sft-pipeline/try/logs/proj2-debug-2config-20260529-2330/runs/2/checkpoints/final_checkpoint \
+    --model_name Qwen/Qwen2.5-1.5B-Instruct
+```
+
+To restore files from unexpected deletion:
+```{bash}
+git checkout HEAD -- try/proj2-debug-config.ipynb
+```
