@@ -90,10 +90,31 @@ If you want to run locally:
 For leaderboard score:
 ```
  KMP_DUPLICATE_LIB_OK=TRUE python eval.py \
-    --predictions preds_run1.json \
+    --predictions preds_run0-2023.json \
     --gold validation_gold_schema_links.json \
     --schemas_dir schemas/ \
     --questions_input validation_input.json \
-    --per_question_out per_question_run1.csv \
-    > eval_run1.txt 2>&1
+    --per_question_out per_question_run0-2023.csv \
+    > eval_run1-2023.txt 2>&1
 ```
+
+proj2-trl-20260531-2023
+Gave me:
+Evaluated:                  101 questions
+Schema-invalid identifiers: tables=0, columns=0
+
+---- Table-level (macro-averaged across questions) ----
+  Precision_T : 0.4229
+  Recall_T    : 0.4200
+  F1_T        : 0.3825
+  Table Score : 0.4085     ((P+R+F1)/3)
+
+---- Column-level (Table.Column pairs, macro-averaged) ----
+  Precision_C : 0.2442
+  Recall_C    : 0.2785
+  F1_C        : 0.1980
+  Column Score: 0.2402     ((P+R+F1)/3)
+
+==> Leaderboard Score : 0.3243   (0.5*Table + 0.5*Column)
+
+Per-question metrics written to per_question_run0-2023.csv
