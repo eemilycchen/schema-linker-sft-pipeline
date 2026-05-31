@@ -60,7 +60,7 @@ python main.py \
       --input validation_input.json \
       --output preds_run1.json \
       --schemas_dir schemas/ \
-      --checkpoint_path /home/emc001/schema-linker-sft-pipeline/try/logs/proj2-debug-2config-20260530-1216/runs/1/checkpoints/final_checkpoint \
+      --checkpoint_path /home/emc001/schema-linker-sft-pipeline/try/logs/proj2-trl-20260531-1859/runs/1/checkpoints/final_checkpoint \
       --model_name Qwen/Qwen2.5-0.5B-Instruct  # or 1.5B depending on which run
 
 # run 2
@@ -75,4 +75,24 @@ python main.py \
 To restore files from unexpected deletion:
 ```{bash}
 git checkout HEAD -- try/proj2-debug-config.ipynb
+```
+
+If you want to run locally:
+```{bash}
+  KMP_DUPLICATE_LIB_OK=TRUE python main.py \
+    --input validation_input.json \
+    --output preds_run1.json \
+    --schemas_dir schemas/ \
+    --checkpoint_path /Users/emilychen/code/schema-linker-sft-pipeline/try/proj2-trl-20260531-1859/runs/0/checkpoints/final_checkpoint \
+    --model_name Qwen/Qwen2.5-0.5B-Instruct
+```
+
+For leaderboard score:
+```
+ KMP_DUPLICATE_LIB_OK=TRUE python eval.py \
+    --predictions preds_run1.json \
+    --gold validation_gold_schema_links.json \
+    --schemas_dir schemas/ \
+    --questions_input validation_input.json \
+    --per_question_out per_question_run1.csv
 ```
