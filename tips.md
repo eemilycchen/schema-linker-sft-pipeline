@@ -94,5 +94,6 @@ For leaderboard score:
     --gold validation_gold_schema_links.json \
     --schemas_dir schemas/ \
     --questions_input validation_input.json \
-    --per_question_out per_question_run1.csv
+    --per_question_out per_question_run1.csv \
+    > eval_run1.txt 2>&1
 ```
