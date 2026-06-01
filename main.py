@@ -73,8 +73,16 @@ def postprocess_output(raw_text, db_id, schemas_dir="./schemas"):
             continue  # hallucinated table — drop it
         orig_table = table_lower2orig[t_lower]
         valid_cols = []
-        for c in (pred_cols or []):
-            if not isinstance(c, str): # malform json, skips this happens when epoch is too low
+        flat_cols = []
+        if not isinstance(pred_cols, list):
+            pred_cols = [] # If pred_col got a number: {"TableName": 0} instead of {"TableName": [...]}, just give it an empty list
+        for c in pred_cols:
+            if isinstance(c, list):  # flatten nested lists e.g. [["col1", "col2"]] -> ["col1", "col2"]
+                flat_cols.extend(c)
+            elif isinstance(c, str):
+                flat_cols.append(c)
+        for c in flat_cols:
+            if not isinstance(c, str):
                 continue
             col_map = col_lower2orig.get(t_lower, {})
             if c.lower() in col_map:
