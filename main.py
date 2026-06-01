@@ -20,7 +20,7 @@ def parse_args():
     p.add_argument("--input",           required=True)
     p.add_argument("--output",          required=True)
     p.add_argument("--schemas_dir",     default="./schemas")
-    p.add_argument("--batch_size",      type=int, default=1) # inference batch size is too big OOM issues
+    p.add_argument("--batch_size",      type=int, default=8)
     p.add_argument("--checkpoint_path", default="./adapter")
     p.add_argument("--model_name",      default="Qwen/Qwen2.5-1.5B-Instruct")
     return p.parse_args()
@@ -75,7 +75,7 @@ def postprocess_output(raw_text, db_id, schemas_dir="./schemas"):
         valid_cols = []
         flat_cols = []
         if not isinstance(pred_cols, list):
-            pred_cols = [] # If pred_col got a number: {"TableName": 0} instead of {"TableName": [...]}, just give it an empty list
+            pred_cols = [] # guard against anything that's not a list
         for c in pred_cols:
             if isinstance(c, list):  # flatten nested lists e.g. [["col1", "col2"]] -> ["col1", "col2"]
                 flat_cols.extend(c)
