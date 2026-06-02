@@ -16,7 +16,7 @@ Example output:
 
 # load the checkpoint
 base_model_name = 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'
-checkpoint_path = '/home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_12/runs/2/checkpoints/final_checkpoint'
+checkpoint_path = './checkpoints/final_checkpoint_12_1'
 base_model = AutoModelForCausalLM.from_pretrained(
     base_model_name,
     device_map="auto",
