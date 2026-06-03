@@ -15,8 +15,8 @@ Example output:
 '''
 
 # load the checkpoint
-base_model_name = 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'
-checkpoint_path = './checkpoints/final_checkpoint_12_1'
+base_model_name = 'Qwen/Qwen2.5-1.5B-Instruct'
+checkpoint_path = './checkpoint/final_checkpoint_18_2'
 base_model = AutoModelForCausalLM.from_pretrained(
     base_model_name,
     device_map="auto",
