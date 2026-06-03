@@ -1,3 +1,147 @@
+===============================================================
+LESSONS LEARNED — what actually moved the leaderboard (6/3/2026)
+===============================================================
+
+Current best: r=512, lr=5e-5 + BM25 post-processing → 0.3509
+(Note: lr=5e-5 was used here but prior data shows 3e-5 is better — BM25
+ masked the lr regression; see lesson 2)
+
+New weakness analysis (raw output audit, 101 questions):
+  ~50 outputs: structurally clean and parsed correctly
+  ~15 outputs: format corruption — non-list values
+               (integers, strings, objects as column lists)
+               e.g. RAW[5] {"EDREventNo": 1}, RAW[35] {"EDRENTRIES": "CASEID"},
+                    RAW[60] {"tlu_Species":"Laridae"}, RAW[80] {"tbl_Events": [103]}
+  ~8  outputs: column names used as table keys instead of real table names
+               e.g. RAW[2] {"EDREventNo":[]}, RAW[34] {"CASEID":[],"VEHNO":[]}
+               Current code drops these as hallucinated tables → zero credit
+  ~6  outputs: truncated JSON (no closing brace)
+               e.g. RAW[6], RAW[39], RAW[85], RAW[94]
+  ~3  outputs: schema embedded inside the table key
+               e.g. RAW[31] {"OCRR(EmpResId, ResourceName, ...)": []}
+  ~16 outputs: empty column lists (BM25 fallback active, top_k=3 may be too low)
+               Partially overlaps with the format corruption group above
+
+===============================================================
+LESSONS LEARNED — what actually moved the leaderboard (6/1/2026)
+===============================================================
+
+From bigger-rank-experiments/info.txt:
+
+  Run 2311 (r=32/64/128, varying lr):
+    r=32  lr=2e-5  → 0.2999
+    r=64  lr=5e-5  → 0.2568  ← worst: high LR at moderate rank hurts
+    r=128 lr=3e-5  → 0.3114  ← best of this batch
+
+  Run 2341 (r=128/256/512, lr=3e-5 or 2e-5):
+    r=128 lr=2e-5  → 0.2810
+    r=128 lr=5e-5  → 0.2877
+    r=256 lr=3e-5  → 0.2850
+    r=512 lr=3e-5  → 0.3319  ← best overall so far
+
+Lessons:
+  1. Higher rank consistently helps — r=512 > r=128 > r=32
+  2. lr=3e-5 is the sweet spot — 5e-5 hurts at all ranks tried
+  3. lr=2e-5 underperforms 3e-5 across both batches
+  4. Current best: r=512, lr=3e-5, score=0.3319
+
+===============================================================
+WHAT TO TRY NEXT — path to 0.60 (priority order)
+===============================================================
+
+--- POST-PROCESSING FIXES (no retraining, implement first) ---
+
+1. Column-as-table-key recovery  [~8 outputs affected, biggest new win]
+   When a predicted key does not match any real table name, check if
+   it is a known column in the schema. If it is, find the table that
+   owns it and add that table (with this column) to the output.
+   In postprocess_output(), after `if t_lower not in table_lower2orig`,
+   instead of `continue`, try:
+
+     col_to_table = {}  # build once per db_id
+     for (t_idx, cname) in schema["column_names_original"]:
+         if t_idx == -1: continue
+         col_to_table[cname.lower()] = schema["table_names_original"][t_idx]
+     # then in the loop:
+     if pred_table.lower() in col_to_table:
+         parent = col_to_table[pred_table.lower()]
+         rescue_cols.setdefault(parent, []).append(pred_table)
+
+2. String-value-to-list recovery  [~5 outputs]
+   When pred_cols is a string (not a list), wrap it: pred_cols = [pred_cols]
+   Add this before the `if not isinstance(pred_cols, list): pred_cols = []` line.
+   This recovers RAW[35], [57], [60].
+
+3. JSON repair for truncation  [~6 outputs]
+   Add to _parse_json_output() before the final `return {}`:
+     # try to close unclosed brackets
+     fixed = text
+     fixed += ']' * max(0, fixed.count('[') - fixed.count(']'))
+     fixed += '}' * max(0, fixed.count('{') - fixed.count('}'))
+     m2 = re.search(r"\{.*\}", fixed, re.DOTALL)
+     if m2:
+         try: return json.loads(m2.group())
+         except: pass
+
+4. Schema-in-tablename extraction  [~3 outputs]
+   Some outputs encode `{"TABLENAME(col1, col2, ...)": []}`.
+   In postprocess_output(), before the table lookup, try:
+     m = re.match(r'^([A-Za-z0-9_]+)\s*\((.+)\)$', pred_table)
+     if m:
+         pred_table = m.group(1)   # strip the "(col1, col2)" part
+         # optionally: parse m.group(2).split(",") as fallback col candidates
+
+5. Raise BM25 top_k  [~16 outputs with empty cols]
+   Current top_k=3 is conservative. Try top_k=5 — the metric is
+   (P+R+F1)/3 and recall matters as much as precision, so adding
+   2 more columns has low cost if they're relevant.
+   Also lower the score>0 guard to allow partial matches:
+     return [col for score, col in scores[:top_k]]  # remove `if score > 0`
+   (only if the question is non-empty, to avoid injecting random cols)
+
+--- RETRAINING FIXES (needed to push past 0.45) ---
+
+6. Switch back to lr=3e-5  [confirmed best from prior experiments]
+   The current run used lr=5e-5 — previous data showed 5e-5 hurts at all
+   ranks. The severe format corruption in this run (integers, sets, objects)
+   is consistent with high-LR overfitting. lr=3e-5 + r=512 was 0.3319
+   without BM25; with the post-processing fixes above it could reach ~0.47+.
+
+7. Increase max_seq_length to 4096 during training
+   Training at 2048 means examples with large schemas got truncated.
+   The model learned to produce outputs mid-sequence, which explains
+   the truncated JSON outputs at inference. Use max_seq_length=4096
+   in SFTTrainer (also increase inference max_length to 4096 to match).
+   Watch VRAM — may need to halve batch size or gradient_accumulation_steps.
+
+8. Try Qwen2.5-Coder-1.5B-Instruct as base model
+   Same architecture/params, but pretrained on code/SQL. Should produce
+   better structured JSON output before SFT. Keep r=512, lr=3e-5 to
+   isolate the model change effect.
+
+9. Data balancing: oversample multi-table / multi-column examples
+   Compute:
+     n_tables = [len(x["schema_links"]) for x in train]
+     n_cols   = [sum(len(v) for v in x["schema_links"].values()) for x in train]
+   Oversample examples where n_tables >= 2 or total_cols >= 4.
+   The column-as-table confusion pattern suggests the model never
+   learned to commit on complex schemas.
+
+10. Question paraphrasing augmentation
+    Generate 1-2 paraphrases per training example using a large model.
+    Same schema_links, different question wording. Teaches generalization
+    across phrasings, especially for cryptic column names (AIS, PCODE, VEHNO).
+
+--- EXPECTED SCORE TRAJECTORY ---
+
+  Current (r=512, lr=5e-5, BM25 top_k=3)             → 0.3509
+  + post-processing fixes #1–5 above                  → ~0.43–0.46
+  + lr=3e-5, max_seq_length=4096, retrain             → ~0.47–0.52
+  + Coder base model                                  → ~0.52–0.56
+  + data balancing + augmentation                     → ~0.56–0.62
+
+===============================================================
+
 ╭─── Claude Code v2.1.159 ─────────────────────────────────────────────────────╮
 │                                                    │ Tips for getting        │
 │                 Welcome back Emily!                │ started                 │
