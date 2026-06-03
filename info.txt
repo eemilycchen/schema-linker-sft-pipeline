@@ -1,0 +1,36 @@
+6/1/2026
+2311:
+| 1 | Qwen2.5-1.5B-Instruct | 2e-5 | r=32 | Leaderboard: 0.2999
+| 2 | Qwen2.5-1.5B-Instruct | 5e-5 | r=64 | Leaderboard: 0.2568
+| 3 | Qwen2.5-1.5B-Instruct | 3e-5 | r=128 | Leaderboard: 0.3114
+
+
+2341:
+| 1 | Qwen2.5-1.5B-Instruct | 2e-5 | r=128 |Leaderboard:0.2810
+| 2 | Qwen2.5-1.5B-Instruct | 5e-5 | r=128|Leaderboard: 0.2877 
+| 3 | Qwen2.5-1.5B-Instruct | 3e-5 | r=256 |Leaderboard:0.2850 
+| 4 | Qwen2.5-1.5B-Instruct | 3e-5 | r=512 |Leaderboard:0.3319
+
+6/3/2026 Experiments
+0216:
+| 1 | !!Qwen2.5-Coder-1.5B-Instruct | 3e-5 | r=512 |Leaderboard:0.3068| just changing it to coder model didn't make it better
+| 2 | Qwen2.5-1.5B-Instruct | 5e-5 | r=512 |Leaderboard: 0.3329 | went slightly up with a bigger lr!
+| 3 | Qwen2.5-1.5B-Instruct | 3e-5 | r=768 |Leaderboard: 0.3376 |hmm maybe try increasing the lr 
+(shouldn't go anymore than 768, else it's full fine tuning)
+
+Just trying at r=512 now but with different learning rate
+0313
+| 2 | Qwen2.5-1.5B-Instruct | 6e-5 | r=512 |Leaderboard:0.3360
+| 3 | Qwen2.5-1.5B-Instruct | 7e-5 | r=512 |Leaderboard:0.3389
+| 1 | Qwen2.5-1.5B-Instruct | 5e-5 | r=512 |Leaderboard: 0.3509 | Purely by post processing I went from 0.3329 tp 0.3509 | eval_run1-0313-pp
+
+Fix 0313 run 1, and run the last command in colab with the new post processing in main.py 
+| 1 | Qwen2.5-1.5B-Instruct | 5e-5 | r=512 |Leaderboard:0.3672  | Adding 5 fixes from suggestions.txt | eval_run1-0313-pp2 
+
+
+
+{"run_id": 1, "model": QWEN_15B, "lr": 2e-5, "lora_r": 128, "lora_alpha": 256, "label": "1.5B | lr=2e-5 | r=128"},
+{"run_id": 2, "model": QWEN_15B, "lr": 5e-5, "lora_r": 128, "lora_alpha": 256, "label": "1.5B | lr=5e-5 | r=128"},
+{"run_id": 3, "model": QWEN_15B, "lr": 3e-5, "lora_r": 256, "lora_alpha": 512, "label": "1.5B | lr=3e-5 | r=256"},
+{"run_id": 4, "model": QWEN_15B, "lr": 3e-5, "lora_r": 512, "lora_alpha": 1024, "label": "1.5B | lr=3e-5 | r=512"},
+
