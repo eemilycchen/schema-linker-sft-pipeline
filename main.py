@@ -10,6 +10,7 @@ Usage:
 """
 import argparse, json, re, sys
 from pathlib import Path
+from collections import Counter
 
 sys.path.insert(0, str(Path(__file__).parent / "try"))
 from schema_formatting import serialize_schema_minimal  # make sure this matches training!
@@ -51,7 +52,35 @@ def _parse_json_output(text):
     return {}
 
 
-def postprocess_output(raw_text, db_id, schemas_dir="./schemas"):
+def _tokenize_identifier(name):
+    """Split a column/table name into lowercase tokens.
+    'OrderDate' -> ['order', 'date'], 'CASEID' -> ['caseid'], 'crash_id' -> ['crash', 'id']
+    """
+    # Split camelCase: insert space before each uppercase letter that follows a lowercase
+    name = re.sub(r'([a-z])([A-Z])', r'\1 \2', name)
+    # Split on underscores/spaces and lowercase everything
+    return [t for t in re.split(r'[_\s]+', name.lower()) if t]
+
+
+def _bm25_column_fallback(question, t_lower, col_lower2orig, top_k=3):
+    """Return top-k columns by token overlap with the question.
+    Returns [] if no column shares any token with the question.
+    """
+    q_tokens = Counter(re.findall(r'[a-z]+', question.lower()))
+    if not q_tokens:
+        return []
+
+    scores = []
+    for col_lower, col_orig in col_lower2orig.get(t_lower, {}).items():
+        col_tokens = _tokenize_identifier(col_lower)
+        score = sum(q_tokens.get(tok, 0) for tok in col_tokens)
+        scores.append((score, col_orig))
+
+    scores.sort(key=lambda x: -x[0])
+    return [col for score, col in scores[:top_k] if score > 0]
+
+
+def postprocess_output(raw_text, db_id, schemas_dir="./schemas", question=""):
     schema = load_schema(db_id, schemas_dir)
     table_lower2orig = {t.lower(): t for t in schema["table_names_original"]}
 
@@ -87,6 +116,10 @@ def postprocess_output(raw_text, db_id, schemas_dir="./schemas"):
             col_map = col_lower2orig.get(t_lower, {})
             if c.lower() in col_map:
                 valid_cols.append(col_map[c.lower()])
+
+        if not valid_cols and question:
+            valid_cols = _bm25_column_fallback(question, t_lower, col_lower2orig)
+
         validated[orig_table] = valid_cols
     return validated
 
@@ -189,7 +222,7 @@ def main():
             raw_text = tokenizer.decode(new_tokens, skip_special_tokens=True)
             # debug
             print(f"  RAW[{ex['question_id']}]: {raw_text[:200]}")  # debug
-            schema_links = postprocess_output(raw_text, ex["db_id"], args.schemas_dir)
+            schema_links = postprocess_output(raw_text, ex["db_id"], args.schemas_dir, question=ex["question"])
             outputs.append({"question_id": ex["question_id"], "schema_links": schema_links})
         print(f"  Processed {min(i + args.batch_size, len(inputs))}/{len(inputs)} questions")
 
