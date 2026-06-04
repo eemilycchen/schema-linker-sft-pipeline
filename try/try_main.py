@@ -18,7 +18,7 @@ If a table is referenced but no specific columns are needed, map it to an empty 
 
 # load the checkpoint
 base_model_name = 'Qwen/Qwen2.5-1.5B-Instruct'
-checkpoint_path = './checkpoint/final_checkpoint_18_2'
+checkpoint_path = './checkpoint/final_checkpoint_25_1'
 base_model = AutoModelForCausalLM.from_pretrained(
     base_model_name,
     device_map="auto",
