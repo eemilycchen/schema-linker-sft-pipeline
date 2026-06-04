@@ -8,10 +8,12 @@ SYSTEM_PROMPT = '''You are a schema-linking model.\n
 Given a database schema and a natural-language question, output only valid JSON.
 The JSON must map table names to lists of referenced column names.
 Include tables even when no specific columns are referenced, using an empty list.
-Do not include explanations, markdown, or extra text.
+Do not include explanations, markdown, or extra text.\n\n
 
-Example output:
-{"TableName1": ["Col1", "Col2"], "TableName2": ["Col3"]}
+Example output format: \n
+{"TableName1": ["Col1", "Col2"], "TableName2": ["Col3"]}\n\n
+
+If a table is referenced but no specific columns are needed, map it to an empty list []. \n\n
 '''
 
 # load the checkpoint

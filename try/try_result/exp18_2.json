@@ -2,37 +2,35 @@
   {
     "question_id": 1,
     "schema_links": {
-      "XRUDF": [
-        "ActionCode",
-        "ParamCode"
+      "XRUDF": [],
+      "OQCN": [
+        "CategoryId",
+        "CatName"
+      ],
+      "SOI1": [
+        "CardCode"
       ],
       "TRB1": [
         "State"
       ],
-      "SOI1": [
-        "DocEntry"
+      "TRB2": [
+        "StaType"
       ]
     }
   },
   {
     "question_id": 2,
     "schema_links": {
-      "CRASH": [
+      "CDC": [
         "CASEID",
-        "DAYOFWEEK",
-        "CRASHYEAR",
-        "CRASHMONTH"
+        "DVTOTAL"
       ]
     }
   },
   {
     "question_id": 3,
     "schema_links": {
-      "AVOID": [
-        "CASEID",
-        "VEHNO",
-        "EQUIP"
-      ]
+      "AVOID": []
     }
   },
   {
@@ -40,21 +38,18 @@
     "schema_links": {
       "tblFieldDataTimeConstrainedSearches": [
         "LocationID",
+        "EventID",
         "Species_Code",
         "Sex",
         "Stage",
-        "Notch_Code",
-        "SnakeID"
+        "Notch_Code"
       ]
     }
   },
   {
     "question_id": 5,
     "schema_links": {
-      "ADAPT": [
-        "CASEID",
-        "ADAPT"
-      ]
+      "ADAPT": []
     }
   },
   {
@@ -79,8 +74,7 @@
     "question_id": 8,
     "schema_links": {
       "VERTEBRATES": [
-        "Observer",
-        "OBS_TYPE"
+        "Observer"
       ]
     }
   },
@@ -117,21 +111,34 @@
   {
     "question_id": 12,
     "schema_links": {
-      "APH1": [
-        "ProjectID",
-        "REMARKS"
+      "APH1": [],
+      "APH8": [
+        "DUEDATE",
+        "OWNER",
+        "ProjectID"
       ],
-      "OPCM": [
-        "Name"
-      ]
+      "OPCM": []
     }
   },
   {
     "question_id": 13,
     "schema_links": {
-      "CRASH": [
-        "LIGHTCOND"
-      ]
+      "CDC": [],
+      "DISTRACT": [],
+      "EDRPOSTCRASH": [],
+      "EDRCOLLECT": [],
+      "EDREVENT": [],
+      "EDRESUMM": [],
+      "EVENT": [],
+      "INTERIOR": [],
+      "LOCALIZER": [],
+      "INJURY": [],
+      "INTEGRITY": [],
+      "JKCOEFF": [],
+      "JKWGT": [],
+      "TIREDAMAGE": [],
+      "VEHMEAS": [],
+      "VEHSPEC": []
     }
   },
   {
@@ -198,15 +205,7 @@
   {
     "question_id": 19,
     "schema_links": {
-      "tlu_Species_ORCA": [
-        "Species"
-      ],
-      "tlu_Species_LABE": [
-        "Species"
-      ],
-      "tlu_Species_LAVO": [
-        "Species"
-      ]
+      "tlu_Species_ORCA": []
     }
   },
   {
@@ -222,7 +221,6 @@
     "question_id": 21,
     "schema_links": {
       "tbl_Events": [
-        "Event_ID",
         "Station_ID"
       ]
     }
@@ -230,10 +228,7 @@
   {
     "question_id": 22,
     "schema_links": {
-      "OFPR": [
-        "DataSource",
-        "T_RefDate"
-      ]
+      "OFPR": []
     }
   },
   {
@@ -251,8 +246,10 @@
   {
     "question_id": 24,
     "schema_links": {
-      "Paste_Errors": [
-        "Comments"
+      "Roadkill": [
+        "Comments",
+        "Date",
+        "Year"
       ]
     }
   },
@@ -273,8 +270,8 @@
         "CASEID",
         "AISCODE"
       ],
-      "VEHICLE": [
-        "MAKE"
+      "VEHMEAS": [
+        "VEHNO"
       ]
     }
   },
@@ -284,9 +281,26 @@
       "OSCT": [
         "SrcDocType",
         "RespOnDate",
+        "RespOnTime",
         "RespByDate",
-        "ResolOnDate",
-        "SrcvCallID"
+        "RespByTime",
+        "ResolDate",
+        "ResolOnDat"
+      ],
+      "ASCL": [
+        "assignee",
+        "cntrctDate",
+        "customer",
+        "contractID",
+        "descrption",
+        "docNum",
+        "itemName",
+        "manufSN",
+        "resolDate",
+        "resolOnDat",
+        "resolOnTim",
+        "srcDocType",
+        "subject"
       ]
     }
   },
@@ -306,12 +320,6 @@
         "CASEID",
         "TIRELOC",
         "TIRESIZE"
-      ],
-      "VEHMEAS": [
-        "CASEID",
-        "VEHNO",
-        "FRNTBUMP",
-        "REARBUMP"
       ]
     }
   },
@@ -327,12 +335,9 @@
   {
     "question_id": 31,
     "schema_links": {
-      "APH1": [
-        "OWNER",
-        "LINEID"
-      ],
-      "OPMG": [
-        "EMPLOYEE"
+      "APH8": [
+        "EmpID",
+        "LogInstanc"
       ]
     }
   },
@@ -341,16 +346,14 @@
     "schema_links": {
       "HEM2": [
         "type",
-        "typeID"
-      ],
-      "OHST": [],
-      "OHTY": []
+        "name"
+      ]
     }
   },
   {
     "question_id": 33,
     "schema_links": {
-      "CHILDSEAT": [
+      "OCC": [
         "MORTALITY"
       ]
     }
@@ -375,65 +378,25 @@
   {
     "question_id": 36,
     "schema_links": {
-      "tbl_Roads_and_Trails": [
-        "Layer"
-      ]
+      "tlu_Roads_and_Trails": []
     }
   },
   {
     "question_id": 37,
     "schema_links": {
-      "tbl_Deadwood": [
-        "Event_ID",
-        "Location_ID"
-      ],
-      "tbl_Events": [
-        "Event_Date",
-        "Event_ID",
-        "Location_ID"
-      ],
       "tbl_Locations": [
         "Location_ID",
         "SiteDescription"
+      ],
+      "tbl_Events": [
+        "Event_ID",
+        "Location_ID"
       ]
     }
   },
   {
     "question_id": 38,
-    "schema_links": {
-      "OHET": [
-        "empID",
-        "statusID"
-      ],
-      "AHE6": [
-        "empID",
-        "roleID"
-      ],
-      "AHE7": [
-        "empID",
-        "officeTel"
-      ],
-      "AHEM": [
-        "empID",
-        "homeTel"
-      ],
-      "HET1": [],
-      "OHED": [],
-      "OHTY": [
-        "typeID"
-      ],
-      "HMT1": [
-        "empID",
-        "teamID"
-      ],
-      "HMM": [
-        "{'$ref': '#/components/schemas/OHTM'}"
-      ],
-      "HME": [
-        "{'$ref': '#/components/schemas/AHE6'}",
-        "{'$ref': '#/components/schemas/HEM2'}"
-      ]
-    }
+    "schema_links": {}
   },
   {
     "question_id": 39,
@@ -451,7 +414,8 @@
   {
     "question_id": 40,
     "schema_links": {
-      "VEHICLE": []
+      "VEHMEAS": [],
+      "VEHSPEC": []
     }
   },
   {
@@ -476,28 +440,22 @@
     "schema_links": {
       "tblFieldDataTurtleMeasurements": [
         "Agency",
-        "Notch_Code"
+        "Notch_Code",
+        "Species_Code"
       ]
     }
   },
   {
     "question_id": 44,
     "schema_links": {
-      "AIRBAG": [
-        "CASEID",
-        "VEHNO"
-      ],
-      "CDC": [
-        "CASEID",
-        "VEHNO"
-      ],
+      "CASEID": [],
       "INJURY": [
         "CASEID",
-        "OCCNO"
+        "OCCNO",
+        "INJNO",
+        "INJLEVEL"
       ],
-      "VEHICLE": [
-        "VEHNO"
-      ]
+      "VEHNO": []
     }
   },
   {
@@ -544,10 +502,7 @@
   {
     "question_id": 49,
     "schema_links": {
-      "XRREL": [
-        "ChildId",
-        "ParentId"
-      ]
+      "XRREL": []
     }
   },
   {
@@ -561,10 +516,10 @@
   {
     "question_id": 51,
     "schema_links": {
+      "Accountability_Status": [],
       "Accountability_Status_by_Subgroup": [
-        "ENTITY_CD",
-        "YEAR",
-        "OVERALL_STATUS"
+        "{'ENTITY_CD': 'ACCOUNTABILITY_STATUS_BY_SUBGROUP'}",
+        "{'YEAR': '2022'}"
       ]
     }
   },
@@ -600,7 +555,6 @@
     "question_id": 55,
     "schema_links": {
       "GLAZING": [
-        "CASEID",
         "GLAZIMP"
       ]
     }
@@ -622,13 +576,9 @@
         "VendorType",
         "Descript"
       ],
-      "OCLG": [
-        "Closed",
-        "CloseDate"
-      ],
       "OPRT": [
-        "Name",
-        "RelatCard"
+        "RelatCard",
+        "Memo"
       ],
       "OCPR": [
         "CardCode",
@@ -663,8 +613,8 @@
     "question_id": 60,
     "schema_links": {
       "tlu_Species": [
-        "Common_Name",
-        "Family"
+        "Family",
+        "Common_Name"
       ]
     }
   },
@@ -700,8 +650,9 @@
         "YEAR",
         "SUBJECT",
         "ENTITY_CD",
-        "SUBGROUP_NAME",
-        "ABSENT_RATE"
+        "ENROLLMENT",
+        "ABSENT_RATE",
+        "SUBGROUP_NAME"
       ],
       "Annual_NYSESLAT": [
         "SUBGROUP_NAME",
@@ -712,7 +663,11 @@
   {
     "question_id": 65,
     "schema_links": {
-      "EDRSUMM": []
+      "TIREDAMAGE": [
+        "CASEID",
+        "VEHNO",
+        "DAMAGE"
+      ]
     }
   },
   {
@@ -732,25 +687,17 @@
         "INJNO"
       ],
       "CDC": [
-        "CASEID",
-        "CDC"
-      ],
-      "CDC_FOR_DEPLOY": [
-        "CASEID",
-        "CDC"
-      ],
-      "DISTRACT": [
-        "CASEID",
-        "DISTRACTN"
+        "CASEID"
       ]
     }
   },
   {
     "question_id": 68,
     "schema_links": {
-      "Annual_NYSESLAT": [
+      "Postsecondary_Enrollment": [
+        "YEAR",
         "SUBGROUP_NAME",
-        "YEAR"
+        "NYS_PUB_4_YR_CNT"
       ]
     }
   },
@@ -778,22 +725,31 @@
   {
     "question_id": 71,
     "schema_links": {
-      "tbl_Deadwood": [
+      "tbl_Deadwood": [],
+      "tbl_Events": [
         "Event_ID"
-      ],
-      "tlu_DecayStage": [
-        "DecayStage_ID"
       ]
     }
   },
   {
     "question_id": 72,
     "schema_links": {
-      "OCC": [
+      "AIRBAG": [],
+      "CHILDSEAT": [
+        "OCCNO"
+      ],
+      "CDC": [
         "CASEID",
-        "ROLE",
-        "BELTUSE"
-      ]
+        "CDC"
+      ],
+      "EDRPRECRASH": [
+        "PCODE"
+      ],
+      "GV": [],
+      "INTERIOR": [],
+      "LOCALIZER": [],
+      "EMSCARE": [],
+      "TIREDAMAGE": []
     }
   },
   {
@@ -807,7 +763,7 @@
         "Herb",
         "Litter",
         "LightIndex",
-        "MicroHab"
+        "MacroHab"
       ]
     }
   },
@@ -829,7 +785,8 @@
     "schema_links": {
       "Inexperienced_Teachers_and_Principals": [
         "ENTITY_NAME",
-        "YEAR"
+        "YEAR",
+        "NUM_TEACH_INEXP"
       ]
     }
   },
@@ -854,69 +811,37 @@
   {
     "question_id": 78,
     "schema_links": {
-      "INTERACTION": [
-        "INTCMPL",
-        "INTCOMP"
+      "INTRUSION": [
+        "INTDIRECT",
+        "INTMAG"
       ]
     }
   },
   {
     "question_id": 79,
     "schema_links": {
-      "Expenditures_per_Pupil": [
-        "ENTITY_NAME",
-        "DISTRICT_NAME"
-      ],
       "Inexperienced_Teachers_and_Principals": [
         "ENTITY_NAME",
-        "YEAR",
-        "DISTRICT_CD"
+        "PER_TEACH_INEXP"
       ],
-      "Total_Cohort_Regents_Exams": [
-        "SUBJECT",
-        "COHORT",
-        "ENTITY_NAME"
+      "BOCES_and_N/RC": [
+        "DISTRICT_NAME"
       ]
     }
   },
   {
     "question_id": 80,
     "schema_links": {
-      "tbl_Locations": [
-        "Rnd_Plt_In"
-      ]
+      "tbl_Locations": []
     }
   },
   {
     "question_id": 81,
     "schema_links": {
-      "OFRT": [
+      "OFPR": [
         "Name",
-        "DocType"
-      ],
-      "OACQ": [
-        "DocEntry",
-        "DocNum",
-        "DocType",
-        "DocDate",
-        "ObjType",
-        "FinncPriod",
-        "FatherNum",
-        "PeriodCat",
-        "Project",
-        "TransId"
-      ],
-      "OCTX": [
-        "DocEntry",
-        "DocNum",
-        "DocType",
-        "DocDate",
-        "ObjType",
-        "FinncPriod",
-        "FatherNum",
-        "PeriodCat",
-        "Project",
-        "TransId"
+        "Category",
+        "CrditDebit"
       ]
     }
   },
@@ -932,14 +857,10 @@
   {
     "question_id": 83,
     "schema_links": {
-      "TIREDAMAGE": [
-        "CASEID",
-        "TIRELOC"
-      ],
-      "TIREPLAC": [
-        "GVWR",
-        "GAWRFRONT",
-        "GAWRREAR"
+      "TIRE": [
+        "TIRESIZE",
+        "TIRESIZE_TYPE",
+        "VEHNO"
       ]
     }
   },
@@ -957,10 +878,11 @@
   {
     "question_id": 85,
     "schema_links": {
-      "ITM1": [
-        "ItemName",
-        "IsCommited"
-      ]
+      "ITM10.ItemName": [],
+      "ITM1.Price": [
+        "ItemCode"
+      ],
+      "ITM1.UomEntry": []
     }
   },
   {
@@ -984,15 +906,38 @@
   {
     "question_id": 88,
     "schema_links": {
-      "tbl_Deadwood": [
-        "Decay",
-        "Length"
+      "tlu_DecayStage": [
+        "DecayStage_Descr"
       ]
     }
   },
   {
     "question_id": 89,
-    "schema_links": {}
+    "schema_links": {
+      "OCRW": [],
+      "OOAT": [
+        "CntctCode",
+        "Position"
+      ],
+      "OCLT": [
+        "Name",
+        "Position"
+      ],
+      "OCPR": [
+        "Address",
+        "Cellular",
+        "Fax",
+        "Name",
+        "Position"
+      ],
+      "OCQB": [
+        "Address",
+        "Cellular",
+        "Fax",
+        "Name",
+        "Position"
+      ]
+    }
   },
   {
     "question_id": 90,
@@ -1025,7 +970,7 @@
   {
     "question_id": 93,
     "schema_links": {
-      "EDRPRECRASH": []
+      "EDRPOSTCRASH": []
     }
   },
   {
@@ -1043,39 +988,25 @@
         "CardCode",
         "CardName",
         "DocCurr",
-        "DocTotal",
-        "DocTotalFC"
+        "DocTotal"
       ],
-      "PWZ1": [
+      "PWZ3": [
         "CardCode",
         "CardName",
-        "BPCurrency"
+        "DocCurr",
+        "DocTotal"
       ]
     }
   },
   {
     "question_id": 96,
     "schema_links": {
-      "HABITAT_CODES": [
-        "Code",
+      "Breeding_Codes": [
+        "Breed",
         "Definition"
       ],
-      "Invert_Family": [
-        "Field1"
-      ],
-      "INVERTEBRATES": [
-        "Common_Name",
-        "Genus_species",
-        "Class",
-        "Family",
-        "Order",
-        "Number",
-        "Species"
-      ],
       "VERTEBRATES": [
-        "BREED",
-        "CLASS",
-        "COMMON_NAME"
+        "Common_Name"
       ]
     }
   },
@@ -1085,14 +1016,29 @@
       "tbl_Density": [
         "Event_ID",
         "One_half_meter"
+      ],
+      "tbl_Event_Details": [
+        "Event_ID"
       ]
     }
   },
   {
     "question_id": 98,
     "schema_links": {
-      "HEM7": [
-        "empID",
+      "HET1": [
+        "empID"
+      ],
+      "OHST": [],
+      "OHED": [
+        "name"
+      ],
+      "OHTY": [
+        "typeID"
+      ],
+      "AHE7": [
+        "ConName"
+      ],
+      "AHEM": [
         "firstName",
         "lastName"
       ]
@@ -1101,9 +1047,9 @@
   {
     "question_id": 99,
     "schema_links": {
-      "OOPER": [
+      "OOCR": [
         "OpprId",
-        "SlpCode"
+        "CardCode"
       ],
       "ODOR": [
         "Percentage"
@@ -1114,8 +1060,8 @@
     "question_id": 100,
     "schema_links": {
       "tbl_Events": [
-        "Station_ID",
-        "Event_ID"
+        "Event_ID",
+        "Station_ID"
       ],
       "tbl_Stations": [
         "Station_ID",
