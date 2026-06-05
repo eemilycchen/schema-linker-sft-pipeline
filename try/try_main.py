@@ -17,8 +17,8 @@ If a table is referenced but no specific columns are needed, map it to an empty 
 '''
 
 # load the checkpoint
-base_model_name = 'Qwen/Qwen3-1.7B'
-checkpoint_path = '/home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_26/runs/1/checkpoints/final_checkpoint'
+base_model_name = 'Qwen/Qwen2.5-Coder-1.5B-Instruct'
+checkpoint_path = './checkpoint/final_checkpoint_31_1'
 base_model = AutoModelForCausalLM.from_pretrained(
     base_model_name,
     device_map="auto",

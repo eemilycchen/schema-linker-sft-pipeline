@@ -1,5 +1,35 @@
 # Project 2 Release Packet -- CSE/DSC 234, Spring 2026
 
+---
+
+## Final Architecture
+- Base Model: `Qwen/Qwen2.5-1.5B-Instruct`
+- Rank: 64
+- Target Modules:
+    - `q_proj`
+    - `k_proj`
+    - `v_proj`
+    - `o_proj`
+    - `gate_proj`
+    - `up_proj`
+    - `down_proj`
+
+## Evaluate on Validation Set
+
+The `main` downloads a `.zip` file containing the checkpoint from Google Drive first and runs the inference.
+
+```[python]
+python3 main.py --input validation_input.json --output <output.json>
+```
+
+## Eval Metrics 
+
+```
+python3 eval.py --predictions <prediction.json> --gold validation_gold_schema_links.json --schemas_dir ./schemas --questions_input validation_input.json
+```
+
+---
+
 This packet accompanies the Project 2 statement PDF. **Read the statement first**;
 this README only documents the files, commands, and a handful of likely gotchas.
 
