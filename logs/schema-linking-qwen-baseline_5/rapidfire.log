@@ -1,0 +1,301 @@
+2026-05-30 15:47:40 | schema-linking-qwen-baseline_5 | experiment | INFO | experiment.py:104 | An experiment with the same name already exists. Created a new experiment 'schema-linking-qwen-baseline_5' with Experiment ID: 6 and Metric Experiment ID: 6 at /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_5
+2026-05-30 15:47:40 | schema-linking-qwen-baseline_5 | experiment | INFO | experiment.py:106 | Running RapidFire AI version 0.15.2
+2026-05-30 15:47:41 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:67 | Found 1 workers/GPUs.
+2026-05-30 15:47:41 | schema-linking-qwen-baseline_5 | controller | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:47:41 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:95 | Controller initialized
+2026-05-30 15:47:41 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:594 | Set experiment task to Create Models.
+2026-05-30 15:47:41 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:607 | Saved datasets to /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_5/datasets.dill
+2026-05-30 15:47:41 | schema-linking-qwen-baseline_5 | controller | INFO | controller.py:613 | Set seed to 42
+2026-05-30 15:47:41 | schema-linking-qwen-baseline_5 | controller | INFO | metric_rfmetric_manager.py:141 | Created MLflow run: 136b91ee19ee4fada7ccc3e6aee7bd84, 1
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:200 | Populated MetricLogger with model config info for run 1.
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | INFO | metric_rfmetric_manager.py:141 | Created MLflow run: 7f1b35592ff44045b73cf3f28922a32c, 2
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:200 | Populated MetricLogger with model config info for run 2.
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | INFO | controller.py:220 | Created 2 runs - 
+{   1: {   'additional_kwargs.generation_config.max_new_tokens': 256,
+           'additional_kwargs.generation_config.repetition_penalty': 1.05,
+           'additional_kwargs.generation_config.temperature': 0.8,
+           'additional_kwargs.generation_config.top_k': 30,
+           'additional_kwargs.generation_config.top_p': 0.9,
+           'model_kwargs.device_map': 'auto',
+           'model_kwargs.use_cache': False,
+           'model_name': 'google/gemma-2-2b-it',
+           'model_type': 'causal_lm',
+           'peft_params.bias': 'none',
+           'peft_params.lora_alpha': 64,
+           'peft_params.lora_dropout': 0.05,
+           'peft_params.r': 32,
+           'peft_params.target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj'],
+           'tokenizer': None,
+           'tokenizer_kwargs': None,
+           'trainer_type': 'SFT',
+           'training_args.eval_steps': 4,
+           'training_args.eval_strategy': 'steps',
+           'training_args.fp16': True,
+           'training_args.gradient_accumulation_steps': 4,
+           'training_args.learning_rate': 2e-05,
+           'training_args.logging_steps': 4,
+           'training_args.lr_scheduler_type': 'cosine',
+           'training_args.max_grad_norm': 0.2,
+           'training_args.max_steps': 128,
+           'training_args.per_device_eval_batch_size': 4,
+           'training_args.per_device_train_batch_size': 4,
+           'training_args.save_steps': 16,
+           'training_args.save_strategy': 'steps',
+           'training_args.save_total_limit': 3,
+           'training_args.warmup_ratio': 0.05},
+    2: {   'additional_kwargs.generation_config.max_new_tokens': 256,
+           'additional_kwargs.generation_config.repetition_penalty': 1.05,
+           'additional_kwargs.generation_config.temperature': 0.8,
+           'additional_kwargs.generation_config.top_k': 30,
+           'additional_kwargs.generation_config.top_p': 0.9,
+           'model_kwargs.device_map': 'auto',
+           'model_kwargs.use_cache': False,
+           'model_name': 'TinyLlama/TinyLlama-1.1B-Chat-v1.0',
+           'model_type': 'causal_lm',
+           'peft_params.bias': 'none',
+           'peft_params.lora_alpha': 64,
+           'peft_params.lora_dropout': 0.05,
+           'peft_params.r': 32,
+           'peft_params.target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj'],
+           'tokenizer': None,
+           'tokenizer_kwargs': None,
+           'trainer_type': 'SFT',
+           'training_args.eval_steps': 4,
+           'training_args.eval_strategy': 'steps',
+           'training_args.fp16': True,
+           'training_args.gradient_accumulation_steps': 4,
+           'training_args.learning_rate': 2e-05,
+           'training_args.logging_steps': 4,
+           'training_args.lr_scheduler_type': 'cosine',
+           'training_args.max_grad_norm': 0.2,
+           'training_args.max_steps': 128,
+           'training_args.per_device_eval_batch_size': 4,
+           'training_args.per_device_train_batch_size': 4,
+           'training_args.warmup_ratio': 0.05}}
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:223 | Got 2 runs for Initial.
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:227 | Completed creating models.
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:625 | Created models.
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:631 | Set experiment task to Training and Validation.
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | worker_manager | DEBUG | worker_manager.py:115 | Creating 1 worker processes...
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | worker_manager | DEBUG | worker_manager.py:121 | Starting worker processes in process group 5113
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | worker_manager | DEBUG | worker_manager.py:149 | Started Worker 0 with PID 5281
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | worker_manager | INFO | worker_manager.py:156 | Started 1 worker processes successfully
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:637 | Created 1 workers.
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | INFO | controller.py:659 | Starting Training and Validation
+2026-05-30 15:47:42 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:886 | Scheduled run 1 on workers (0,) for chunk 0
+2026-05-30 15:47:56 | schema-linking-qwen-baseline_5 | worker_0 | DEBUG | worker.py:157 | Worker 0 initialized with PID 5281
+2026-05-30 15:47:56 | schema-linking-qwen-baseline_5 | worker_0 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:47:56 | schema-linking-qwen-baseline_5 | worker_0 | DEBUG | worker.py:192 | Loaded datasets
+2026-05-30 15:47:56 | schema-linking-qwen-baseline_5 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 1
+2026-05-30 15:47:56 | schema-linking-qwen-baseline_5 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 1 with chunk 0
+2026-05-30 15:49:51 | schema-linking-qwen-baseline_5 | worker-0-shm | DEBUG | shm_manager.py:348 | Saved base_model for run google/gemma-2-2b-it
+2026-05-30 15:51:21 | schema-linking-qwen-baseline_5 | worker_0 | ERROR | worker.py:524 | Error during training for run 1: System role not supported
+2026-05-30 15:51:22 | schema-linking-qwen-baseline_5 | worker_0 | ERROR | worker.py:683 | Error while running run_fit for run 1 and chunk 0: System role not supported
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 3
+               │     └ 125
+               └ <function _main at 0x7f2beabaee80>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 3
+           │    └ <function BaseProcess._bootstrap at 0x7f2beac951c0>
+           └ <Process name='Process-2' parent=5113 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x7f2beac94720>
+    └ <Process name='Process-2' parent=5113 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Process name='Process-2' parent=5113 started>
+    │    │        │    └ (0, <DictProxy object, typeid 'dict' at 0x7f2962846c90>, <AcquirerProxy object, typeid 'Lock' at 0x7f295886dd30>, <Event at 0...
+    │    │        └ <Process name='Process-2' parent=5113 started>
+    │    └ <function worker_process_target at 0x7f2b4081a700>
+    └ <Process name='Process-2' parent=5113 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/utils/worker_manager.py", line 44, in worker_process_target
+    worker.serve_forever()
+    │      └ <function Worker.serve_forever at 0x7f2955c9d9e0>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7f29562364e0>
+> File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+    │    └ <function Worker.run_fit at 0x7f2955c9d940>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7f29562364e0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 354, in run_fit
+    trainer_instance, base_model_name = create_trainer_instance(
+                                        └ <function create_trainer_instance at 0x7f297ed23ba0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 458, in create_trainer_instance
+    trainer = _create_trainer_by_type(
+              └ <function _create_trainer_by_type at 0x7f2959fb0360>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 752, in _create_trainer_by_type
+    trainer = create_rf_trainer(
+              └ <function create_rf_trainer at 0x7f297ed23f60>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 356, in create_rf_trainer
+    return RFTrainer(
+           └ <class 'rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer'>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 56, in __init__
+    super().__init__(**kwargs)
+                       └ {'model': PeftModel(
+                           (base_model): LoraModel(
+                             (model): Gemma2ForCausalLM(
+                               (model): Gemma2Model(
+                                 (embed_to...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 519, in __init__
+    train_dataset = self._prepare_dataset(
+                    │    └ <function SFTTrainer._prepare_dataset at 0x7f2959ef6160>
+                    └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7f2708153a40>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 800, in _prepare_dataset
+    dataset = dataset.map(
+              │       └ <function Dataset.map at 0x7f298187f4c0>
+              └ Dataset({
+                    features: ['question_id', 'db_id', 'question', 'gold_sql', 'schema_links', 'prompt_text', 'completion_text', 'p...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 575, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+         │                                 │    │      │       └ {'fn_kwargs': {'processing_class': GemmaTokenizerFast(name_or_path='google/gemma-2-2b-it', vocab_size=256000, model_max_lengt...
+         │                                 │    │      └ (<function SFTTrainer._prepare_dataset.<locals>.tokenize at 0x7f295418e660>,)
+         │                                 │    └ Dataset({
+         │                                 │          features: ['question_id', 'db_id', 'question', 'gold_sql', 'schema_links', 'prompt_text', 'completion_text', 'p...
+         │                                 └ <function Dataset.map at 0x7f298187f420>
+         └ typing.Union
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3633, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+        │     │     │          │       │             └ {'shard': Dataset({
+        │     │     │          │       │                   features: ['question_id', 'db_id', 'question', 'gold_sql', 'schema_links', 'prompt_text', 'completion...
+        │     │     │          │       └ <staticmethod(<function Dataset._map_single at 0x7f298187f560>)>
+        │     │     │          └ <class 'datasets.arrow_dataset.Dataset'>
+        │     │     └ 0
+        │     └ False
+        └ None
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3973, in _map_single
+    for i, example in iter_outputs(shard_iterable):
+                      │            └ <enumerate object at 0x7f248c32c220>
+                      └ <function Dataset._map_single.<locals>.iter_outputs at 0x7f248ce89da0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3951, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+          │  │              │        │         └ 0
+          │  │              │        └ 0
+          │  │              └ pyarrow.Table
+          │  │                question_id: int64
+          │  │                db_id: string
+          │  │                question: string
+          │  │                gold_sql: string
+          │  │                schema_links: struct<ACC_EM_Chronic_Absentee...
+          │  └ <function Dataset._map_single.<locals>.apply_function at 0x7f248ce8a3e0>
+          └ 0
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3872, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+                       │         │         │                  └ {'processing_class': GemmaTokenizerFast(name_or_path='google/gemma-2-2b-it', vocab_size=256000, model_max_length=100000000000...
+                       │         │         └ ()
+                       │         └ [{'question_id': 1, 'db_id': 'NTSB', 'question': 'Show a count of injuries by body region where the injury severity is critic...
+                       └ <function SFTTrainer._prepare_dataset.<locals>.tokenize at 0x7f295418e660>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 744, in tokenize
+    prompt_ids = processing_class.apply_chat_template(
+                 │                └ <function PreTrainedTokenizerBase.apply_chat_template at 0x7f2a35d8bc40>
+                 └ GemmaTokenizerFast(name_or_path='google/gemma-2-2b-it', vocab_size=256000, model_max_length=1000000000000000019884624838656, ...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1667, in apply_chat_template
+    rendered_chat, generation_indices = render_jinja_template(
+                                        └ <function render_jinja_template at 0x7f2a36725da0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/chat_template_utils.py", line 539, in render_jinja_template
+    rendered_chat = compiled_template.render(
+                    │                 └ <function Template.render at 0x7f2a3683c360>
+                    └ <Template memory:7f248cdf3e30>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    │    │           └ <function Environment.handle_exception at 0x7f2a3686bb00>
+    │    └ <jinja2.sandbox.ImmutableSandboxedEnvironment object at 0x7f248c382e10>
+    └ <Template memory:7f248cdf3e30>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+          │                              └ None
+          └ <function rewrite_traceback_stack at 0x7f248ce89800>
+  File "<template>", line 1, in top-level template code
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+                                  │       └ {}
+                                  └ ('System role not supported',)
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/chat_template_utils.py", line 447, in raise_exception
+    raise jinja2.exceptions.TemplateError(message)
+          │      │          │             └ 'System role not supported'
+          │      │          └ <class 'jinja2.exceptions.TemplateError'>
+          │      └ <module 'jinja2.exceptions' from '/opt/conda/envs/cse234/lib/python3.12/site-packages/jinja2/exceptions.py'>
+          └ <module 'jinja2' from '/opt/conda/envs/cse234/lib/python3.12/site-packages/jinja2/__init__.py'>
+
+jinja2.exceptions.TemplateError: System role not supported
+2026-05-30 15:51:22 | schema-linking-qwen-baseline_5 | controller-shm | WARNING | shm_manager.py:492 | Model '1' not found in shared memory during delete
+2026-05-30 15:51:22 | schema-linking-qwen-baseline_5 | controller | ERROR | controller.py:788 | Run 1 has failed: System role not supportedTraceback (most recent call last):
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 354, in run_fit
+    trainer_instance, base_model_name = create_trainer_instance(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 458, in create_trainer_instance
+    trainer = _create_trainer_by_type(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 752, in _create_trainer_by_type
+    trainer = create_rf_trainer(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 356, in create_rf_trainer
+    return RFTrainer(
+           ^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 56, in __init__
+    super().__init__(**kwargs)
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 519, in __init__
+    train_dataset = self._prepare_dataset(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 800, in _prepare_dataset
+    dataset = dataset.map(
+              ^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 575, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3633, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3973, in _map_single
+    for i, example in iter_outputs(shard_iterable):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3951, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3872, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 744, in tokenize
+    prompt_ids = processing_class.apply_chat_template(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1667, in apply_chat_template
+    rendered_chat, generation_indices = render_jinja_template(
+                                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/chat_template_utils.py", line 539, in render_jinja_template
+    rendered_chat = compiled_template.render(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 1, in top-level template code
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/chat_template_utils.py", line 447, in raise_exception
+    raise jinja2.exceptions.TemplateError(message)
+jinja2.exceptions.TemplateError: System role not supported
+
+2026-05-30 15:51:22 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:789 | Removed run 1 from scheduler
+2026-05-30 15:51:22 | schema-linking-qwen-baseline_5 | controller | DEBUG | controller.py:886 | Scheduled run 2 on workers (0,) for chunk 0
+2026-05-30 15:51:23 | schema-linking-qwen-baseline_5 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 2
+2026-05-30 15:51:23 | schema-linking-qwen-baseline_5 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 2 with chunk 0
+2026-05-30 15:52:42 | schema-linking-qwen-baseline_5 | worker-0-shm | DEBUG | shm_manager.py:348 | Saved base_model for run TinyLlama/TinyLlama-1.1B-Chat-v1.0
+2026-05-30 15:53:57 | schema-linking-qwen-baseline_5 | worker_0 | DEBUG | worker.py:378 | Beginning training for run 2 on chunk 0
+2026-05-30 15:56:11 | schema-linking-qwen-baseline_5 | worker_0 | DEBUG | worker_manager.py:46 | Worker 0 interrupted
+2026-05-30 15:56:11 | schema-linking-qwen-baseline_5 | worker_0 | INFO | worker_manager.py:50 | Worker 0 process exiting
+2026-05-30 15:56:11 | schema-linking-qwen-baseline_5 | worker_0 | DEBUG | worker.py:712 | Worker 0 shutdown requested
+2026-05-30 15:56:19 | schema-linking-qwen-baseline_5 | schema-linking-qwen-baseline_5 | INFO | experiment_utils.py:270 | Task Training and Validation cancelled
+2026-05-30 15:56:19 | schema-linking-qwen-baseline_5 | schema-linking-qwen-baseline_5 | DEBUG | experiment_utils.py:271 | Reset experiment states and set current experiment task to idle
+2026-05-30 15:57:35 | schema-linking-qwen-baseline_5 | schema-linking-qwen-baseline_5 | DEBUG | experiment_utils.py:271 | Reset experiment states and set current experiment task to idle
+2026-05-30 15:57:35 | schema-linking-qwen-baseline_5 | schema-linking-qwen-baseline_5 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:57:35 | schema-linking-qwen-baseline_5 | schema-linking-qwen-baseline_5 | INFO | metric_mlflow_manager.py:133 | No active MLflow run to clear
+2026-05-30 15:57:35 | schema-linking-qwen-baseline_5 | schema-linking-qwen-baseline_5 | INFO | experiment_utils.py:240 | Experiment schema-linking-qwen-baseline_5 ended

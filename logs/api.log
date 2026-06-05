@@ -1,0 +1,21 @@
+[2026-06-04 10:14:21 -0700] [2169] [INFO] Starting gunicorn 25.3.0
+[2026-06-04 10:14:21 -0700] [2169] [INFO] Listening at: http://127.0.0.1:8851 (2169)
+[2026-06-04 10:14:21 -0700] [2169] [INFO] Using worker: sync
+[2026-06-04 10:14:21 -0700] [2206] [INFO] Booting worker with pid: 2206
+[2026-06-04 10:14:21 -0700] [2169] [INFO] Control socket listening at /home/chc016/.gunicorn/gunicorn.ctl
+[2026-06-04 15:00:48 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:00:48 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:00:48 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:00:48 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:00:48 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:00:48 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:00:48 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:00:48 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:02:28 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:02:28 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:02:28 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:02:28 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:02:28 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:02:28 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:02:28 -0700] [2169] [INFO] Handling signal: winch
+[2026-06-04 15:02:28 -0700] [2169] [INFO] Handling signal: winch

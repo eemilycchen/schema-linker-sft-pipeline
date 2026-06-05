@@ -48,8 +48,6 @@ Thumbs.db
 *~
 
 # --- Logs & temp ---
-*.log
-logs/
 tmp/
 temp/
 .cache/

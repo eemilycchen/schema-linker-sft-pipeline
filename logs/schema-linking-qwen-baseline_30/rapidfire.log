@@ -1,0 +1,191 @@
+2026-06-04 15:01:13 | schema-linking-qwen-baseline_30 | experiment | INFO | experiment.py:104 | The previously running experiment schema-linking-qwen-baseline_29 was forcibly ended. Created a new experiment 'schema-linking-qwen-baseline_30' with Experiment ID: 31 and Metric Experiment ID: 29 at /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_30
+2026-06-04 15:01:13 | schema-linking-qwen-baseline_30 | experiment | INFO | experiment.py:106 | Running RapidFire AI version 0.15.2
+2026-06-04 15:01:14 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:67 | Found 1 workers/GPUs.
+2026-06-04 15:01:14 | schema-linking-qwen-baseline_30 | controller | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 15:01:14 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:95 | Controller initialized
+2026-06-04 15:01:14 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:594 | Set experiment task to Create Models.
+2026-06-04 15:01:14 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:607 | Saved datasets to /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_30/datasets.dill
+2026-06-04 15:01:14 | schema-linking-qwen-baseline_30 | controller | INFO | controller.py:613 | Set seed to 42
+2026-06-04 15:01:14 | schema-linking-qwen-baseline_30 | controller | INFO | metric_rfmetric_manager.py:141 | Created MLflow run: 0f9e09f6cee34c52a3e413e00087a43d, 1
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:200 | Populated MetricLogger with model config info for run 1.
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | controller | INFO | controller.py:220 | Created 1 runs - 
+{   1: {   'additional_kwargs.generation_config.max_new_tokens': 256,
+           'additional_kwargs.generation_config.repetition_penalty': 1.05,
+           'additional_kwargs.generation_config.temperature': 0.8,
+           'additional_kwargs.generation_config.top_k': 30,
+           'additional_kwargs.generation_config.top_p': 0.9,
+           'model_kwargs.device_map': 'auto',
+           'model_kwargs.use_cache': False,
+           'model_name': 'Qwen/Qwen2.5-Coder-1.5B-Instruct',
+           'model_type': 'causal_lm',
+           'peft_params.bias': 'none',
+           'peft_params.lora_alpha': 256,
+           'peft_params.lora_dropout': 0.05,
+           'peft_params.r': 128,
+           'peft_params.target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'],
+           'tokenizer': None,
+           'tokenizer_kwargs': None,
+           'trainer_type': 'SFT',
+           'training_args.eval_steps': 4,
+           'training_args.eval_strategy': 'steps',
+           'training_args.fp16': True,
+           'training_args.gradient_accumulation_steps': 4,
+           'training_args.learning_rate': 1e-05,
+           'training_args.logging_steps': 2,
+           'training_args.lr_scheduler_type': 'cosine',
+           'training_args.max_grad_norm': 0.2,
+           'training_args.num_train_epochs': 2,
+           'training_args.per_device_eval_batch_size': 4,
+           'training_args.per_device_train_batch_size': 1,
+           'training_args.save_steps': 16,
+           'training_args.save_strategy': 'steps',
+           'training_args.save_total_limit': 3,
+           'training_args.warmup_ratio': 0.05}}
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:223 | Got 1 runs for Initial.
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:227 | Completed creating models.
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:625 | Created models.
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:631 | Set experiment task to Training and Validation.
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | worker_manager | DEBUG | worker_manager.py:115 | Creating 1 worker processes...
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | worker_manager | DEBUG | worker_manager.py:121 | Starting worker processes in process group 25447
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | worker_manager | DEBUG | worker_manager.py:149 | Started Worker 0 with PID 25547
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | worker_manager | INFO | worker_manager.py:156 | Started 1 worker processes successfully
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:637 | Created 1 workers.
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | controller | INFO | controller.py:659 | Starting Training and Validation
+2026-06-04 15:01:15 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:886 | Scheduled run 1 on workers (0,) for chunk 0
+2026-06-04 15:01:30 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:157 | Worker 0 initialized with PID 25547
+2026-06-04 15:01:30 | schema-linking-qwen-baseline_30 | worker_0 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 15:01:30 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:192 | Loaded datasets
+2026-06-04 15:01:30 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 1
+2026-06-04 15:01:30 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 1 with chunk 0
+2026-06-04 15:01:47 | schema-linking-qwen-baseline_30 | worker-0-shm | DEBUG | shm_manager.py:348 | Saved base_model for run Qwen/Qwen2.5-Coder-1.5B-Instruct
+2026-06-04 15:01:53 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:378 | Beginning training for run 1 on chunk 0
+2026-06-04 15:22:41 | schema-linking-qwen-baseline_30 | worker-0-shm | DEBUG | shm_manager.py:445 | Checkpoint update:0 in-place, 7 new
+2026-06-04 15:22:41 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:473 | Saved checkpoint to shared memory for run 1 on chunk 0
+2026-06-04 15:22:42 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:714 | Completed task: run 1, chunk 0 on workers (0,)
+2026-06-04 15:22:42 | schema-linking-qwen-baseline_30 | controller | INFO | controller.py:717 | Run 1 completed steps - 19/152
+2026-06-04 15:22:42 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:886 | Scheduled run 1 on workers (0,) for chunk 1
+2026-06-04 15:22:43 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 1
+2026-06-04 15:22:43 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 1 with chunk 1
+2026-06-04 15:51:17 | schema-linking-qwen-baseline_30 | worker_0 | ERROR | worker.py:524 | Error during training for run 1: Database error executing query '
+            UPDATE runs
+            SET completed...': disk I/O error
+2026-06-04 15:51:17 | schema-linking-qwen-baseline_30 | worker_0 | ERROR | worker.py:524 | Error during training for run 1: Database error executing query '
+            UPDATE runs
+            SET completed...': disk I/O error
+2026-06-04 15:51:19 | schema-linking-qwen-baseline_30 | worker_0 | ERROR | worker.py:683 | Error while running run_fit for run 1 and chunk 1: Database error executing query '
+            UPDATE runs
+            SET completed...': disk I/O error
+Traceback (most recent call last):
+
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/db/db_interface.py", line 129, in execute
+    result = self.cursor.execute(query, params)
+             │    │      │       │      └ (38, 1)
+             │    │      │       └ '\n            UPDATE runs\n            SET completed_steps = ?\n            WHERE run_id = ?\n        '
+             │    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+             │    └ <sqlite3.Cursor object at 0x7f2080a20e40>
+             └ <rapidfireai.fit.db.db_interface.DatabaseInterface object at 0x7f2080bbc800>
+
+sqlite3.OperationalError: disk I/O error
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 3
+               │     └ 120
+               └ <function _main at 0x7f226d11ae80>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 3
+           │    └ <function BaseProcess._bootstrap at 0x7f226d2011c0>
+           └ <Process name='Process-2' parent=25447 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x7f226d200720>
+    └ <Process name='Process-2' parent=25447 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Process name='Process-2' parent=25447 started>
+    │    │        │    └ (0, <DictProxy object, typeid 'dict' at 0x7f2082981190>, <AcquirerProxy object, typeid 'Lock' at 0x7f20827e8ef0>, <Event at 0...
+    │    │        └ <Process name='Process-2' parent=25447 started>
+    │    └ <function worker_process_target at 0x7f220edca700>
+    └ <Process name='Process-2' parent=25447 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/utils/worker_manager.py", line 44, in worker_process_target
+    worker.serve_forever()
+    │      └ <function Worker.serve_forever at 0x7f2080a119e0>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7f226d0ff380>
+> File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+    │    └ <function Worker.run_fit at 0x7f2080a11940>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7f226d0ff380>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 395, in run_fit
+    self.db.set_completed_steps(run_id, new_completed_steps)
+    │    │  │                   │       └ 38
+    │    │  │                   └ 1
+    │    │  └ <function RfDb.set_completed_steps at 0x7f210db18360>
+    │    └ <rapidfireai.fit.db.rf_db.RfDb object at 0x7f226d0ff5f0>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7f226d0ff380>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/db/rf_db.py", line 554, in set_completed_steps
+    self.db.execute(query, (completed_steps, run_id), commit=True)
+    │    │  │       │       │                └ 1
+    │    │  │       │       └ 38
+    │    │  │       └ '\n            UPDATE runs\n            SET completed_steps = ?\n            WHERE run_id = ?\n        '
+    │    │  └ <function DatabaseInterface.execute at 0x7f210dbb3420>
+    │    └ <rapidfireai.fit.db.db_interface.DatabaseInterface object at 0x7f2080bbc800>
+    └ <rapidfireai.fit.db.rf_db.RfDb object at 0x7f226d0ff5f0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/db/db_interface.py", line 142, in execute
+    raise DBException(
+          └ <class 'rapidfireai.fit.utils.exceptions.DBException'>
+
+rapidfireai.fit.utils.exceptions.DBException: Database error executing query '
+            UPDATE runs
+            SET completed...': disk I/O error
+2026-06-04 15:51:21 | schema-linking-qwen-baseline_30 | controller-shm | DEBUG | shm_manager.py:504 | Deleted checkpoints for model 1 from shared memory
+2026-06-04 15:51:24 | schema-linking-qwen-baseline_30 | controller-shm | DEBUG | shm_manager.py:545 | Deleted base_model for model 1 from shared memory
+2026-06-04 15:51:24 | schema-linking-qwen-baseline_30 | controller-shm | DEBUG | shm_manager.py:551 | Deleted model registry entry for 1 from shared memory
+2026-06-04 15:51:24 | schema-linking-qwen-baseline_30 | controller-shm | DEBUG | shm_manager.py:560 | Force garbage collection and empty cache
+2026-06-04 15:51:24 | schema-linking-qwen-baseline_30 | controller | ERROR | controller.py:788 | Run 1 has failed: Database error executing query '
+            UPDATE runs
+            SET completed...': disk I/O errorTraceback (most recent call last):
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/db/db_interface.py", line 129, in execute
+    result = self.cursor.execute(query, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: disk I/O error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 395, in run_fit
+    self.db.set_completed_steps(run_id, new_completed_steps)
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/db/rf_db.py", line 554, in set_completed_steps
+    self.db.execute(query, (completed_steps, run_id), commit=True)
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/db/db_interface.py", line 142, in execute
+    raise DBException(
+rapidfireai.fit.utils.exceptions.DBException: Database error executing query '
+            UPDATE runs
+            SET completed...': disk I/O error
+
+2026-06-04 15:51:24 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:789 | Removed run 1 from scheduler
+2026-06-04 15:51:24 | schema-linking-qwen-baseline_30 | controller | INFO | controller.py:848 | Scheduler indicates all runs have completed all chunks
+2026-06-04 15:51:24 | schema-linking-qwen-baseline_30 | controller | DEBUG | controller.py:904 | Set experiment task to Idle.
+2026-06-04 15:51:24 | schema-linking-qwen-baseline_30 | worker_manager | DEBUG | worker_manager.py:163 | WorkerManager shutdown initiated...
+2026-06-04 15:51:24 | schema-linking-qwen-baseline_30 | worker_manager | DEBUG | worker_manager.py:167 | Signaling graceful shutdown...
+2026-06-04 15:51:25 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:712 | Worker 0 shutdown requested
+2026-06-04 15:51:25 | schema-linking-qwen-baseline_30 | worker_0 | INFO | worker_manager.py:50 | Worker 0 process exiting
+2026-06-04 15:51:25 | schema-linking-qwen-baseline_30 | worker_0 | DEBUG | worker.py:712 | Worker 0 shutdown requested
+2026-06-04 15:51:26 | schema-linking-qwen-baseline_30 | worker_manager | DEBUG | worker_manager.py:186 | All workers shutdown gracefully
+2026-06-04 15:51:26 | schema-linking-qwen-baseline_30 | worker_manager | DEBUG | worker_manager.py:163 | WorkerManager shutdown initiated...
+2026-06-04 15:51:26 | schema-linking-qwen-baseline_30 | worker_manager | DEBUG | worker_manager.py:167 | Signaling graceful shutdown...
+2026-06-04 15:51:26 | schema-linking-qwen-baseline_30 | worker_manager | DEBUG | worker_manager.py:186 | All workers shutdown gracefully
+2026-06-04 15:51:27 | schema-linking-qwen-baseline_30 | schema-linking-qwen-baseline_30 | DEBUG | experiment_utils.py:271 | Reset experiment states and set current experiment task to idle
+2026-06-04 15:51:27 | schema-linking-qwen-baseline_30 | schema-linking-qwen-baseline_30 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 15:51:27 | schema-linking-qwen-baseline_30 | schema-linking-qwen-baseline_30 | INFO | metric_mlflow_manager.py:133 | No active MLflow run to clear
+2026-06-04 15:51:27 | schema-linking-qwen-baseline_30 | schema-linking-qwen-baseline_30 | INFO | experiment_utils.py:240 | Experiment schema-linking-qwen-baseline_30 ended

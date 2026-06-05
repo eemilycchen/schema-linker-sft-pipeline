@@ -1,0 +1,215 @@
+2026-06-04 14:21:27 | schema-linking-qwen-baseline_28 | experiment | INFO | experiment.py:104 | The previously running experiment schema-linking-qwen-baseline_27 was forcibly ended. Created a new experiment 'schema-linking-qwen-baseline_28' with Experiment ID: 29 and Metric Experiment ID: 27 at /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_28
+2026-06-04 14:21:27 | schema-linking-qwen-baseline_28 | experiment | INFO | experiment.py:106 | Running RapidFire AI version 0.15.2
+2026-06-04 14:21:28 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:67 | Found 1 workers/GPUs.
+2026-06-04 14:21:28 | schema-linking-qwen-baseline_28 | controller | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 14:21:28 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:95 | Controller initialized
+2026-06-04 14:21:28 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:594 | Set experiment task to Create Models.
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:607 | Saved datasets to /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_28/datasets.dill
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | INFO | controller.py:613 | Set seed to 42
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | INFO | metric_rfmetric_manager.py:141 | Created MLflow run: 76913fc032344bf08a16cba8b74949aa, 1
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:200 | Populated MetricLogger with model config info for run 1.
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | INFO | controller.py:220 | Created 1 runs - 
+{   1: {   'additional_kwargs.generation_config.max_new_tokens': 256,
+           'additional_kwargs.generation_config.repetition_penalty': 1.05,
+           'additional_kwargs.generation_config.temperature': 0.8,
+           'additional_kwargs.generation_config.top_k': 30,
+           'additional_kwargs.generation_config.top_p': 0.9,
+           'model_kwargs.device_map': 'auto',
+           'model_kwargs.use_cache': False,
+           'model_name': 'Qwen/Qwen2.5-Coder-1.5B-Instruct',
+           'model_type': 'causal_lm',
+           'peft_params.bias': 'none',
+           'peft_params.lora_alpha': 256,
+           'peft_params.lora_dropout': 0.05,
+           'peft_params.r': 128,
+           'peft_params.target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj'],
+           'tokenizer': None,
+           'tokenizer_kwargs': None,
+           'trainer_type': 'SFT',
+           'training_args.eval_steps': 4,
+           'training_args.eval_strategy': 'steps',
+           'training_args.fp16': True,
+           'training_args.gradient_accumulation_steps': 4,
+           'training_args.learning_rate': 1e-05,
+           'training_args.logging_steps': 2,
+           'training_args.lr_scheduler_type': 'cosine',
+           'training_args.max_grad_norm': 0.2,
+           'training_args.num_train_epochs': 2,
+           'training_args.per_device_eval_batch_size': 4,
+           'training_args.per_device_train_batch_size': 1,
+           'training_args.save_steps': 16,
+           'training_args.save_strategy': 'steps',
+           'training_args.save_total_limit': 3,
+           'training_args.warmup_ratio': 0.05}}
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:223 | Got 1 runs for Initial.
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:227 | Completed creating models.
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:625 | Created models.
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:631 | Set experiment task to Training and Validation.
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | worker_manager | DEBUG | worker_manager.py:115 | Creating 1 worker processes...
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | worker_manager | DEBUG | worker_manager.py:121 | Starting worker processes in process group 21089
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | worker_manager | DEBUG | worker_manager.py:149 | Started Worker 0 with PID 21221
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | worker_manager | INFO | worker_manager.py:156 | Started 1 worker processes successfully
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:637 | Created 1 workers.
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | INFO | controller.py:659 | Starting Training and Validation
+2026-06-04 14:21:29 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:886 | Scheduled run 1 on workers (0,) for chunk 0
+2026-06-04 14:21:44 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:157 | Worker 0 initialized with PID 21221
+2026-06-04 14:21:44 | schema-linking-qwen-baseline_28 | worker_0 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 14:21:44 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:192 | Loaded datasets
+2026-06-04 14:21:44 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 1
+2026-06-04 14:21:44 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 1 with chunk 0
+2026-06-04 14:22:10 | schema-linking-qwen-baseline_28 | worker-0-shm | DEBUG | shm_manager.py:348 | Saved base_model for run Qwen/Qwen2.5-Coder-1.5B-Instruct
+2026-06-04 14:22:16 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:378 | Beginning training for run 1 on chunk 0
+2026-06-04 14:43:52 | schema-linking-qwen-baseline_28 | worker-0-shm | DEBUG | shm_manager.py:445 | Checkpoint update:0 in-place, 7 new
+2026-06-04 14:43:52 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:473 | Saved checkpoint to shared memory for run 1 on chunk 0
+2026-06-04 14:43:54 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:714 | Completed task: run 1, chunk 0 on workers (0,)
+2026-06-04 14:43:54 | schema-linking-qwen-baseline_28 | controller | INFO | controller.py:717 | Run 1 completed steps - 19/152
+2026-06-04 14:43:54 | schema-linking-qwen-baseline_28 | controller | DEBUG | controller.py:886 | Scheduled run 1 on workers (0,) for chunk 1
+2026-06-04 14:43:55 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 1
+2026-06-04 14:43:55 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 1 with chunk 1
+2026-06-04 14:44:05 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:378 | Beginning training for run 1 on chunk 1
+2026-06-04 14:57:12 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker_manager.py:37 | Worker 0 received SIGTERM
+2026-06-04 14:57:12 | schema-linking-qwen-baseline_28 | schema-linking-qwen-baseline_28 | INFO | experiment_utils.py:270 | Task Training and Validation cancelled
+2026-06-04 14:57:12 | schema-linking-qwen-baseline_28 | schema-linking-qwen-baseline_28 | DEBUG | experiment_utils.py:271 | Reset experiment states and set current experiment task to idle
+2026-06-04 14:57:29 | schema-linking-qwen-baseline_28 | schema-linking-qwen-baseline_28 | DEBUG | experiment_utils.py:271 | Reset experiment states and set current experiment task to idle
+2026-06-04 14:57:29 | schema-linking-qwen-baseline_28 | schema-linking-qwen-baseline_28 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 14:57:29 | schema-linking-qwen-baseline_28 | schema-linking-qwen-baseline_28 | INFO | metric_mlflow_manager.py:133 | No active MLflow run to clear
+2026-06-04 14:57:29 | schema-linking-qwen-baseline_28 | schema-linking-qwen-baseline_28 | INFO | experiment_utils.py:240 | Experiment schema-linking-qwen-baseline_28 ended
+2026-06-04 15:00:31 | schema-linking-qwen-baseline_28 | worker_0 | ERROR | worker.py:524 | Error during training for run 1: INVALID_PARAMETER_VALUE: The run 76913fc032344bf08a16cba8b74949aa must be in the 'active' state. Current state is deleted.
+2026-06-04 15:00:32 | schema-linking-qwen-baseline_28 | worker_0 | ERROR | worker.py:683 | Error while running run_fit for run 1 and chunk 1: INVALID_PARAMETER_VALUE: The run 76913fc032344bf08a16cba8b74949aa must be in the 'active' state. Current state is deleted.
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 3
+               │     └ 120
+               └ <function _main at 0x7f1172d1ee80>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 3
+           │    └ <function BaseProcess._bootstrap at 0x7f1172e051c0>
+           └ <Process name='Process-2' parent=21089 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x7f1172e04720>
+    └ <Process name='Process-2' parent=21089 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Process name='Process-2' parent=21089 started>
+    │    │        │    └ (0, <DictProxy object, typeid 'dict' at 0x7f0f9329f620>, <AcquirerProxy object, typeid 'Lock' at 0x7f0f88432780>, <Event at 0...
+    │    │        └ <Process name='Process-2' parent=21089 started>
+    │    └ <function worker_process_target at 0x7f11189de700>
+    └ <Process name='Process-2' parent=21089 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/utils/worker_manager.py", line 44, in worker_process_target
+    worker.serve_forever()
+    │      └ <function Worker.serve_forever at 0x7f0f8667d9e0>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7f0f867be7e0>
+> File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+    │    └ <function Worker.run_fit at 0x7f0f8667d940>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7f0f867be7e0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 387, in run_fit
+    trainer_instance.train()
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           └ functools.partial(<bound method Trainer._inner_training_loop of <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrai...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2756, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+    │    └ <function Trainer._maybe_log_save_evaluate at 0x7f0fad704540>
+    └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7f0f8460cc50>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 3217, in _maybe_log_save_evaluate
+    self.log(logs, start_time)
+    │    │   │     └ 1780609445.718148
+    │    │   └ {'loss': 0.2495, 'grad_norm': 2.7465579509735107, 'learning_rate': 9.12841974998278e-06}
+    │    └ <function SFTTrainer.log at 0x7f0f931663e0>
+    └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7f0f8460cc50>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 916, in log
+    super().log(logs, start_time)
+                │     └ 1780609445.718148
+                └ {'loss': 0.2495, 'grad_norm': 2.7465579509735107, 'learning_rate': 9.12841974998278e-06, 'num_tokens': 40467.0, 'mean_token_a...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 3793, in log
+    self.control = self.callback_handler.on_log(self.args, self.state, self.control, logs)
+    │    │         │                            │    │     │           │    │        └ {'loss': 0.2495, 'grad_norm': 2.7465579509735107, 'learning_rate': 9.12841974998278e-06, 'num_tokens': 40467.0, 'mean_token_a...
+    │    │         │                            │    │     │           │    └ TrainerControl(should_training_stop=False, should_epoch_stop=False, should_save=False, should_evaluate=False, should_log=False)
+    │    │         │                            │    │     │           └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7f0f8460cc50>
+    │    │         │                            │    │     └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7f0f8460cc50>
+    │    │         │                            │    └ SFTConfig(output_dir='./checkpoint', overwrite_output_dir=False, do_train=True, do_eval=True, do_predict=False, eval_strategy...
+    │    │         │                            └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7f0f8460cc50>
+    │    │         └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7f0f8460cc50>
+    │    └ TrainerControl(should_training_stop=False, should_epoch_stop=False, should_save=False, should_evaluate=False, should_log=False)
+    └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7f0f8460cc50>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer_callback.py", line 549, in on_log
+    return self.call_event("on_log", args, state, control, logs=logs)
+           │    │                    │     │      │             └ {'loss': 0.2495, 'grad_norm': 2.7465579509735107, 'learning_rate': 9.12841974998278e-06, 'num_tokens': 40467.0, 'mean_token_a...
+           │    │                    │     │      └ TrainerControl(should_training_stop=False, should_epoch_stop=False, should_save=False, should_evaluate=False, should_log=False)
+           │    │                    │     └ TrainerState(epoch=0.5789473684210527, global_step=11, max_steps=19, logging_steps=2, eval_steps=4, save_steps=500, train_bat...
+           │    │                    └ SFTConfig(output_dir='./checkpoint', overwrite_output_dir=False, do_train=True, do_eval=True, do_predict=False, eval_strategy...
+           │    └ <function CallbackHandler.call_event at 0x7f0fad6bac00>
+           └ <transformers.trainer_callback.CallbackHandler object at 0x7f0d68947680>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer_callback.py", line 556, in call_event
+    result = getattr(callback, event)(
+                     │         └ 'on_log'
+                     └ <rapidfireai.fit.ml.callbacks.MetricLoggingCallback object at 0x7f0d789f3d10>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/callbacks.py", line 459, in on_log
+    self.metric_logger.log_metric(
+    │    │             └ <function RFMetricLogger.log_metric at 0x7f0f8667cfe0>
+    │    └ <rapidfireai.utils.metric_rfmetric_manager.RFMetricLogger object at 0x7f0f86613890>
+    └ <rapidfireai.fit.ml.callbacks.MetricLoggingCallback object at 0x7f0d789f3d10>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/utils/metric_rfmetric_manager.py", line 173, in log_metric
+    metric_logger.log_metric(run_id, key, value, step=step)
+    │             │          │       │    │           └ 30
+    │             │          │       │    └ 1
+    │             │          │       └ 'chunk number'
+    │             │          └ '76913fc032344bf08a16cba8b74949aa'
+    │             └ <function MLflowMetricLogger.log_metric at 0x7f0f881bec00>
+    └ <rapidfireai.utils.metric_mlflow_manager.MLflowMetricLogger object at 0x7f0f86613440>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/utils/metric_mlflow_manager.py", line 61, in log_metric
+    self.client.log_metric(run_id, key, value, step=step)
+    │    │      │          │       │    │           └ 30
+    │    │      │          │       │    └ 1
+    │    │      │          │       └ 'chunk number'
+    │    │      │          └ '76913fc032344bf08a16cba8b74949aa'
+    │    │      └ <function MlflowClient.log_metric at 0x7f0fab8d39c0>
+    │    └ <mlflow.tracking.client.MlflowClient object at 0x7f0fac484920>
+    └ <rapidfireai.utils.metric_mlflow_manager.MLflowMetricLogger object at 0x7f0f86613440>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/mlflow/tracking/client.py", line 2328, in log_metric
+    return self._tracking_client.log_metric(
+           │    │                └ <function TrackingServiceClient.log_metric at 0x7f0fab8d4f40>
+           │    └ <mlflow.tracking._tracking_service.client.TrackingServiceClient object at 0x7f0f86613b00>
+           └ <mlflow.tracking.client.MlflowClient object at 0x7f0fac484920>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/mlflow/telemetry/track.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+             │     │       └ {'synchronous': True, 'dataset_name': None, 'dataset_digest': None, 'model_id': None}
+             │     └ (<mlflow.tracking._tracking_service.client.TrackingServiceClient object at 0x7f0f86613b00>, '76913fc032344bf08a16cba8b74949aa...
+             └ <function TrackingServiceClient.log_metric at 0x7f0fab8d4ea0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py", line 388, in log_metric
+    self.store.log_metric(run_id, metric)
+    │    │                │       └ <Metric: dataset_digest=None, dataset_name=None, key='chunk number', model_id=None, run_id=None, step=30, timestamp=178061043...
+    │    │                └ '76913fc032344bf08a16cba8b74949aa'
+    │    └ <property object at 0x7f0fab8c2e80>
+    └ <mlflow.tracking._tracking_service.client.TrackingServiceClient object at 0x7f0f86613b00>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py", line 994, in log_metric
+    self._call_endpoint(LogMetric, req_body)
+    │    │              │          └ '{\n  "run_uuid": "76913fc032344bf08a16cba8b74949aa",\n  "key": "chunk number",\n  "value": 1.0,\n  "timestamp": 178061043108...
+    │    │              └ <class 'service_pb2.LogMetric'>
+    │    └ <function RestStore._call_endpoint at 0x7f0fac31ca40>
+    └ <mlflow.store.tracking.rest_store.RestStore object at 0x7f0f86613b30>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py", line 243, in _call_endpoint
+    return call_endpoint(
+           └ <function call_endpoint at 0x7f0fac174d60>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 658, in call_endpoint
+    response = verify_rest_response(
+               └ <function verify_rest_response at 0x7f0fac174400>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 365, in verify_rest_response
+    raise RestException(json.loads(response.text))
+          │             │    │     │        └ <property object at 0x7f1012ee72e0>
+          │             │    │     └ <Response [400]>
+          │             │    └ <function loads at 0x7f11198628e0>
+          │             └ <module 'json' from '/opt/conda/envs/cse234/lib/python3.12/json/__init__.py'>
+          └ <class 'mlflow.exceptions.RestException'>
+
+mlflow.exceptions.RestException: INVALID_PARAMETER_VALUE: The run 76913fc032344bf08a16cba8b74949aa must be in the 'active' state. Current state is deleted.
+2026-06-04 15:00:32 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:712 | Worker 0 shutdown requested
+2026-06-04 15:00:32 | schema-linking-qwen-baseline_28 | worker_0 | INFO | worker_manager.py:50 | Worker 0 process exiting
+2026-06-04 15:00:32 | schema-linking-qwen-baseline_28 | worker_0 | DEBUG | worker.py:712 | Worker 0 shutdown requested

@@ -1,0 +1,514 @@
+2026-05-30 15:57:36 | schema-linking-qwen-baseline_6 | experiment | INFO | experiment.py:104 | The previously running experiment schema-linking-qwen-baseline_5 was forcibly ended. Created a new experiment 'schema-linking-qwen-baseline_6' with Experiment ID: 7 and Metric Experiment ID: 7 at /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_6
+2026-05-30 15:57:36 | schema-linking-qwen-baseline_6 | experiment | INFO | experiment.py:106 | Running RapidFire AI version 0.15.2
+2026-05-30 15:57:37 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:67 | Found 1 workers/GPUs.
+2026-05-30 15:57:37 | schema-linking-qwen-baseline_6 | controller | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:57:37 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:95 | Controller initialized
+2026-05-30 15:57:37 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:594 | Set experiment task to Create Models.
+2026-05-30 15:57:37 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:607 | Saved datasets to /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_6/datasets.dill
+2026-05-30 15:57:37 | schema-linking-qwen-baseline_6 | controller | INFO | controller.py:613 | Set seed to 42
+2026-05-30 15:57:37 | schema-linking-qwen-baseline_6 | controller | INFO | metric_rfmetric_manager.py:141 | Created MLflow run: 81955c4be81b45b0926308f5b007f989, 1
+2026-05-30 15:57:37 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:200 | Populated MetricLogger with model config info for run 1.
+2026-05-30 15:57:37 | schema-linking-qwen-baseline_6 | controller | INFO | metric_rfmetric_manager.py:141 | Created MLflow run: aa097c4473ed445f891c450597383158, 2
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:200 | Populated MetricLogger with model config info for run 2.
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | controller | INFO | controller.py:220 | Created 2 runs - 
+{   1: {   'additional_kwargs.generation_config.max_new_tokens': 256,
+           'additional_kwargs.generation_config.repetition_penalty': 1.05,
+           'additional_kwargs.generation_config.temperature': 0.8,
+           'additional_kwargs.generation_config.top_k': 30,
+           'additional_kwargs.generation_config.top_p': 0.9,
+           'model_kwargs.device_map': 'auto',
+           'model_kwargs.use_cache': False,
+           'model_name': 'Qwen/Qwen2.5-1.5B-Instruct',
+           'model_type': 'causal_lm',
+           'peft_params.bias': 'none',
+           'peft_params.lora_alpha': 64,
+           'peft_params.lora_dropout': 0.05,
+           'peft_params.r': 32,
+           'peft_params.target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj'],
+           'tokenizer': None,
+           'tokenizer_kwargs': None,
+           'trainer_type': 'SFT',
+           'training_args.eval_steps': 4,
+           'training_args.eval_strategy': 'steps',
+           'training_args.fp16': True,
+           'training_args.gradient_accumulation_steps': 4,
+           'training_args.learning_rate': 2e-05,
+           'training_args.logging_steps': 4,
+           'training_args.lr_scheduler_type': 'cosine',
+           'training_args.max_grad_norm': 0.2,
+           'training_args.max_steps': 128,
+           'training_args.per_device_eval_batch_size': 4,
+           'training_args.per_device_train_batch_size': 4,
+           'training_args.save_steps': 16,
+           'training_args.save_strategy': 'steps',
+           'training_args.save_total_limit': 3,
+           'training_args.warmup_ratio': 0.05},
+    2: {   'additional_kwargs.generation_config.max_new_tokens': 256,
+           'additional_kwargs.generation_config.repetition_penalty': 1.05,
+           'additional_kwargs.generation_config.temperature': 0.8,
+           'additional_kwargs.generation_config.top_k': 30,
+           'additional_kwargs.generation_config.top_p': 0.9,
+           'model_kwargs.device_map': 'auto',
+           'model_kwargs.use_cache': False,
+           'model_name': 'TinyLlama/TinyLlama-1.1B-Chat-v1.0',
+           'model_type': 'causal_lm',
+           'peft_params.bias': 'none',
+           'peft_params.lora_alpha': 64,
+           'peft_params.lora_dropout': 0.05,
+           'peft_params.r': 32,
+           'peft_params.target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj'],
+           'tokenizer': None,
+           'tokenizer_kwargs': None,
+           'trainer_type': 'SFT',
+           'training_args.eval_steps': 4,
+           'training_args.eval_strategy': 'steps',
+           'training_args.fp16': True,
+           'training_args.gradient_accumulation_steps': 4,
+           'training_args.learning_rate': 2e-05,
+           'training_args.logging_steps': 4,
+           'training_args.lr_scheduler_type': 'cosine',
+           'training_args.max_grad_norm': 0.2,
+           'training_args.max_steps': 128,
+           'training_args.per_device_eval_batch_size': 4,
+           'training_args.per_device_train_batch_size': 4,
+           'training_args.save_steps': 16,
+           'training_args.save_strategy': 'steps',
+           'training_args.save_total_limit': 3,
+           'training_args.warmup_ratio': 0.05}}
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:223 | Got 2 runs for Initial.
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:227 | Completed creating models.
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:625 | Created models.
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:631 | Set experiment task to Training and Validation.
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | worker_manager | DEBUG | worker_manager.py:115 | Creating 1 worker processes...
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | worker_manager | DEBUG | worker_manager.py:121 | Starting worker processes in process group 6481
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | worker_manager | DEBUG | worker_manager.py:149 | Started Worker 0 with PID 6646
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | worker_manager | INFO | worker_manager.py:156 | Started 1 worker processes successfully
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:637 | Created 1 workers.
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | controller | INFO | controller.py:659 | Starting Training and Validation
+2026-05-30 15:57:38 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:886 | Scheduled run 1 on workers (0,) for chunk 0
+2026-05-30 15:57:52 | schema-linking-qwen-baseline_6 | worker_0 | DEBUG | worker.py:157 | Worker 0 initialized with PID 6646
+2026-05-30 15:57:52 | schema-linking-qwen-baseline_6 | worker_0 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:57:52 | schema-linking-qwen-baseline_6 | worker_0 | DEBUG | worker.py:192 | Loaded datasets
+2026-05-30 15:57:52 | schema-linking-qwen-baseline_6 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 1
+2026-05-30 15:57:52 | schema-linking-qwen-baseline_6 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 1 with chunk 0
+2026-05-30 15:59:50 | schema-linking-qwen-baseline_6 | worker-0-shm | DEBUG | shm_manager.py:348 | Saved base_model for run Qwen/Qwen2.5-1.5B-Instruct
+2026-05-30 16:01:23 | schema-linking-qwen-baseline_6 | worker_0 | DEBUG | worker.py:378 | Beginning training for run 1 on chunk 0
+2026-05-30 16:01:24 | schema-linking-qwen-baseline_6 | worker_0 | ERROR | worker.py:524 | Error during training for run 1: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+2026-05-30 16:01:25 | schema-linking-qwen-baseline_6 | worker_0 | ERROR | worker.py:683 | Error while running run_fit for run 1 and chunk 0: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 3
+               │     └ 123
+               └ <function _main at 0x7fad78baae80>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 3
+           │    └ <function BaseProcess._bootstrap at 0x7fad78c911c0>
+           └ <Process name='Process-2' parent=6481 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x7fad78c90720>
+    └ <Process name='Process-2' parent=6481 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Process name='Process-2' parent=6481 started>
+    │    │        │    └ (0, <DictProxy object, typeid 'dict' at 0x7faae5817dd0>, <AcquirerProxy object, typeid 'Lock' at 0x7faae3c40410>, <Event at 0...
+    │    │        └ <Process name='Process-2' parent=6481 started>
+    │    └ <function worker_process_target at 0x7fad2d372700>
+    └ <Process name='Process-2' parent=6481 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/utils/worker_manager.py", line 44, in worker_process_target
+    worker.serve_forever()
+    │      └ <function Worker.serve_forever at 0x7faae3af99e0>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7fad78b8f5c0>
+> File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+    │    └ <function Worker.run_fit at 0x7faae3af9940>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7fad78b8f5c0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 387, in run_fit
+    trainer_instance.train()
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           └ functools.partial(<bound method Trainer._inner_training_loop of <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrai...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   │    │             │      │       └ tensor(240, device='cuda:0')
+                   │    │             │      └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+                   │    │             │                [151644,   8948,    198,  ..., 151643, ...
+                   │    │             └ PeftModel(
+                   │    │                 (base_model): LoraModel(
+                   │    │                   (model): Qwen2ForCausalLM(
+                   │    │                     (model): Qwen2Model(
+                   │    │                       (embed_tokens): Embed...
+                   │    └ <function SFTTrainer.training_step at 0x7fab09b0e340>
+                   └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7fa6c0152810>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 904, in training_step
+    return super().training_step(*args, **kwargs)
+                                  │       └ {}
+                                  └ (PeftModel(
+                                      (base_model): LoraModel(
+                                        (model): Qwen2ForCausalLM(
+                                          (model): Qwen2Model(
+                                            (embed_tokens): Embe...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           │    │            │      │                          └ tensor(240, device='cuda:0')
+           │    │            │      └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+           │    │            │                [151644,   8948,    198,  ..., 151643, ...
+           │    │            └ PeftModel(
+           │    │                (base_model): LoraModel(
+           │    │                  (model): Qwen2ForCausalLM(
+           │    │                    (model): Qwen2Model(
+           │    │                      (embed_tokens): Embed...
+           │    └ <function SFTTrainer.compute_loss at 0x7fab09b0e2a0>
+           └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7fa6c0152810>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 858, in compute_loss
+    (loss, outputs) = super().compute_loss(
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 4110, in compute_loss
+    outputs = model(**inputs)
+              │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+              │                 [151644,   8948,    198,  ..., 151643, ...
+              └ PeftModel(
+                  (base_model): LoraModel(
+                    (model): Qwen2ForCausalLM(
+                      (model): Qwen2Model(
+                        (embed_tokens): Embed...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+           │    │           │                 [151644,   8948,    198,  ..., 151643, ...
+           │    │           └ ()
+           │    └ <function Module._call_impl at 0x7fad0b134b80>
+           └ PeftModel(
+               (base_model): LoraModel(
+                 (model): Qwen2ForCausalLM(
+                   (model): Qwen2Model(
+                     (embed_tokens): Embed...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+           │             │                 [151644,   8948,    198,  ..., 151643, ...
+           │             └ ()
+           └ <bound method convert_outputs_to_fp32.<locals>.forward of PeftModel(
+               (base_model): LoraModel(
+                 (model): Qwen2ForCausalLM...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/accelerate/utils/operations.py", line 823, in forward
+    return model_forward(*args, **kwargs)
+           │              │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+           │              │                 [151644,   8948,    198,  ..., 151643, ...
+           │              └ (PeftModel(
+           │                  (base_model): LoraModel(
+           │                    (model): Qwen2ForCausalLM(
+           │                      (model): Qwen2Model(
+           │                        (embed_tokens): Embe...
+           └ <accelerate.utils.operations.ConvertOutputsToFp32 object at 0x7fa698a92810>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/accelerate/utils/operations.py", line 811, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+           │               │    │              │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+           │               │    │              │                 [151644,   8948,    198,  ..., 151643, ...
+           │               │    │              └ (PeftModel(
+           │               │    │                  (base_model): LoraModel(
+           │               │    │                    (model): Qwen2ForCausalLM(
+           │               │    │                      (model): Qwen2Model(
+           │               │    │                        (embed_tokens): Embe...
+           │               │    └ <function PeftModel.forward at 0x7fa6981a1300>
+           │               └ <accelerate.utils.operations.ConvertOutputsToFp32 object at 0x7fa698a92810>
+           └ <function convert_to_fp32 at 0x7fab122f5440>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+           │     │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+           │     │                 [151644,   8948,    198,  ..., 151643, ...
+           │     └ (PeftModel(
+           │         (base_model): LoraModel(
+           │           (model): Qwen2ForCausalLM(
+           │             (model): Qwen2Model(
+           │               (embed_tokens): Embe...
+           └ <function PeftModel.forward at 0x7fab0fb54e00>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/peft_model.py", line 945, in forward
+    return self.get_base_model()(*args, **kwargs)
+           │    │                 │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+           │    │                 │                 [151644,   8948,    198,  ..., 151643, ...
+           │    │                 └ ()
+           │    └ <function PeftModel.get_base_model at 0x7fab0fb55120>
+           └ PeftModel(
+               (base_model): LoraModel(
+                 (model): Qwen2ForCausalLM(
+                   (model): Qwen2Model(
+                     (embed_tokens): Embed...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+           │    │           │                 [151644,   8948,    198,  ..., 151643, ...
+           │    │           └ ()
+           │    └ <function Module._call_impl at 0x7fad0b134b80>
+           └ Qwen2ForCausalLM(
+               (model): Qwen2Model(
+                 (embed_tokens): Embedding(151936, 1536)
+                 (layers): ModuleList(
+                   (0-27): ...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+           │             │                 [151644,   8948,    198,  ..., 151643, ...
+           │             └ ()
+           └ <bound method Qwen2ForCausalLM.forward of Qwen2ForCausalLM(
+               (model): Qwen2Model(
+                 (embed_tokens): Embedding(151936, 1536...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+             │    │      │       └ {'input_ids': tensor([[151644,   8948,    198,  ..., 151643, 151643, 151643],
+             │    │      │                 [151644,   8948,    198,  ..., 151643, ...
+             │    │      └ ()
+             │    └ Qwen2ForCausalLM(
+             │        (model): Qwen2Model(
+             │          (embed_tokens): Embedding(151936, 1536)
+             │          (layers): ModuleList(
+             │            (0-27): ...
+             └ <function Qwen2ForCausalLM.forward at 0x7faae1a90a40>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 467, in forward
+    loss = self.loss_function(logits=logits, labels=labels, vocab_size=self.config.vocab_size, **kwargs)
+           │    │                    │              │                  │    │      │             └ {'num_items_in_batch': tensor(240, device='cuda:0')}
+           │    │                    │              │                  │    │      └ 151936
+           │    │                    │              │                  │    └ Qwen2Config {
+           │    │                    │              │                  │        "architectures": [
+           │    │                    │              │                  │          "Qwen2ForCausalLM"
+           │    │                    │              │                  │        ],
+           │    │                    │              │                  │        "attention_dropout": 0.0,
+           │    │                    │              │                  │        "dtype": "bfloat16",
+           │    │                    │              │                  │        "eos_toke...
+           │    │                    │              │                  └ Qwen2ForCausalLM(
+           │    │                    │              │                      (model): Qwen2Model(
+           │    │                    │              │                        (embed_tokens): Embedding(151936, 1536)
+           │    │                    │              │                        (layers): ModuleList(
+           │    │                    │              │                          (0-27): ...
+           │    │                    │              └ tensor([[-100, -100, -100,  ..., -100, -100, -100],
+           │    │                    │                        [-100, -100, -100,  ..., -100, -100, -100],
+           │    │                    │                        [-100, -100, ...
+           │    │                    └ tensor([[[ 6.6797, 11.9609,  9.3594,  ...,  0.1101,  0.1101,  0.1100],
+           │    │                               [ 5.5039,  6.8984,  8.3438,  ...,  0.4829,  0...
+           │    └ <property object at 0x7fab1008e610>
+           └ Qwen2ForCausalLM(
+               (model): Qwen2Model(
+                 (embed_tokens): Embedding(151936, 1536)
+                 (layers): ModuleList(
+                   (0-27): ...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/loss/loss_utils.py", line 55, in ForCausalLMLoss
+    logits = logits.float()
+             │      └ <method 'float' of 'torch._C.TensorBase' objects>
+             └ tensor([[[ 6.6797, 11.9609,  9.3594,  ...,  0.1101,  0.1101,  0.1100],
+                        [ 5.5039,  6.8984,  8.3438,  ...,  0.4829,  0...
+
+RuntimeError: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+2026-05-30 16:01:26 | schema-linking-qwen-baseline_6 | controller-shm | WARNING | shm_manager.py:492 | Model '1' not found in shared memory during delete
+2026-05-30 16:01:26 | schema-linking-qwen-baseline_6 | controller | ERROR | controller.py:788 | Run 1 has failed: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. Traceback (most recent call last):
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 387, in run_fit
+    trainer_instance.train()
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 904, in training_step
+    return super().training_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 858, in compute_loss
+    (loss, outputs) = super().compute_loss(
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 4110, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/accelerate/utils/operations.py", line 823, in forward
+    return model_forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/accelerate/utils/operations.py", line 811, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/peft_model.py", line 945, in forward
+    return self.get_base_model()(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 467, in forward
+    loss = self.loss_function(logits=logits, labels=labels, vocab_size=self.config.vocab_size, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/loss/loss_utils.py", line 55, in ForCausalLMLoss
+    logits = logits.float()
+             ^^^^^^^^^^^^^^
+RuntimeError: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+
+2026-05-30 16:01:26 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:789 | Removed run 1 from scheduler
+2026-05-30 16:01:26 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:886 | Scheduled run 2 on workers (0,) for chunk 0
+2026-05-30 16:01:26 | schema-linking-qwen-baseline_6 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 2
+2026-05-30 16:01:26 | schema-linking-qwen-baseline_6 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 2 with chunk 0
+2026-05-30 16:01:27 | schema-linking-qwen-baseline_6 | worker_0 | ERROR | worker.py:524 | Error during training for run 2: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+2026-05-30 16:01:28 | schema-linking-qwen-baseline_6 | worker_0 | ERROR | worker.py:683 | Error while running run_fit for run 2 and chunk 0: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 3
+               │     └ 123
+               └ <function _main at 0x7fad78baae80>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 3
+           │    └ <function BaseProcess._bootstrap at 0x7fad78c911c0>
+           └ <Process name='Process-2' parent=6481 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x7fad78c90720>
+    └ <Process name='Process-2' parent=6481 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Process name='Process-2' parent=6481 started>
+    │    │        │    └ (0, <DictProxy object, typeid 'dict' at 0x7faae5817dd0>, <AcquirerProxy object, typeid 'Lock' at 0x7faae3c40410>, <Event at 0...
+    │    │        └ <Process name='Process-2' parent=6481 started>
+    │    └ <function worker_process_target at 0x7fad2d372700>
+    └ <Process name='Process-2' parent=6481 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/utils/worker_manager.py", line 44, in worker_process_target
+    worker.serve_forever()
+    │      └ <function Worker.serve_forever at 0x7faae3af99e0>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7fad78b8f5c0>
+> File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+    │    └ <function Worker.run_fit at 0x7faae3af9940>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7fad78b8f5c0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 354, in run_fit
+    trainer_instance, base_model_name = create_trainer_instance(
+                                        └ <function create_trainer_instance at 0x7fab0c54bba0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 397, in create_trainer_instance
+    model_instance, tokenizer = load_checkpoint_from_shared_memory(
+                                └ <function load_checkpoint_from_shared_memory at 0x7fab09ba6980>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/checkpoint_utils.py", line 402, in load_checkpoint_from_shared_memory
+    base_model, tokenizer = create_model_instance(
+    │                       └ <function create_model_instance at 0x7fab09ba6520>
+    └ None
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/checkpoint_utils.py", line 104, in create_model_instance
+    model_instance, tokenizer = create_model_fn(model_config)
+                                │               └ {'trainer_type': 'SFT', 'training_args': {'learning_rate': 2e-05, 'lr_scheduler_type': 'cosine', 'per_device_train_batch_size...
+                                └ <function create_model at 0x7faae02fbec0>
+
+  File "/tmp/ipykernel_6481/3211382490.py", line 9, in create_model
+
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+           │           └ <classmethod(<function PreTrainedModel.from_pretrained at 0x7fab1009d4e0>)>
+           └ <class 'transformers.models.llama.modeling_llama.LlamaForCausalLM'>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           │     │       └ {'config': LlamaConfig {
+           │     │           "architectures": [
+           │     │             "LlamaForCausalLM"
+           │     │           ],
+           │     │           "attention_bias": false,
+           │     │           "attention_dropout": 0...
+           │     └ (<class 'transformers.models.llama.modeling_llama.LlamaForCausalLM'>, 'TinyLlama/TinyLlama-1.1B-Chat-v1.0')
+           └ <function PreTrainedModel.from_pretrained at 0x7fab1009d440>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        │   └ <classmethod(<function PreTrainedModel._load_pretrained_model at 0x7fab1009d800>)>
+        └ <class 'transformers.models.llama.modeling_llama.LlamaForCausalLM'>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5468, in _load_pretrained_model
+    _error_msgs, disk_offload_index = load_shard_file(args)
+                                      │               └ ('/tmp/xdg-cache/huggingface/hub/models--TinyLlama--TinyLlama-1.1B-Chat-v1.0/snapshots/fe8a4ea1ffedaf415f4da2f062534de366a451...
+                                      └ <function load_shard_file at 0x7fab100998a0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 843, in load_shard_file
+    disk_offload_index = _load_state_dict_into_meta_model(
+                         └ <function _load_state_dict_into_meta_model at 0x7fab10099620>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           │     │       └ {'device_map': {'': 'cuda:0'}, 'disk_offload_folder': None, 'disk_offload_index': None, 'hf_quantizer': None, 'keep_in_fp32_r...
+           │     └ (LlamaForCausalLM(
+           │         (model): LlamaModel(
+           │           (embed_tokens): Embedding(32000, 2048)
+           │           (layers): ModuleList(
+           │             (0-21): ...
+           └ <function _load_state_dict_into_meta_model at 0x7fab10099800>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 748, in _load_state_dict_into_meta_model
+    param = param[...]
+            └ <builtins.PySafeSlice object at 0x7faae031ae20>
+
+RuntimeError: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+2026-05-30 16:01:28 | schema-linking-qwen-baseline_6 | controller-shm | WARNING | shm_manager.py:492 | Model '2' not found in shared memory during delete
+2026-05-30 16:01:28 | schema-linking-qwen-baseline_6 | controller | ERROR | controller.py:788 | Run 2 has failed: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. Traceback (most recent call last):
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 354, in run_fit
+    trainer_instance, base_model_name = create_trainer_instance(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 397, in create_trainer_instance
+    model_instance, tokenizer = load_checkpoint_from_shared_memory(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/checkpoint_utils.py", line 402, in load_checkpoint_from_shared_memory
+    base_model, tokenizer = create_model_instance(
+                            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/checkpoint_utils.py", line 104, in create_model_instance
+    model_instance, tokenizer = create_model_fn(model_config)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_6481/3211382490.py", line 9, in create_model
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5468, in _load_pretrained_model
+    _error_msgs, disk_offload_index = load_shard_file(args)
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 843, in load_shard_file
+    disk_offload_index = _load_state_dict_into_meta_model(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_utils.py", line 748, in _load_state_dict_into_meta_model
+    param = param[...]
+            ~~~~~^^^^^
+RuntimeError: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+
+2026-05-30 16:01:28 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:789 | Removed run 2 from scheduler
+2026-05-30 16:01:28 | schema-linking-qwen-baseline_6 | controller | INFO | controller.py:848 | Scheduler indicates all runs have completed all chunks
+2026-05-30 16:01:28 | schema-linking-qwen-baseline_6 | controller | DEBUG | controller.py:904 | Set experiment task to Idle.
+2026-05-30 16:01:28 | schema-linking-qwen-baseline_6 | worker_manager | DEBUG | worker_manager.py:163 | WorkerManager shutdown initiated...
+2026-05-30 16:01:28 | schema-linking-qwen-baseline_6 | worker_manager | DEBUG | worker_manager.py:167 | Signaling graceful shutdown...
+2026-05-30 16:01:29 | schema-linking-qwen-baseline_6 | worker_0 | DEBUG | worker.py:712 | Worker 0 shutdown requested
+2026-05-30 16:01:29 | schema-linking-qwen-baseline_6 | worker_0 | INFO | worker_manager.py:50 | Worker 0 process exiting
+2026-05-30 16:01:29 | schema-linking-qwen-baseline_6 | worker_0 | DEBUG | worker.py:712 | Worker 0 shutdown requested
+2026-05-30 16:01:31 | schema-linking-qwen-baseline_6 | worker_manager | DEBUG | worker_manager.py:186 | All workers shutdown gracefully
+2026-05-30 16:01:31 | schema-linking-qwen-baseline_6 | worker_manager | DEBUG | worker_manager.py:163 | WorkerManager shutdown initiated...
+2026-05-30 16:01:31 | schema-linking-qwen-baseline_6 | worker_manager | DEBUG | worker_manager.py:167 | Signaling graceful shutdown...
+2026-05-30 16:01:31 | schema-linking-qwen-baseline_6 | worker_manager | DEBUG | worker_manager.py:186 | All workers shutdown gracefully
+2026-05-30 16:01:32 | schema-linking-qwen-baseline_6 | schema-linking-qwen-baseline_6 | DEBUG | experiment_utils.py:271 | Reset experiment states and set current experiment task to idle
+2026-05-30 16:01:32 | schema-linking-qwen-baseline_6 | schema-linking-qwen-baseline_6 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 16:01:32 | schema-linking-qwen-baseline_6 | schema-linking-qwen-baseline_6 | INFO | metric_mlflow_manager.py:133 | No active MLflow run to clear
+2026-05-30 16:01:32 | schema-linking-qwen-baseline_6 | schema-linking-qwen-baseline_6 | INFO | experiment_utils.py:240 | Experiment schema-linking-qwen-baseline_6 ended

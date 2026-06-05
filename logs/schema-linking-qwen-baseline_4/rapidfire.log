@@ -1,0 +1,769 @@
+2026-05-30 15:36:12 | schema-linking-qwen-baseline_4 | experiment | INFO | experiment.py:104 | An experiment with the same name already exists. Created a new experiment 'schema-linking-qwen-baseline_4' with Experiment ID: 5 and Metric Experiment ID: 5 at /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_4
+2026-05-30 15:36:12 | schema-linking-qwen-baseline_4 | experiment | INFO | experiment.py:106 | Running RapidFire AI version 0.15.2
+2026-05-30 15:36:13 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:67 | Found 1 workers/GPUs.
+2026-05-30 15:36:13 | schema-linking-qwen-baseline_4 | controller | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:36:13 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:95 | Controller initialized
+2026-05-30 15:36:13 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:594 | Set experiment task to Create Models.
+2026-05-30 15:36:13 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:607 | Saved datasets to /home/chc016/rapidfireai/rapidfire_experiments/schema-linking-qwen-baseline_4/datasets.dill
+2026-05-30 15:36:13 | schema-linking-qwen-baseline_4 | controller | INFO | controller.py:613 | Set seed to 42
+2026-05-30 15:36:13 | schema-linking-qwen-baseline_4 | controller | INFO | metric_rfmetric_manager.py:141 | Created MLflow run: 6307994c0ab247f7a5b9913001bc9e50, 1
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:200 | Populated MetricLogger with model config info for run 1.
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | INFO | metric_rfmetric_manager.py:141 | Created MLflow run: 727286ce0b1b45ceab9ed5beb3f07da6, 2
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:200 | Populated MetricLogger with model config info for run 2.
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | INFO | controller.py:220 | Created 2 runs - 
+{   1: {   'additional_kwargs.generation_config.max_new_tokens': 256,
+           'additional_kwargs.generation_config.repetition_penalty': 1.05,
+           'additional_kwargs.generation_config.temperature': 0.8,
+           'additional_kwargs.generation_config.top_k': 30,
+           'additional_kwargs.generation_config.top_p': 0.9,
+           'model_kwargs.device_map': 'auto',
+           'model_kwargs.use_cache': False,
+           'model_name': 'google/gemma-2-2b',
+           'model_type': 'causal_lm',
+           'peft_params.bias': 'none',
+           'peft_params.lora_alpha': 64,
+           'peft_params.lora_dropout': 0.05,
+           'peft_params.r': 32,
+           'peft_params.target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj'],
+           'tokenizer': None,
+           'tokenizer_kwargs': None,
+           'trainer_type': 'SFT',
+           'training_args.eval_steps': 4,
+           'training_args.eval_strategy': 'steps',
+           'training_args.fp16': True,
+           'training_args.gradient_accumulation_steps': 4,
+           'training_args.learning_rate': 2e-05,
+           'training_args.logging_steps': 4,
+           'training_args.lr_scheduler_type': 'cosine',
+           'training_args.max_grad_norm': 0.2,
+           'training_args.max_steps': 128,
+           'training_args.per_device_eval_batch_size': 4,
+           'training_args.per_device_train_batch_size': 4,
+           'training_args.save_steps': 16,
+           'training_args.save_strategy': 'steps',
+           'training_args.save_total_limit': 3,
+           'training_args.warmup_ratio': 0.05},
+    2: {   'additional_kwargs.generation_config.max_new_tokens': 256,
+           'additional_kwargs.generation_config.repetition_penalty': 1.05,
+           'additional_kwargs.generation_config.temperature': 0.8,
+           'additional_kwargs.generation_config.top_k': 30,
+           'additional_kwargs.generation_config.top_p': 0.9,
+           'model_kwargs.device_map': 'auto',
+           'model_kwargs.use_cache': False,
+           'model_name': 'TinyLlama/TinyLlama-1.1B-Chat-v1.0',
+           'model_type': 'causal_lm',
+           'peft_params.bias': 'none',
+           'peft_params.lora_alpha': 64,
+           'peft_params.lora_dropout': 0.05,
+           'peft_params.r': 32,
+           'peft_params.target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj'],
+           'tokenizer': None,
+           'tokenizer_kwargs': None,
+           'trainer_type': 'SFT',
+           'training_args.eval_steps': 4,
+           'training_args.eval_strategy': 'steps',
+           'training_args.fp16': True,
+           'training_args.gradient_accumulation_steps': 4,
+           'training_args.learning_rate': 2e-05,
+           'training_args.logging_steps': 4,
+           'training_args.lr_scheduler_type': 'cosine',
+           'training_args.max_grad_norm': 0.2,
+           'training_args.max_steps': 128,
+           'training_args.per_device_eval_batch_size': 4,
+           'training_args.per_device_train_batch_size': 4,
+           'training_args.warmup_ratio': 0.05}}
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:223 | Got 2 runs for Initial.
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:227 | Completed creating models.
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:625 | Created models.
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:631 | Set experiment task to Training and Validation.
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | worker_manager | DEBUG | worker_manager.py:115 | Creating 1 worker processes...
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | worker_manager | DEBUG | worker_manager.py:121 | Starting worker processes in process group 3012
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | worker_manager | DEBUG | worker_manager.py:149 | Started Worker 0 with PID 3726
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | worker_manager | INFO | worker_manager.py:156 | Started 1 worker processes successfully
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:637 | Created 1 workers.
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | INFO | controller.py:659 | Starting Training and Validation
+2026-05-30 15:36:14 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:886 | Scheduled run 1 on workers (0,) for chunk 0
+2026-05-30 15:36:28 | schema-linking-qwen-baseline_4 | worker_0 | DEBUG | worker.py:157 | Worker 0 initialized with PID 3726
+2026-05-30 15:36:28 | schema-linking-qwen-baseline_4 | worker_0 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:36:29 | schema-linking-qwen-baseline_4 | worker_0 | DEBUG | worker.py:192 | Loaded datasets
+2026-05-30 15:36:29 | schema-linking-qwen-baseline_4 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 1
+2026-05-30 15:36:29 | schema-linking-qwen-baseline_4 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 1 with chunk 0
+2026-05-30 15:38:37 | schema-linking-qwen-baseline_4 | worker-0-shm | DEBUG | shm_manager.py:348 | Saved base_model for run google/gemma-2-2b
+2026-05-30 15:38:52 | schema-linking-qwen-baseline_4 | worker_0 | ERROR | worker.py:524 | Error during training for run 1: Cannot use chat template functions because tokenizer.chat_template is not set and no template argument was passed! For information about writing templates and setting the tokenizer.chat_template attribute, please see the documentation at https://huggingface.co/docs/transformers/main/en/chat_templating
+2026-05-30 15:38:53 | schema-linking-qwen-baseline_4 | worker_0 | ERROR | worker.py:683 | Error while running run_fit for run 1 and chunk 0: Cannot use chat template functions because tokenizer.chat_template is not set and no template argument was passed! For information about writing templates and setting the tokenizer.chat_template attribute, please see the documentation at https://huggingface.co/docs/transformers/main/en/chat_templating
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 3
+               │     └ 125
+               └ <function _main at 0x7fb14de0ee80>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 3
+           │    └ <function BaseProcess._bootstrap at 0x7fb14def51c0>
+           └ <Process name='Process-2' parent=3012 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x7fb14def4720>
+    └ <Process name='Process-2' parent=3012 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Process name='Process-2' parent=3012 started>
+    │    │        │    └ (0, <DictProxy object, typeid 'dict' at 0x7faeb906bc20>, <AcquirerProxy object, typeid 'Lock' at 0x7faeb8ee4d10>, <Event at 0...
+    │    │        └ <Process name='Process-2' parent=3012 started>
+    │    └ <function worker_process_target at 0x7fb0da572700>
+    └ <Process name='Process-2' parent=3012 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/utils/worker_manager.py", line 44, in worker_process_target
+    worker.serve_forever()
+    │      └ <function Worker.serve_forever at 0x7faeb8f519e0>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7fb14ddf3170>
+> File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+    │    └ <function Worker.run_fit at 0x7faeb8f51940>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7fb14ddf3170>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 354, in run_fit
+    trainer_instance, base_model_name = create_trainer_instance(
+                                        └ <function create_trainer_instance at 0x7faee1d77ba0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 458, in create_trainer_instance
+    trainer = _create_trainer_by_type(
+              └ <function _create_trainer_by_type at 0x7faedf0f0360>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 752, in _create_trainer_by_type
+    trainer = create_rf_trainer(
+              └ <function create_rf_trainer at 0x7faee1d77f60>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 356, in create_rf_trainer
+    return RFTrainer(
+           └ <class 'rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer'>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 56, in __init__
+    super().__init__(**kwargs)
+                       └ {'model': PeftModel(
+                           (base_model): LoraModel(
+                             (model): Gemma2ForCausalLM(
+                               (model): Gemma2Model(
+                                 (embed_to...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 519, in __init__
+    train_dataset = self._prepare_dataset(
+                    │    └ <function SFTTrainer._prepare_dataset at 0x7faedf00e160>
+                    └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7fac86502db0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 800, in _prepare_dataset
+    dataset = dataset.map(
+              │       └ <function Dataset.map at 0x7faee4a534c0>
+              └ Dataset({
+                    features: ['question_id', 'db_id', 'question', 'gold_sql', 'schema_links', 'prompt_text', 'completion_text', 'p...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 575, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+         │                                 │    │      │       └ {'fn_kwargs': {'processing_class': GemmaTokenizerFast(name_or_path='google/gemma-2-2b', vocab_size=256000, model_max_length=1...
+         │                                 │    │      └ (<function SFTTrainer._prepare_dataset.<locals>.tokenize at 0x7fac6c7b28e0>,)
+         │                                 │    └ Dataset({
+         │                                 │          features: ['question_id', 'db_id', 'question', 'gold_sql', 'schema_links', 'prompt_text', 'completion_text', 'p...
+         │                                 └ <function Dataset.map at 0x7faee4a53420>
+         └ typing.Union
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3633, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+        │     │     │          │       │             └ {'shard': Dataset({
+        │     │     │          │       │                   features: ['question_id', 'db_id', 'question', 'gold_sql', 'schema_links', 'prompt_text', 'completion...
+        │     │     │          │       └ <staticmethod(<function Dataset._map_single at 0x7faee4a53560>)>
+        │     │     │          └ <class 'datasets.arrow_dataset.Dataset'>
+        │     │     └ 0
+        │     └ False
+        └ None
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3973, in _map_single
+    for i, example in iter_outputs(shard_iterable):
+                      │            └ <enumerate object at 0x7fac6c7cf9c0>
+                      └ <function Dataset._map_single.<locals>.iter_outputs at 0x7fac6c7b1d00>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3951, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+          │  │              │        │         └ 0
+          │  │              │        └ 0
+          │  │              └ pyarrow.Table
+          │  │                question_id: int64
+          │  │                db_id: string
+          │  │                question: string
+          │  │                gold_sql: string
+          │  │                schema_links: struct<ACC_EM_Chronic_Absentee...
+          │  └ <function Dataset._map_single.<locals>.apply_function at 0x7fac6c7b2b60>
+          └ 0
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3872, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+                       │         │         │                  └ {'processing_class': GemmaTokenizerFast(name_or_path='google/gemma-2-2b', vocab_size=256000, model_max_length=100000000000000...
+                       │         │         └ ()
+                       │         └ [{'question_id': 1, 'db_id': 'NTSB', 'question': 'Show a count of injuries by body region where the injury severity is critic...
+                       └ <function SFTTrainer._prepare_dataset.<locals>.tokenize at 0x7fac6c7b28e0>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 744, in tokenize
+    prompt_ids = processing_class.apply_chat_template(
+                 │                └ <function PreTrainedTokenizerBase.apply_chat_template at 0x7faf97bbbc40>
+                 └ GemmaTokenizerFast(name_or_path='google/gemma-2-2b', vocab_size=256000, model_max_length=1000000000000000019884624838656, is_...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1647, in apply_chat_template
+    chat_template = self.get_chat_template(chat_template, tools)
+                    │    │                 │              └ None
+                    │    │                 └ None
+                    │    └ <function PreTrainedTokenizerBase.get_chat_template at 0x7faf97bbbd80>
+                    └ GemmaTokenizerFast(name_or_path='google/gemma-2-2b', vocab_size=256000, model_max_length=1000000000000000019884624838656, is_...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1825, in get_chat_template
+    raise ValueError(
+
+ValueError: Cannot use chat template functions because tokenizer.chat_template is not set and no template argument was passed! For information about writing templates and setting the tokenizer.chat_template attribute, please see the documentation at https://huggingface.co/docs/transformers/main/en/chat_templating
+2026-05-30 15:38:53 | schema-linking-qwen-baseline_4 | controller-shm | WARNING | shm_manager.py:492 | Model '1' not found in shared memory during delete
+2026-05-30 15:38:53 | schema-linking-qwen-baseline_4 | controller | ERROR | controller.py:788 | Run 1 has failed: Cannot use chat template functions because tokenizer.chat_template is not set and no template argument was passed! For information about writing templates and setting the tokenizer.chat_template attribute, please see the documentation at https://huggingface.co/docs/transformers/main/en/chat_templatingTraceback (most recent call last):
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 354, in run_fit
+    trainer_instance, base_model_name = create_trainer_instance(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 458, in create_trainer_instance
+    trainer = _create_trainer_by_type(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 752, in _create_trainer_by_type
+    trainer = create_rf_trainer(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 356, in create_rf_trainer
+    return RFTrainer(
+           ^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/ml/trainer.py", line 56, in __init__
+    super().__init__(**kwargs)
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 519, in __init__
+    train_dataset = self._prepare_dataset(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 800, in _prepare_dataset
+    dataset = dataset.map(
+              ^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 575, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3633, in map
+    for rank, done, content in Dataset._map_single(**unprocessed_kwargs):
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3973, in _map_single
+    for i, example in iter_outputs(shard_iterable):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3951, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 3872, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 744, in tokenize
+    prompt_ids = processing_class.apply_chat_template(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1647, in apply_chat_template
+    chat_template = self.get_chat_template(chat_template, tools)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1825, in get_chat_template
+    raise ValueError(
+ValueError: Cannot use chat template functions because tokenizer.chat_template is not set and no template argument was passed! For information about writing templates and setting the tokenizer.chat_template attribute, please see the documentation at https://huggingface.co/docs/transformers/main/en/chat_templating
+
+2026-05-30 15:38:53 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:789 | Removed run 1 from scheduler
+2026-05-30 15:38:53 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:886 | Scheduled run 2 on workers (0,) for chunk 0
+2026-05-30 15:38:54 | schema-linking-qwen-baseline_4 | worker_0 | DEBUG | worker.py:667 | Received task WorkerTask.TRAIN_VAL for run 2
+2026-05-30 15:38:54 | schema-linking-qwen-baseline_4 | worker_0 | DEBUG | worker.py:205 | Received run_fit on worker for run 2 with chunk 0
+2026-05-30 15:40:18 | schema-linking-qwen-baseline_4 | worker-0-shm | DEBUG | shm_manager.py:348 | Saved base_model for run TinyLlama/TinyLlama-1.1B-Chat-v1.0
+2026-05-30 15:41:33 | schema-linking-qwen-baseline_4 | worker_0 | DEBUG | worker.py:378 | Beginning training for run 2 on chunk 0
+2026-05-30 15:41:35 | schema-linking-qwen-baseline_4 | worker_0 | ERROR | worker.py:524 | Error during training for run 2: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+2026-05-30 15:41:36 | schema-linking-qwen-baseline_4 | worker_0 | ERROR | worker.py:683 | Error while running run_fit for run 2 and chunk 0: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 3
+               │     └ 125
+               └ <function _main at 0x7fb14de0ee80>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 3
+           │    └ <function BaseProcess._bootstrap at 0x7fb14def51c0>
+           └ <Process name='Process-2' parent=3012 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x7fb14def4720>
+    └ <Process name='Process-2' parent=3012 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Process name='Process-2' parent=3012 started>
+    │    │        │    └ (0, <DictProxy object, typeid 'dict' at 0x7faeb906bc20>, <AcquirerProxy object, typeid 'Lock' at 0x7faeb8ee4d10>, <Event at 0...
+    │    │        └ <Process name='Process-2' parent=3012 started>
+    │    └ <function worker_process_target at 0x7fb0da572700>
+    └ <Process name='Process-2' parent=3012 started>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/utils/worker_manager.py", line 44, in worker_process_target
+    worker.serve_forever()
+    │      └ <function Worker.serve_forever at 0x7faeb8f519e0>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7fb14ddf3170>
+> File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+    │    └ <function Worker.run_fit at 0x7faeb8f51940>
+    └ <rapidfireai.fit.backend.worker.Worker object at 0x7fb14ddf3170>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 387, in run_fit
+    trainer_instance.train()
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           └ functools.partial(<bound method Trainer._inner_training_loop of <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrai...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   │    │             │      │       └ tensor(202, device='cuda:0')
+                   │    │             │      └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+                   │    │             │                [  529, 29989,  5205,  ...,  5244, 29918,  98...
+                   │    │             └ PeftModel(
+                   │    │                 (base_model): LoraModel(
+                   │    │                   (model): LlamaForCausalLM(
+                   │    │                     (model): LlamaModel(
+                   │    │                       (embed_tokens): Embed...
+                   │    └ <function SFTTrainer.training_step at 0x7faedf00e340>
+                   └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7fac6c758830>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 904, in training_step
+    return super().training_step(*args, **kwargs)
+                                  │       └ {}
+                                  └ (PeftModel(
+                                      (base_model): LoraModel(
+                                        (model): LlamaForCausalLM(
+                                          (model): LlamaModel(
+                                            (embed_tokens): Embe...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           │    │            │      │                          └ tensor(202, device='cuda:0')
+           │    │            │      └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │    │            │                [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │    │            └ PeftModel(
+           │    │                (base_model): LoraModel(
+           │    │                  (model): LlamaForCausalLM(
+           │    │                    (model): LlamaModel(
+           │    │                      (embed_tokens): Embed...
+           │    └ <function SFTTrainer.compute_loss at 0x7faedf00e2a0>
+           └ <rapidfireai.fit.ml.trainer.create_rf_trainer.<locals>.RFTrainer object at 0x7fac6c758830>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 858, in compute_loss
+    (loss, outputs) = super().compute_loss(
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 4110, in compute_loss
+    outputs = model(**inputs)
+              │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+              │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+              └ PeftModel(
+                  (base_model): LoraModel(
+                    (model): LlamaForCausalLM(
+                      (model): LlamaModel(
+                        (embed_tokens): Embed...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │    │           │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │    │           └ ()
+           │    └ <function Module._call_impl at 0x7fb0b3338b80>
+           └ PeftModel(
+               (base_model): LoraModel(
+                 (model): LlamaForCausalLM(
+                   (model): LlamaModel(
+                     (embed_tokens): Embed...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │             │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │             └ ()
+           └ <bound method convert_outputs_to_fp32.<locals>.forward of PeftModel(
+               (base_model): LoraModel(
+                 (model): LlamaForCausalLM...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/accelerate/utils/operations.py", line 823, in forward
+    return model_forward(*args, **kwargs)
+           │              │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │              │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │              └ (PeftModel(
+           │                  (base_model): LoraModel(
+           │                    (model): LlamaForCausalLM(
+           │                      (model): LlamaModel(
+           │                        (embed_tokens): Embe...
+           └ <accelerate.utils.operations.ConvertOutputsToFp32 object at 0x7fac185d6e40>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/accelerate/utils/operations.py", line 811, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+           │               │    │              │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │               │    │              │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │               │    │              └ (PeftModel(
+           │               │    │                  (base_model): LoraModel(
+           │               │    │                    (model): LlamaForCausalLM(
+           │               │    │                      (model): LlamaModel(
+           │               │    │                        (embed_tokens): Embe...
+           │               │    └ <function PeftModel.forward at 0x7fac6c22e840>
+           │               └ <accelerate.utils.operations.ConvertOutputsToFp32 object at 0x7fac185d6e40>
+           └ <function convert_to_fp32 at 0x7faee8421440>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+           │     │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │     │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │     └ (PeftModel(
+           │         (base_model): LoraModel(
+           │           (model): LlamaForCausalLM(
+           │             (model): LlamaModel(
+           │               (embed_tokens): Embe...
+           └ <function PeftModel.forward at 0x7faee584ce00>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/peft_model.py", line 945, in forward
+    return self.get_base_model()(*args, **kwargs)
+           │    │                 │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │    │                 │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │    │                 └ ()
+           │    └ <function PeftModel.get_base_model at 0x7faee584d120>
+           └ PeftModel(
+               (base_model): LoraModel(
+                 (model): LlamaForCausalLM(
+                   (model): LlamaModel(
+                     (embed_tokens): Embed...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │    │           │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │    │           └ ()
+           │    └ <function Module._call_impl at 0x7fb0b3338b80>
+           └ LlamaForCausalLM(
+               (model): LlamaModel(
+                 (embed_tokens): Embedding(32000, 2048)
+                 (layers): ModuleList(
+                   (0-21): 2...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │             │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │             └ ()
+           └ <bound method LlamaForCausalLM.forward of LlamaForCausalLM(
+               (model): LlamaModel(
+                 (embed_tokens): Embedding(32000, 2048)...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+             │    │      │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+             │    │      │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+             │    │      └ ()
+             │    └ LlamaForCausalLM(
+             │        (model): LlamaModel(
+             │          (embed_tokens): Embedding(32000, 2048)
+             │          (layers): ModuleList(
+             │            (0-21): 2...
+             └ <function LlamaForCausalLM.forward at 0x7fac6c32b380>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 459, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       └ LlamaForCausalLM(
+                                           (model): LlamaModel(
+                                             (embed_tokens): Embedding(32000, 2048)
+                                             (layers): ModuleList(
+                                               (0-21): 2...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │    │           │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │    │           └ ()
+           │    └ <function Module._call_impl at 0x7fb0b3338b80>
+           └ LlamaModel(
+               (embed_tokens): Embedding(32000, 2048)
+               (layers): ModuleList(
+                 (0-21): 22 x LlamaDecoderLayer(
+                   (self_...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+           │             │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+           │             └ ()
+           └ <bound method LlamaModel.forward of LlamaModel(
+               (embed_tokens): Embedding(32000, 2048)
+               (layers): ModuleList(
+                 (0-21): ...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+              │    │      │       └ {'input_ids': tensor([[  529, 29989,  5205,  ...,     2,     2,     2],
+              │    │      │                 [  529, 29989,  5205,  ...,  5244, 29918,  98...
+              │    │      └ ()
+              │    └ LlamaModel(
+              │        (embed_tokens): Embedding(32000, 2048)
+              │        (layers): ModuleList(
+              │          (0-21): 22 x LlamaDecoderLayer(
+              │            (self_...
+              └ <function LlamaModel.forward at 0x7fac6c38c220>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 395, in forward
+    hidden_states = decoder_layer(
+                    └ LlamaDecoderLayer(
+                        (self_attn): LlamaAttention(
+                          (q_proj): lora.Linear(
+                            (base_layer): Linear(in_features=2048, out...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+                             │       └ {'attention_mask': tensor([[[[ True, False, False,  ..., False, False, False],
+                             │                   [ True,  True, False,  ..., False, F...
+                             └ (tensor([[[-0.2907, -0.0376, -0.1038,  ..., -0.0451,  0.0709,  0.2143],
+                                        [-0.1222,  0.0509, -0.1449,  ..., -0.1480,  ...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {'attention_mask': tensor([[[[ True, False, False,  ..., False, False, False],
+           │    │           │                   [ True,  True, False,  ..., False, F...
+           │    │           └ (tensor([[[-0.2907, -0.0376, -0.1038,  ..., -0.0451,  0.0709,  0.2143],
+           │    │                      [-0.1222,  0.0509, -0.1449,  ..., -0.1480,  ...
+           │    └ <function Module._call_impl at 0x7fb0b3338b80>
+           └ LlamaDecoderLayer(
+               (self_attn): LlamaAttention(
+                 (q_proj): lora.Linear(
+                   (base_layer): Linear(in_features=2048, out...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {'attention_mask': tensor([[[[ True, False, False,  ..., False, False, False],
+           │             │                   [ True,  True, False,  ..., False, F...
+           │             └ (tensor([[[-0.2907, -0.0376, -0.1038,  ..., -0.0451,  0.0709,  0.2143],
+           │                        [-0.1222,  0.0509, -0.1449,  ..., -0.1480,  ...
+           └ <bound method LlamaDecoderLayer.forward of LlamaDecoderLayer(
+               (self_attn): LlamaAttention(
+                 (q_proj): lora.Linear(
+                  ...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           │     │       └ {'attention_mask': tensor([[[[ True, False, False,  ..., False, False, False],
+           │     │                   [ True,  True, False,  ..., False, F...
+           │     └ (LlamaDecoderLayer(
+           │         (self_attn): LlamaAttention(
+           │           (q_proj): lora.Linear(
+           │             (base_layer): Linear(in_features=2048, ou...
+           └ <function LlamaDecoderLayer.forward at 0x7fac6c38c360>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 294, in forward
+    hidden_states, _ = self.self_attn(
+    │                  └ LlamaDecoderLayer(
+    │                      (self_attn): LlamaAttention(
+    │                        (q_proj): lora.Linear(
+    │                          (base_layer): Linear(in_features=2048, out...
+    └ tensor([[[-0.0260, -0.0035, -0.0095,  ..., -0.0052,  0.0067,  0.0169],
+               [-0.2899,  0.1270, -0.3509,  ..., -0.4492,  0...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {'hidden_states': tensor([[[-0.0260, -0.0035, -0.0095,  ..., -0.0052,  0.0067,  0.0169],
+           │    │           │                  [-0.2899,  0.1270, -0.3509,...
+           │    │           └ ()
+           │    └ <function Module._call_impl at 0x7fb0b3338b80>
+           └ LlamaAttention(
+               (q_proj): lora.Linear(
+                 (base_layer): Linear(in_features=2048, out_features=2048, bias=False)
+                 (lora_...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {'hidden_states': tensor([[[-0.0260, -0.0035, -0.0095,  ..., -0.0052,  0.0067,  0.0169],
+           │             │                  [-0.2899,  0.1270, -0.3509,...
+           │             └ ()
+           └ <bound method LlamaAttention.forward of LlamaAttention(
+               (q_proj): lora.Linear(
+                 (base_layer): Linear(in_features=2048, o...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           │     │       └ {'hidden_states': tensor([[[-0.0260, -0.0035, -0.0095,  ..., -0.0052,  0.0067,  0.0169],
+           │     │                  [-0.2899,  0.1270, -0.3509,...
+           │     └ (LlamaAttention(
+           │         (q_proj): lora.Linear(
+           │           (base_layer): Linear(in_features=2048, out_features=2048, bias=False)
+           │           (lora...
+           └ <function LlamaAttention.forward at 0x7fac6c38c180>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 264, in forward
+    attn_output = self.o_proj(attn_output)
+                  │           └ tensor([[[-4.2877e-03,  2.0008e-03, -6.9275e-03,  ...,  2.8782e-03,
+                  │                        5.2338e-03, -9.2173e-04],
+                  │                      [ 9.9106e-0...
+                  └ LlamaAttention(
+                      (q_proj): lora.Linear(
+                        (base_layer): Linear(in_features=2048, out_features=2048, bias=False)
+                        (lora_...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ (tensor([[[-4.2877e-03,  2.0008e-03, -6.9275e-03,  ...,  2.8782e-03,
+           │    │                        5.2338e-03, -9.2173e-04],
+           │    │                      [ 9.9106e-...
+           │    └ <function Module._call_impl at 0x7fb0b3338b80>
+           └ lora.Linear(
+               (base_layer): Linear(in_features=2048, out_features=2048, bias=False)
+               (lora_dropout): ModuleDict(
+                 (defau...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ (tensor([[[-4.2877e-03,  2.0008e-03, -6.9275e-03,  ...,  2.8782e-03,
+           │                          5.2338e-03, -9.2173e-04],
+           │                        [ 9.9106e-...
+           └ <bound method Linear.forward of lora.Linear(
+               (base_layer): Linear(in_features=2048, out_features=2048, bias=False)
+               (lora_...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/lora/layer.py", line 969, in forward
+    result = result + lora_B(lora_A(dropout(x))) * scaling
+             │        │      │      │       │      └ 2.0
+             │        │      │      │       └ tensor([[[-4.2877e-03,  2.0008e-03, -6.9275e-03,  ...,  2.8782e-03,
+             │        │      │      │                    5.2338e-03, -9.2173e-04],
+             │        │      │      │                  [ 9.9106e-0...
+             │        │      │      └ Dropout(p=0.05, inplace=False)
+             │        │      └ Linear(in_features=2048, out_features=32, bias=False)
+             │        └ Linear(in_features=32, out_features=2048, bias=False)
+             └ tensor([[[-0.0011, -0.0118,  0.0019,  ..., -0.0438,  0.0092,  0.0156],
+                        [-0.0152,  0.0123, -0.0359,  ..., -0.0048,  0...
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           │    │           │       └ {}
+           │    │           └ (tensor([[[-4.2877e-03,  2.0008e-03, -6.9275e-03,  ...,  2.8782e-03,
+           │    │                        5.2338e-03, -9.2173e-04],
+           │    │                      [ 9.9106e-...
+           │    └ <function Module._call_impl at 0x7fb0b3338b80>
+           └ Dropout(p=0.05, inplace=False)
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           │             │       └ {}
+           │             └ (tensor([[[-4.2877e-03,  2.0008e-03, -6.9275e-03,  ...,  2.8782e-03,
+           │                          5.2338e-03, -9.2173e-04],
+           │                        [ 9.9106e-...
+           └ <bound method Dropout.forward of Dropout(p=0.05, inplace=False)>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/dropout.py", line 70, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+           │ │       │      │    │  │    │         │    └ False
+           │ │       │      │    │  │    │         └ Dropout(p=0.05, inplace=False)
+           │ │       │      │    │  │    └ True
+           │ │       │      │    │  └ Dropout(p=0.05, inplace=False)
+           │ │       │      │    └ 0.05
+           │ │       │      └ Dropout(p=0.05, inplace=False)
+           │ │       └ tensor([[[-4.2877e-03,  2.0008e-03, -6.9275e-03,  ...,  2.8782e-03,
+           │ │                    5.2338e-03, -9.2173e-04],
+           │ │                  [ 9.9106e-0...
+           │ └ <function dropout at 0x7fb0a0d03060>
+           └ <module 'torch.nn.functional' from '/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/functional.py'>
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/functional.py", line 1422, in dropout
+    _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+    │            │      │  │            │            │           │      │  └ True
+    │            │      │  │            │            │           │      └ 0.05
+    │            │      │  │            │            │           └ tensor([[[-4.2877e-03,  2.0008e-03, -6.9275e-03,  ...,  2.8782e-03,
+    │            │      │  │            │            │                        5.2338e-03, -9.2173e-04],
+    │            │      │  │            │            │                      [ 9.9106e-0...
+    │            │      │  │            │            └ <module 'torch._VF'>
+    │            │      │  │            └ False
+    │            │      │  └ True
+    │            │      └ 0.05
+    │            └ tensor([[[-4.2877e-03,  2.0008e-03, -6.9275e-03,  ...,  2.8782e-03,
+    │                         5.2338e-03, -9.2173e-04],
+    │                       [ 9.9106e-0...
+    └ <module 'torch._VF'>
+
+RuntimeError: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+2026-05-30 15:41:37 | schema-linking-qwen-baseline_4 | controller-shm | WARNING | shm_manager.py:492 | Model '2' not found in shared memory during delete
+2026-05-30 15:41:37 | schema-linking-qwen-baseline_4 | controller | ERROR | controller.py:788 | Run 2 has failed: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. Traceback (most recent call last):
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 676, in serve_forever
+    self.run_fit(
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/rapidfireai/fit/backend/worker.py", line 387, in run_fit
+    trainer_instance.train()
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 904, in training_step
+    return super().training_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 858, in compute_loss
+    (loss, outputs) = super().compute_loss(
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/trainer.py", line 4110, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/accelerate/utils/operations.py", line 823, in forward
+    return model_forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/accelerate/utils/operations.py", line 811, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/peft_model.py", line 945, in forward
+    return self.get_base_model()(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 459, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 395, in forward
+    hidden_states = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 294, in forward
+    hidden_states, _ = self.self_attn(
+                       ^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 264, in forward
+    attn_output = self.o_proj(attn_output)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/lora/layer.py", line 969, in forward
+    result = result + lora_B(lora_A(dropout(x))) * scaling
+                                    ^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/modules/dropout.py", line 70, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/cse234/lib/python3.12/site-packages/torch/nn/functional.py", line 1422, in dropout
+    _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: NVML_SUCCESS == r INTERNAL ASSERT FAILED at "/pytorch/c10/cuda/CUDACachingAllocator.cpp":1131, please report a bug to PyTorch. 
+
+2026-05-30 15:41:37 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:789 | Removed run 2 from scheduler
+2026-05-30 15:41:37 | schema-linking-qwen-baseline_4 | controller | INFO | controller.py:848 | Scheduler indicates all runs have completed all chunks
+2026-05-30 15:41:37 | schema-linking-qwen-baseline_4 | controller | DEBUG | controller.py:904 | Set experiment task to Idle.
+2026-05-30 15:41:37 | schema-linking-qwen-baseline_4 | worker_manager | DEBUG | worker_manager.py:163 | WorkerManager shutdown initiated...
+2026-05-30 15:41:37 | schema-linking-qwen-baseline_4 | worker_manager | DEBUG | worker_manager.py:167 | Signaling graceful shutdown...
+2026-05-30 15:41:38 | schema-linking-qwen-baseline_4 | worker_0 | DEBUG | worker.py:712 | Worker 0 shutdown requested
+2026-05-30 15:41:38 | schema-linking-qwen-baseline_4 | worker_0 | INFO | worker_manager.py:50 | Worker 0 process exiting
+2026-05-30 15:41:38 | schema-linking-qwen-baseline_4 | worker_0 | DEBUG | worker.py:712 | Worker 0 shutdown requested
+2026-05-30 15:41:39 | schema-linking-qwen-baseline_4 | worker_manager | DEBUG | worker_manager.py:186 | All workers shutdown gracefully
+2026-05-30 15:41:39 | schema-linking-qwen-baseline_4 | worker_manager | DEBUG | worker_manager.py:163 | WorkerManager shutdown initiated...
+2026-05-30 15:41:39 | schema-linking-qwen-baseline_4 | worker_manager | DEBUG | worker_manager.py:167 | Signaling graceful shutdown...
+2026-05-30 15:41:39 | schema-linking-qwen-baseline_4 | worker_manager | DEBUG | worker_manager.py:186 | All workers shutdown gracefully
+2026-05-30 15:41:42 | schema-linking-qwen-baseline_4 | schema-linking-qwen-baseline_4 | DEBUG | experiment_utils.py:271 | Reset experiment states and set current experiment task to idle
+2026-05-30 15:41:42 | schema-linking-qwen-baseline_4 | schema-linking-qwen-baseline_4 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:41:42 | schema-linking-qwen-baseline_4 | schema-linking-qwen-baseline_4 | INFO | metric_mlflow_manager.py:133 | No active MLflow run to clear
+2026-05-30 15:41:42 | schema-linking-qwen-baseline_4 | schema-linking-qwen-baseline_4 | INFO | experiment_utils.py:240 | Experiment schema-linking-qwen-baseline_4 ended

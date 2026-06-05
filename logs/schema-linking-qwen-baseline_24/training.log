@@ -1,0 +1,228 @@
+2026-06-03 23:57:21 | schema-linking-qwen-baseline_24 | worker_0 | INFO | worker.py:644 | {'loss': 3.9683, 'grad_norm': 38.66976547241211, 'learning_rate': 1.25e-06, 'num_tokens': 7243.0, 'mean_token_accuracy': 0.44751182198524475, 'epoch': 0.10526315789473684}
+{'loss': 4.6148, 'grad_norm': 24.374042510986328, 'learning_rate': 3.7500000000000005e-06, 'num_tokens': 15015.0, 'mean_token_accuracy': 0.5273904874920845, 'epoch': 0.21052631578947367}
+{'eval_loss': nan, 'eval_runtime': 11.1526, 'eval_samples_per_second': 9.056, 'eval_steps_per_second': 2.331, 'eval_num_tokens': 15015.0, 'eval_mean_token_accuracy': 0.5395340300523318, 'epoch': 0.21052631578947367}
+{'loss': 1.4525, 'grad_norm': 34.382057189941406, 'learning_rate': 6.25e-06, 'num_tokens': 23197.0, 'mean_token_accuracy': 0.09957627207040787, 'epoch': 0.3157894736842105}
+{'loss': 4.034, 'grad_norm': 31.914325714111328, 'learning_rate': 8.750000000000001e-06, 'num_tokens': 29970.0, 'mean_token_accuracy': 0.46279405802488327, 'epoch': 0.42105263157894735}
+{'eval_loss': nan, 'eval_runtime': 11.3327, 'eval_samples_per_second': 8.912, 'eval_steps_per_second': 2.294, 'eval_num_tokens': 29970.0, 'eval_mean_token_accuracy': 0.5606915033780612, 'epoch': 0.42105263157894735}
+{'loss': 3.8304, 'grad_norm': 31.686166763305664, 'learning_rate': 9.998810135399545e-06, 'num_tokens': 37347.0, 'mean_token_accuracy': 0.34864433109760284, 'epoch': 0.5263157894736842}
+{'loss': 3.3712, 'grad_norm': 27.624631881713867, 'learning_rate': 9.989294616193018e-06, 'num_tokens': 43207.0, 'mean_token_accuracy': 0.4369407817721367, 'epoch': 0.631578947368421}
+{'eval_loss': nan, 'eval_runtime': 11.3317, 'eval_samples_per_second': 8.913, 'eval_steps_per_second': 2.294, 'eval_num_tokens': 43207.0, 'eval_mean_token_accuracy': 0.5867688426604638, 'epoch': 0.631578947368421}
+{'loss': 2.4488, 'grad_norm': 26.806232452392578, 'learning_rate': 9.970281691111598e-06, 'num_tokens': 51241.0, 'mean_token_accuracy': 0.28166842460632324, 'epoch': 0.7368421052631579}
+{'loss': 1.0543, 'grad_norm': 18.62660026550293, 'learning_rate': 9.941807552338805e-06, 'num_tokens': 58955.0, 'mean_token_accuracy': 0.19125939905643463, 'epoch': 0.8421052631578947}
+{'eval_loss': nan, 'eval_runtime': 11.3231, 'eval_samples_per_second': 8.92, 'eval_steps_per_second': 2.296, 'eval_num_tokens': 58955.0, 'eval_mean_token_accuracy': 0.5913299505527203, 'epoch': 0.8421052631578947}
+{'loss': 0.8603, 'grad_norm': 20.052522659301758, 'learning_rate': 9.903926402016153e-06, 'num_tokens': 66541.0, 'mean_token_accuracy': 0.09659090638160706, 'epoch': 0.9473684210526315}
+{'train_runtime': 1341.5808, 'train_samples_per_second': 0.057, 'train_steps_per_second': 0.014, 'train_loss': 2.7644656394657336, 'num_tokens': 70619.0, 'mean_token_accuracy': 0.20454545319080353, 'epoch': 1.0}
+
+2026-06-03 23:57:21 | schema-linking-qwen-baseline_24 | worker_0 | ERROR | worker.py:646 | Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:05<00:05,  5.66s/it]Fetching 2 files: 100%|██████████| 2/2 [00:05<00:00,  2.83s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.86it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.20it/s]
+/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:1348: UserWarning: Model has `tie_word_embeddings=True` and a tied layer is part of the adapter, but `ensure_weight_tying` is not set to True. This can lead to complications, for example when merging the adapter or converting your model to formats other than safetensors. Check the discussion here: https://github.com/huggingface/peft/issues/2777
+  warnings.warn(msg)
+Map:   0%|          | 0/76 [00:00<?, ? examples/s]Map: 100%|██████████| 76/76 [00:00<00:00, 1479.77 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2952.99 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2797.55 examples/s]
+Tokenizing train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Tokenizing train dataset:  18%|█▊        | 14/76 [00:00<00:00, 126.04 examples/s]Tokenizing train dataset:  46%|████▌     | 35/76 [00:00<00:00, 169.58 examples/s]Tokenizing train dataset:  71%|███████   | 54/76 [00:00<00:00, 170.42 examples/s]Tokenizing train dataset: 100%|██████████| 76/76 [00:00<00:00, 128.14 examples/s]Tokenizing train dataset: 100%|██████████| 76/76 [00:00<00:00, 133.47 examples/s]
+Truncating train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 76/76 [00:00<00:00, 2398.17 examples/s]
+Tokenizing eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Tokenizing eval dataset:  19%|█▉        | 19/101 [00:00<00:00, 178.75 examples/s]Tokenizing eval dataset:  37%|███▋      | 37/101 [00:00<00:00, 169.54 examples/s]Tokenizing eval dataset:  56%|█████▋    | 57/101 [00:00<00:00, 176.31 examples/s]Tokenizing eval dataset:  78%|███████▊  | 79/101 [00:00<00:00, 186.36 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 140.00 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 151.64 examples/s]
+Truncating eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 101/101 [00:00<00:00, 4952.36 examples/s]
+/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/utils/save_and_load.py:356: UserWarning: Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.
+  warnings.warn("Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.")
+
+2026-06-04 00:27:32 | schema-linking-qwen-baseline_24 | worker_0 | INFO | worker.py:644 | {'loss': 1.2943, 'grad_norm': 21.486459732055664, 'learning_rate': 9.856710349066307e-06, 'num_tokens': 3446.0, 'mean_token_accuracy': 0.4188453257083893, 'epoch': 0.05263157894736842}
+{'eval_loss': nan, 'eval_runtime': 11.222, 'eval_samples_per_second': 9.0, 'eval_steps_per_second': 2.317, 'eval_num_tokens': 3446.0, 'eval_mean_token_accuracy': 0.6307129859924316, 'epoch': 0.05263157894736842}
+{'loss': 1.2944, 'grad_norm': 16.21262550354004, 'learning_rate': 9.536379665907801e-06, 'num_tokens': 11259.0, 'mean_token_accuracy': 0.4045078456401825, 'epoch': 0.15789473684210525}
+{'loss': 1.4036, 'grad_norm': 16.214664459228516, 'learning_rate': 9.445611340695926e-06, 'num_tokens': 17597.0, 'mean_token_accuracy': 0.31804653257131577, 'epoch': 0.2631578947368421}
+{'eval_loss': nan, 'eval_runtime': 11.4552, 'eval_samples_per_second': 8.817, 'eval_steps_per_second': 2.27, 'eval_num_tokens': 17597.0, 'eval_mean_token_accuracy': 0.639768850344878, 'epoch': 0.2631578947368421}
+{'loss': 0.8423, 'grad_norm': 13.382433891296387, 'learning_rate': 9.347247763081834e-06, 'num_tokens': 25385.0, 'mean_token_accuracy': 0.41918225586414337, 'epoch': 0.3684210526315789}
+{'loss': 0.4701, 'grad_norm': 14.74337387084961, 'learning_rate': 9.241456985587868e-06, 'num_tokens': 33243.0, 'mean_token_accuracy': 0.3173474669456482, 'epoch': 0.47368421052631576}
+{'eval_loss': nan, 'eval_runtime': 11.4574, 'eval_samples_per_second': 8.815, 'eval_steps_per_second': 2.269, 'eval_num_tokens': 33243.0, 'eval_mean_token_accuracy': 0.6396868779109075, 'epoch': 0.47368421052631576}
+{'loss': 0.783, 'grad_norm': 22.321632385253906, 'learning_rate': 9.12841974998278e-06, 'num_tokens': 40551.0, 'mean_token_accuracy': 0.5186733454465866, 'epoch': 0.5789473684210527}
+{'loss': 0.3888, 'grad_norm': nan, 'learning_rate': 9.008329178487442e-06, 'num_tokens': 48659.0, 'mean_token_accuracy': 0.2351120263338089, 'epoch': 0.6842105263157895}
+{'eval_loss': nan, 'eval_runtime': 11.4725, 'eval_samples_per_second': 8.804, 'eval_steps_per_second': 2.266, 'eval_num_tokens': 48659.0, 'eval_mean_token_accuracy': 0.6899793400214269, 'epoch': 0.6842105263157895}
+{'loss': 0.1533, 'grad_norm': 10.343775749206543, 'learning_rate': 8.881390443828788e-06, 'num_tokens': 56739.0, 'mean_token_accuracy': 0.22259759902954102, 'epoch': 0.7894736842105263}
+{'loss': 0.5031, 'grad_norm': 7.518029689788818, 'learning_rate': 8.747820418705632e-06, 'num_tokens': 63987.0, 'mean_token_accuracy': 0.5507397726178169, 'epoch': 0.8947368421052632}
+{'eval_loss': nan, 'eval_runtime': 11.2261, 'eval_samples_per_second': 8.997, 'eval_steps_per_second': 2.316, 'eval_num_tokens': 63987.0, 'eval_mean_token_accuracy': 0.684136532820188, 'epoch': 0.8947368421052632}
+{'loss': 0.321, 'grad_norm': 7.854071617126465, 'learning_rate': 8.607847305265312e-06, 'num_tokens': 71848.0, 'mean_token_accuracy': 0.3362196534872055, 'epoch': 1.0}
+{'train_runtime': 1684.935, 'train_samples_per_second': 0.045, 'train_steps_per_second': 0.011, 'train_loss': 0.7164993835122961, 'epoch': 1.0}
+
+2026-06-04 00:27:32 | schema-linking-qwen-baseline_24 | worker_0 | ERROR | worker.py:646 | /opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:1348: UserWarning: Model has `tie_word_embeddings=True` and a tied layer is part of the adapter, but `ensure_weight_tying` is not set to True. This can lead to complications, for example when merging the adapter or converting your model to formats other than safetensors. Check the discussion here: https://github.com/huggingface/peft/issues/2777
+  warnings.warn(msg)
+Map:   0%|          | 0/76 [00:00<?, ? examples/s]Map: 100%|██████████| 76/76 [00:00<00:00, 1474.27 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2809.00 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2874.88 examples/s]
+Tokenizing train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Tokenizing train dataset:  22%|██▏       | 17/76 [00:00<00:00, 148.26 examples/s]Tokenizing train dataset:  42%|████▏     | 32/76 [00:00<00:00, 145.53 examples/s]Tokenizing train dataset:  62%|██████▏   | 47/76 [00:00<00:00, 143.44 examples/s]Tokenizing train dataset:  88%|████████▊ | 67/76 [00:00<00:00, 162.63 examples/s]Tokenizing train dataset: 100%|██████████| 76/76 [00:00<00:00, 135.94 examples/s]
+Truncating train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 76/76 [00:00<00:00, 2409.26 examples/s]
+Tokenizing eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Tokenizing eval dataset:  18%|█▊        | 18/101 [00:00<00:00, 162.13 examples/s]Tokenizing eval dataset:  43%|████▎     | 43/101 [00:00<00:00, 162.08 examples/s]Tokenizing eval dataset:  63%|██████▎   | 64/101 [00:00<00:00, 173.44 examples/s]Tokenizing eval dataset:  81%|████████  | 82/101 [00:00<00:00, 171.41 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 128.47 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 141.88 examples/s]
+Truncating eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 101/101 [00:00<00:00, 4952.88 examples/s]
+/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/utils/save_and_load.py:356: UserWarning: Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.
+  warnings.warn("Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.")
+
+2026-06-04 00:57:37 | schema-linking-qwen-baseline_24 | worker_0 | INFO | worker.py:644 | {'loss': 0.2154, 'grad_norm': 6.65753698348999, 'learning_rate': 8.461710245224149e-06, 'num_tokens': 7820.0, 'mean_token_accuracy': 0.4695644825696945, 'epoch': 0.10526315789473684}
+{'eval_loss': nan, 'eval_runtime': 11.4423, 'eval_samples_per_second': 8.827, 'eval_steps_per_second': 2.272, 'eval_num_tokens': 7820.0, 'eval_mean_token_accuracy': 0.6831046617948092, 'epoch': 0.10526315789473684}
+{'loss': 0.1091, 'grad_norm': 7.038545608520508, 'learning_rate': 8.309658911297833e-06, 'num_tokens': 15420.0, 'mean_token_accuracy': 0.11666666716337204, 'epoch': 0.21052631578947367}
+{'loss': 0.6678, 'grad_norm': 0.0, 'learning_rate': 8.151953080639777e-06, 'num_tokens': 23532.0, 'mean_token_accuracy': 0.11666666716337204, 'epoch': 0.3157894736842105}
+{'eval_loss': nan, 'eval_runtime': 11.2416, 'eval_samples_per_second': 8.984, 'eval_steps_per_second': 2.313, 'eval_num_tokens': 23532.0, 'eval_mean_token_accuracy': 0.683107112462704, 'epoch': 0.3157894736842105}
+{'loss': 0.3314, 'grad_norm': 3.0864319801330566, 'learning_rate': 7.988862191016204e-06, 'num_tokens': 31642.0, 'mean_token_accuracy': 0.21590909361839294, 'epoch': 0.42105263157894735}
+{'loss': 0.2215, 'grad_norm': 7.716793537139893, 'learning_rate': 7.820664880476257e-06, 'num_tokens': 39107.0, 'mean_token_accuracy': 0.4464327320456505, 'epoch': 0.5263157894736842}
+{'eval_loss': nan, 'eval_runtime': 11.2361, 'eval_samples_per_second': 8.989, 'eval_steps_per_second': 2.314, 'eval_num_tokens': 39107.0, 'eval_mean_token_accuracy': 0.6904260286918054, 'epoch': 0.5263157894736842}
+{'loss': 0.8461, 'grad_norm': 0.0, 'learning_rate': 7.647648511303545e-06, 'num_tokens': 46616.0, 'mean_token_accuracy': 0.21898148208856583, 'epoch': 0.631578947368421}
+{'loss': 0.6914, 'grad_norm': 0.0, 'learning_rate': 7.470108679062521e-06, 'num_tokens': 54593.0, 'mean_token_accuracy': 0.22829078882932663, 'epoch': 0.7368421052631579}
+{'eval_loss': nan, 'eval_runtime': 11.2334, 'eval_samples_per_second': 8.991, 'eval_steps_per_second': 2.315, 'eval_num_tokens': 54593.0, 'eval_mean_token_accuracy': 0.6919553875923157, 'epoch': 0.7368421052631579}
+{'loss': 0.1385, 'grad_norm': nan, 'learning_rate': 7.288348707578409e-06, 'num_tokens': 61271.0, 'mean_token_accuracy': 0.4687413051724434, 'epoch': 0.8421052631578947}
+{'loss': 0.3315, 'grad_norm': 6.8696513175964355, 'learning_rate': 7.102679130713538e-06, 'num_tokens': 69376.0, 'mean_token_accuracy': 0.22159090638160706, 'epoch': 0.9473684210526315}
+{'eval_loss': nan, 'eval_runtime': 11.2503, 'eval_samples_per_second': 8.978, 'eval_steps_per_second': 2.311, 'eval_num_tokens': 69376.0, 'eval_mean_token_accuracy': 0.6927124995451707, 'epoch': 0.9473684210526315}
+{'train_runtime': 1680.649, 'train_samples_per_second': 0.045, 'train_steps_per_second': 0.011, 'train_loss': 0.38943805976917867, 'num_tokens': 73417.0, 'mean_token_accuracy': 0.2142857164144516, 'epoch': 1.0}
+
+2026-06-04 00:57:37 | schema-linking-qwen-baseline_24 | worker_0 | ERROR | worker.py:646 | /opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:1348: UserWarning: Model has `tie_word_embeddings=True` and a tied layer is part of the adapter, but `ensure_weight_tying` is not set to True. This can lead to complications, for example when merging the adapter or converting your model to formats other than safetensors. Check the discussion here: https://github.com/huggingface/peft/issues/2777
+  warnings.warn(msg)
+Map:   0%|          | 0/76 [00:00<?, ? examples/s]Map: 100%|██████████| 76/76 [00:00<00:00, 1466.18 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2794.36 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2943.53 examples/s]
+Tokenizing train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Tokenizing train dataset:  29%|██▉       | 22/76 [00:00<00:00, 197.50 examples/s]Tokenizing train dataset:  61%|██████    | 46/76 [00:00<00:00, 163.08 examples/s]Tokenizing train dataset:  86%|████████▌ | 65/76 [00:00<00:00, 162.75 examples/s]Tokenizing train dataset: 100%|██████████| 76/76 [00:00<00:00, 131.51 examples/s]
+Truncating train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 76/76 [00:00<00:00, 2373.74 examples/s]
+Tokenizing eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Tokenizing eval dataset:  18%|█▊        | 18/101 [00:00<00:00, 161.77 examples/s]Tokenizing eval dataset:  42%|████▏     | 42/101 [00:00<00:00, 157.83 examples/s]Tokenizing eval dataset:  61%|██████▏   | 62/101 [00:00<00:00, 168.66 examples/s]Tokenizing eval dataset:  80%|████████  | 81/101 [00:00<00:00, 169.83 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 128.39 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 140.56 examples/s]
+Truncating eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 101/101 [00:00<00:00, 5011.89 examples/s]
+/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/utils/save_and_load.py:356: UserWarning: Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.
+  warnings.warn("Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.")
+
+2026-06-04 01:27:45 | schema-linking-qwen-baseline_24 | worker_0 | INFO | worker.py:644 | {'loss': 0.2113, 'grad_norm': 6.350247859954834, 'learning_rate': 6.913417161825449e-06, 'num_tokens': 3764.0, 'mean_token_accuracy': 0.4699999988079071, 'epoch': 0.0547945205479452}
+{'loss': 0.1644, 'grad_norm': 7.496294975280762, 'learning_rate': 6.720886151813194e-06, 'num_tokens': 10664.0, 'mean_token_accuracy': 0.342571921646595, 'epoch': 0.1643835616438356}
+{'eval_loss': nan, 'eval_runtime': 11.1773, 'eval_samples_per_second': 9.036, 'eval_steps_per_second': 2.326, 'eval_num_tokens': 10664.0, 'eval_mean_token_accuracy': 0.6952537068953881, 'epoch': 0.1643835616438356}
+{'loss': 0.3341, 'grad_norm': 4.967745780944824, 'learning_rate': 6.525415036677745e-06, 'num_tokens': 18376.0, 'mean_token_accuracy': 0.6819673478603363, 'epoch': 0.273972602739726}
+{'loss': 1.2089, 'grad_norm': 0.0, 'learning_rate': 6.327337775540362e-06, 'num_tokens': 26568.0, 'mean_token_accuracy': 0.09836065769195557, 'epoch': 0.3835616438356164}
+{'eval_loss': nan, 'eval_runtime': 11.2455, 'eval_samples_per_second': 8.981, 'eval_steps_per_second': 2.312, 'eval_num_tokens': 26568.0, 'eval_mean_token_accuracy': 0.6950146945623251, 'epoch': 0.3835616438356164}
+{'loss': 0.2219, 'grad_norm': 2.49417781829834, 'learning_rate': 6.126992780079032e-06, 'num_tokens': 33811.0, 'mean_token_accuracy': 0.4600537195801735, 'epoch': 0.4931506849315068}
+{'loss': 0.3274, 'grad_norm': 4.330996036529541, 'learning_rate': 5.924722336357793e-06, 'num_tokens': 41758.0, 'mean_token_accuracy': 0.5596032738685608, 'epoch': 0.6027397260273972}
+{'eval_loss': nan, 'eval_runtime': 11.2476, 'eval_samples_per_second': 8.98, 'eval_steps_per_second': 2.312, 'eval_num_tokens': 41758.0, 'eval_mean_token_accuracy': 0.6990227859753829, 'epoch': 0.6027397260273972}
+{'loss': 0.3824, 'grad_norm': 7.314000129699707, 'learning_rate': 5.720872020036734e-06, 'num_tokens': 48759.0, 'mean_token_accuracy': 0.22177083790302277, 'epoch': 0.7123287671232876}
+{'loss': 0.3619, 'grad_norm': 11.661849021911621, 'learning_rate': 5.515790105961785e-06, 'num_tokens': 56249.0, 'mean_token_accuracy': 0.22295673191547394, 'epoch': 0.821917808219178}
+{'eval_loss': nan, 'eval_runtime': 11.2374, 'eval_samples_per_second': 8.988, 'eval_steps_per_second': 2.314, 'eval_num_tokens': 56249.0, 'eval_mean_token_accuracy': 0.6998308736544389, 'epoch': 0.821917808219178}
+{'loss': 0.3281, 'grad_norm': 4.579123497009277, 'learning_rate': 5.309826973142974e-06, 'num_tokens': 63990.0, 'mean_token_accuracy': 0.44822797179222107, 'epoch': 0.9315068493150684}
+{'loss': 0.1946, 'grad_norm': 0.0, 'learning_rate': 5.103334506137773e-06, 'num_tokens': 68840.0, 'mean_token_accuracy': 0.36111111640930177, 'epoch': 1.0}
+{'eval_loss': nan, 'eval_runtime': 11.4478, 'eval_samples_per_second': 8.823, 'eval_steps_per_second': 2.271, 'eval_num_tokens': 68840.0, 'eval_mean_token_accuracy': 0.7020012002724868, 'epoch': 1.0}
+{'train_runtime': 1680.184, 'train_samples_per_second': 0.043, 'train_steps_per_second': 0.011, 'train_loss': 0.3820435169496034, 'epoch': 1.0}
+
+2026-06-04 01:27:45 | schema-linking-qwen-baseline_24 | worker_0 | ERROR | worker.py:646 | /opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:1348: UserWarning: Model has `tie_word_embeddings=True` and a tied layer is part of the adapter, but `ensure_weight_tying` is not set to True. This can lead to complications, for example when merging the adapter or converting your model to formats other than safetensors. Check the discussion here: https://github.com/huggingface/peft/issues/2777
+  warnings.warn(msg)
+Map:   0%|          | 0/73 [00:00<?, ? examples/s]Map: 100%|██████████| 73/73 [00:00<00:00, 1387.83 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2848.66 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2835.94 examples/s]
+Tokenizing train dataset:   0%|          | 0/73 [00:00<?, ? examples/s]Tokenizing train dataset:  23%|██▎       | 17/73 [00:00<00:00, 146.97 examples/s]Tokenizing train dataset:  53%|█████▎    | 39/73 [00:00<00:00, 130.17 examples/s]Tokenizing train dataset:  73%|███████▎  | 53/73 [00:00<00:00, 133.61 examples/s]Tokenizing train dataset: 100%|██████████| 73/73 [00:00<00:00, 108.52 examples/s]Tokenizing train dataset: 100%|██████████| 73/73 [00:00<00:00, 113.66 examples/s]
+Truncating train dataset:   0%|          | 0/73 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 73/73 [00:00<00:00, 2146.46 examples/s]
+Tokenizing eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Tokenizing eval dataset:  18%|█▊        | 18/101 [00:00<00:00, 162.87 examples/s]Tokenizing eval dataset:  42%|████▏     | 42/101 [00:00<00:00, 156.00 examples/s]Tokenizing eval dataset:  61%|██████▏   | 62/101 [00:00<00:00, 167.41 examples/s]Tokenizing eval dataset:  80%|████████  | 81/101 [00:00<00:00, 166.95 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 125.30 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 137.95 examples/s]
+Truncating eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 101/101 [00:00<00:00, 4216.93 examples/s]
+/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/utils/save_and_load.py:356: UserWarning: Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.
+  warnings.warn("Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.")
+
+2026-06-04 01:52:18 | schema-linking-qwen-baseline_24 | worker_0 | INFO | worker.py:644 | {'loss': 0.333, 'grad_norm': 2.7817811965942383, 'learning_rate': 4.89666549386223e-06, 'num_tokens': 7243.0, 'mean_token_accuracy': 0.5590480268001556, 'epoch': 0.10526315789473684}
+{'loss': 0.2476, 'grad_norm': 4.141470432281494, 'learning_rate': 4.690173026857028e-06, 'num_tokens': 15015.0, 'mean_token_accuracy': 0.7049699127674103, 'epoch': 0.21052631578947367}
+{'eval_loss': nan, 'eval_runtime': 11.1942, 'eval_samples_per_second': 9.023, 'eval_steps_per_second': 2.323, 'eval_num_tokens': 15015.0, 'eval_mean_token_accuracy': 0.7007499749843891, 'epoch': 0.21052631578947367}
+{'loss': 0.1153, 'grad_norm': 6.284425258636475, 'learning_rate': 4.4842098940382155e-06, 'num_tokens': 23197.0, 'mean_token_accuracy': 0.11652542650699615, 'epoch': 0.3157894736842105}
+{'loss': 0.2593, 'grad_norm': 3.6357879638671875, 'learning_rate': 4.279127979963266e-06, 'num_tokens': 29970.0, 'mean_token_accuracy': 0.5886164307594299, 'epoch': 0.42105263157894735}
+{'eval_loss': nan, 'eval_runtime': 11.2358, 'eval_samples_per_second': 8.989, 'eval_steps_per_second': 2.314, 'eval_num_tokens': 29970.0, 'eval_mean_token_accuracy': 0.7043929535609025, 'epoch': 0.42105263157894735}
+{'loss': 0.2053, 'grad_norm': 3.149449110031128, 'learning_rate': 4.075277663642208e-06, 'num_tokens': 37347.0, 'mean_token_accuracy': 0.46208133548498154, 'epoch': 0.5263157894736842}
+{'loss': 0.2263, 'grad_norm': 7.137012958526611, 'learning_rate': 3.8730072199209705e-06, 'num_tokens': 43207.0, 'mean_token_accuracy': 0.5742528140544891, 'epoch': 0.631578947368421}
+{'eval_loss': nan, 'eval_runtime': 11.2392, 'eval_samples_per_second': 8.986, 'eval_steps_per_second': 2.313, 'eval_num_tokens': 43207.0, 'eval_mean_token_accuracy': 0.706775053189351, 'epoch': 0.631578947368421}
+{'loss': 0.222, 'grad_norm': 4.093155384063721, 'learning_rate': 3.67266222445964e-06, 'num_tokens': 51241.0, 'mean_token_accuracy': 0.34797099232673645, 'epoch': 0.7368421052631579}
+{'loss': 0.0586, 'grad_norm': 3.9455161094665527, 'learning_rate': 3.4745849633222566e-06, 'num_tokens': 58955.0, 'mean_token_accuracy': 0.2374686747789383, 'epoch': 0.8421052631578947}
+{'eval_loss': nan, 'eval_runtime': 11.2536, 'eval_samples_per_second': 8.975, 'eval_steps_per_second': 2.31, 'eval_num_tokens': 58955.0, 'eval_mean_token_accuracy': 0.709307828774819, 'epoch': 0.8421052631578947}
+{'loss': 0.0199, 'grad_norm': 2.0980451107025146, 'learning_rate': 3.2791138481868084e-06, 'num_tokens': 66541.0, 'mean_token_accuracy': 0.125, 'epoch': 0.9473684210526315}
+{'train_runtime': 1347.7568, 'train_samples_per_second': 0.056, 'train_steps_per_second': 0.014, 'train_loss': 0.18631285821136676, 'num_tokens': 70619.0, 'mean_token_accuracy': 0.23636363446712494, 'epoch': 1.0}
+
+2026-06-04 01:52:18 | schema-linking-qwen-baseline_24 | worker_0 | ERROR | worker.py:646 | /opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:1348: UserWarning: Model has `tie_word_embeddings=True` and a tied layer is part of the adapter, but `ensure_weight_tying` is not set to True. This can lead to complications, for example when merging the adapter or converting your model to formats other than safetensors. Check the discussion here: https://github.com/huggingface/peft/issues/2777
+  warnings.warn(msg)
+Map:   0%|          | 0/76 [00:00<?, ? examples/s]Map: 100%|██████████| 76/76 [00:00<00:00, 1454.34 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2823.37 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2902.43 examples/s]
+Tokenizing train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Tokenizing train dataset:  21%|██        | 16/76 [00:00<00:00, 139.56 examples/s]Tokenizing train dataset:  49%|████▊     | 37/76 [00:00<00:00, 163.55 examples/s]Tokenizing train dataset:  71%|███████   | 54/76 [00:00<00:00, 163.36 examples/s]Tokenizing train dataset:  97%|█████████▋| 74/76 [00:00<00:00, 146.86 examples/s]Tokenizing train dataset: 100%|██████████| 76/76 [00:00<00:00, 124.72 examples/s]
+Truncating train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 76/76 [00:00<00:00, 2347.78 examples/s]
+Tokenizing eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Tokenizing eval dataset:  18%|█▊        | 18/101 [00:00<00:00, 157.97 examples/s]Tokenizing eval dataset:  34%|███▎      | 34/101 [00:00<00:00, 154.38 examples/s]Tokenizing eval dataset:  53%|█████▎    | 54/101 [00:00<00:00, 171.84 examples/s]Tokenizing eval dataset:  71%|███████▏  | 72/101 [00:00<00:00, 166.63 examples/s]Tokenizing eval dataset:  94%|█████████▍| 95/101 [00:00<00:00, 151.22 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 138.03 examples/s]
+Truncating eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 101/101 [00:00<00:00, 5031.53 examples/s]
+/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/utils/save_and_load.py:356: UserWarning: Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.
+  warnings.warn("Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.")
+
+2026-06-04 02:22:28 | schema-linking-qwen-baseline_24 | worker_0 | INFO | worker.py:644 | {'loss': 0.1446, 'grad_norm': 4.396234035491943, 'learning_rate': 3.0865828381745515e-06, 'num_tokens': 3446.0, 'mean_token_accuracy': 0.4667755961418152, 'epoch': 0.05263157894736842}
+{'eval_loss': nan, 'eval_runtime': 11.1384, 'eval_samples_per_second': 9.068, 'eval_steps_per_second': 2.334, 'eval_num_tokens': 3446.0, 'eval_mean_token_accuracy': 0.7102519136208755, 'epoch': 0.05263157894736842}
+{'loss': 0.1687, 'grad_norm': 2.7175867557525635, 'learning_rate': 2.8973208692864623e-06, 'num_tokens': 11259.0, 'mean_token_accuracy': 0.4642024040222168, 'epoch': 0.15789473684210525}
+{'loss': 0.0871, 'grad_norm': 4.451748847961426, 'learning_rate': 2.711651292421593e-06, 'num_tokens': 17597.0, 'mean_token_accuracy': 0.363591268658638, 'epoch': 0.2631578947368421}
+{'eval_loss': nan, 'eval_runtime': 11.4713, 'eval_samples_per_second': 8.805, 'eval_steps_per_second': 2.267, 'eval_num_tokens': 17597.0, 'eval_mean_token_accuracy': 0.7089550884870383, 'epoch': 0.2631578947368421}
+{'loss': 0.232, 'grad_norm': 3.0258493423461914, 'learning_rate': 2.529891320937481e-06, 'num_tokens': 25385.0, 'mean_token_accuracy': 0.45967262238264084, 'epoch': 0.3684210526315789}
+{'loss': 0.1276, 'grad_norm': 3.4399614334106445, 'learning_rate': 2.352351488696457e-06, 'num_tokens': 33243.0, 'mean_token_accuracy': 0.3495587408542633, 'epoch': 0.47368421052631576}
+{'eval_loss': nan, 'eval_runtime': 11.4627, 'eval_samples_per_second': 8.811, 'eval_steps_per_second': 2.268, 'eval_num_tokens': 33243.0, 'eval_mean_token_accuracy': 0.710133447096898, 'epoch': 0.47368421052631576}
+{'loss': 0.191, 'grad_norm': 4.790236473083496, 'learning_rate': 2.179335119523745e-06, 'num_tokens': 40551.0, 'mean_token_accuracy': 0.576542891561985, 'epoch': 0.5789473684210527}
+{'loss': 0.1697, 'grad_norm': nan, 'learning_rate': 2.0111378089837958e-06, 'num_tokens': 48659.0, 'mean_token_accuracy': 0.23747052252292633, 'epoch': 0.6842105263157895}
+{'eval_loss': nan, 'eval_runtime': 11.464, 'eval_samples_per_second': 8.81, 'eval_steps_per_second': 2.268, 'eval_num_tokens': 48659.0, 'eval_mean_token_accuracy': 0.710133447096898, 'epoch': 0.6842105263157895}
+{'loss': 0.0708, 'grad_norm': 3.683011054992676, 'learning_rate': 1.848046919360225e-06, 'num_tokens': 56739.0, 'mean_token_accuracy': 0.2362987920641899, 'epoch': 0.7894736842105263}
+{'loss': 0.1842, 'grad_norm': 3.388174057006836, 'learning_rate': 1.6903410887021676e-06, 'num_tokens': 63987.0, 'mean_token_accuracy': 0.574244037270546, 'epoch': 0.8947368421052632}
+{'eval_loss': nan, 'eval_runtime': 11.2378, 'eval_samples_per_second': 8.987, 'eval_steps_per_second': 2.314, 'eval_num_tokens': 63987.0, 'eval_mean_token_accuracy': 0.7119649488192338, 'epoch': 0.8947368421052632}
+{'loss': 0.1599, 'grad_norm': 4.482123374938965, 'learning_rate': 1.5382897547758513e-06, 'num_tokens': 71848.0, 'mean_token_accuracy': 0.34683147817850113, 'epoch': 1.0}
+{'train_runtime': 1685.697, 'train_samples_per_second': 0.045, 'train_steps_per_second': 0.011, 'train_loss': 0.15403446241428978, 'epoch': 1.0}
+
+2026-06-04 02:22:28 | schema-linking-qwen-baseline_24 | worker_0 | ERROR | worker.py:646 | /opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:1348: UserWarning: Model has `tie_word_embeddings=True` and a tied layer is part of the adapter, but `ensure_weight_tying` is not set to True. This can lead to complications, for example when merging the adapter or converting your model to formats other than safetensors. Check the discussion here: https://github.com/huggingface/peft/issues/2777
+  warnings.warn(msg)
+Map:   0%|          | 0/76 [00:00<?, ? examples/s]Map: 100%|██████████| 76/76 [00:00<00:00, 1428.23 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2753.47 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2899.30 examples/s]
+Tokenizing train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Tokenizing train dataset:  21%|██        | 16/76 [00:00<00:00, 138.59 examples/s]Tokenizing train dataset:  42%|████▏     | 32/76 [00:00<00:00, 142.19 examples/s]Tokenizing train dataset:  62%|██████▏   | 47/76 [00:00<00:00, 139.69 examples/s]Tokenizing train dataset:  86%|████████▌ | 65/76 [00:00<00:00, 154.29 examples/s]Tokenizing train dataset: 100%|██████████| 76/76 [00:00<00:00, 130.92 examples/s]
+Truncating train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 76/76 [00:00<00:00, 2346.71 examples/s]
+Tokenizing eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Tokenizing eval dataset:  18%|█▊        | 18/101 [00:00<00:00, 160.99 examples/s]Tokenizing eval dataset:  42%|████▏     | 42/101 [00:00<00:00, 155.17 examples/s]Tokenizing eval dataset:  61%|██████▏   | 62/101 [00:00<00:00, 166.20 examples/s]Tokenizing eval dataset:  80%|████████  | 81/101 [00:00<00:00, 165.94 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 125.25 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 137.63 examples/s]
+Truncating eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 101/101 [00:00<00:00, 4947.44 examples/s]
+/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/utils/save_and_load.py:356: UserWarning: Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.
+  warnings.warn("Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.")
+
+2026-06-04 02:52:40 | schema-linking-qwen-baseline_24 | worker_0 | INFO | worker.py:644 | {'loss': 0.0689, 'grad_norm': 2.339362144470215, 'learning_rate': 1.3921526947346902e-06, 'num_tokens': 7820.0, 'mean_token_accuracy': 0.4943181797862053, 'epoch': 0.10526315789473684}
+{'eval_loss': nan, 'eval_runtime': 11.4373, 'eval_samples_per_second': 8.831, 'eval_steps_per_second': 2.273, 'eval_num_tokens': 7820.0, 'eval_mean_token_accuracy': 0.7119649488192338, 'epoch': 0.10526315789473684}
+{'loss': 0.061, 'grad_norm': 4.406059265136719, 'learning_rate': 1.2521795812943704e-06, 'num_tokens': 15420.0, 'mean_token_accuracy': 0.11944444477558136, 'epoch': 0.21052631578947367}
+{'loss': 0.2703, 'grad_norm': 0.0, 'learning_rate': 1.118609556171213e-06, 'num_tokens': 23532.0, 'mean_token_accuracy': 0.12083332985639572, 'epoch': 0.3157894736842105}
+{'eval_loss': nan, 'eval_runtime': 11.2364, 'eval_samples_per_second': 8.989, 'eval_steps_per_second': 2.314, 'eval_num_tokens': 23532.0, 'eval_mean_token_accuracy': 0.7134042909512153, 'epoch': 0.3157894736842105}
+{'loss': 0.1708, 'grad_norm': 1.2053489685058594, 'learning_rate': 9.916708215125586e-07, 'num_tokens': 31642.0, 'mean_token_accuracy': 0.22727272659540176, 'epoch': 0.42105263157894735}
+{'loss': 0.094, 'grad_norm': 1.3140164613723755, 'learning_rate': 8.715802500172215e-07, 'num_tokens': 39107.0, 'mean_token_accuracy': 0.4777618274092674, 'epoch': 0.5263157894736842}
+{'eval_loss': nan, 'eval_runtime': 11.2589, 'eval_samples_per_second': 8.971, 'eval_steps_per_second': 2.309, 'eval_num_tokens': 39107.0, 'eval_mean_token_accuracy': 0.7139240411611704, 'epoch': 0.5263157894736842}
+{'loss': 0.3161, 'grad_norm': 0.0, 'learning_rate': 7.585430144121319e-07, 'num_tokens': 46616.0, 'mean_token_accuracy': 0.24074073880910873, 'epoch': 0.631578947368421}
+{'loss': 0.359, 'grad_norm': 0.0, 'learning_rate': 6.527522369181655e-07, 'num_tokens': 54593.0, 'mean_token_accuracy': 0.2362987920641899, 'epoch': 0.7368421052631579}
+{'eval_loss': nan, 'eval_runtime': 11.2507, 'eval_samples_per_second': 8.977, 'eval_steps_per_second': 2.311, 'eval_num_tokens': 54593.0, 'eval_mean_token_accuracy': 0.7139240411611704, 'epoch': 0.7368421052631579}
+{'loss': 0.0948, 'grad_norm': 6.774643898010254, 'learning_rate': 5.543886593040737e-07, 'num_tokens': 61271.0, 'mean_token_accuracy': 0.4863547757267952, 'epoch': 0.8421052631578947}
+{'loss': 0.1042, 'grad_norm': 3.5692100524902344, 'learning_rate': 4.6362033409220077e-07, 'num_tokens': 69376.0, 'mean_token_accuracy': 0.23926767706871033, 'epoch': 0.9473684210526315}
+{'eval_loss': nan, 'eval_runtime': 11.237, 'eval_samples_per_second': 8.988, 'eval_steps_per_second': 2.314, 'eval_num_tokens': 69376.0, 'eval_mean_token_accuracy': 0.7130082914462457, 'epoch': 0.9473684210526315}
+{'train_runtime': 1683.5659, 'train_samples_per_second': 0.045, 'train_steps_per_second': 0.011, 'train_loss': 0.17266770687542463, 'num_tokens': 73417.0, 'mean_token_accuracy': 0.22857142984867096, 'epoch': 1.0}
+
+2026-06-04 02:52:40 | schema-linking-qwen-baseline_24 | worker_0 | ERROR | worker.py:646 | /opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:1348: UserWarning: Model has `tie_word_embeddings=True` and a tied layer is part of the adapter, but `ensure_weight_tying` is not set to True. This can lead to complications, for example when merging the adapter or converting your model to formats other than safetensors. Check the discussion here: https://github.com/huggingface/peft/issues/2777
+  warnings.warn(msg)
+Map:   0%|          | 0/76 [00:00<?, ? examples/s]Map: 100%|██████████| 76/76 [00:00<00:00, 1452.39 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2761.10 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2897.95 examples/s]
+Tokenizing train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Tokenizing train dataset:  29%|██▉       | 22/76 [00:00<00:00, 198.30 examples/s]Tokenizing train dataset:  61%|██████    | 46/76 [00:00<00:00, 163.28 examples/s]Tokenizing train dataset:  86%|████████▌ | 65/76 [00:00<00:00, 163.25 examples/s]Tokenizing train dataset: 100%|██████████| 76/76 [00:00<00:00, 131.68 examples/s]
+Truncating train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 76/76 [00:00<00:00, 2407.24 examples/s]
+Tokenizing eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Tokenizing eval dataset:  18%|█▊        | 18/101 [00:00<00:00, 155.26 examples/s]Tokenizing eval dataset:  34%|███▎      | 34/101 [00:00<00:00, 152.74 examples/s]Tokenizing eval dataset:  53%|█████▎    | 54/101 [00:00<00:00, 170.34 examples/s]Tokenizing eval dataset:  71%|███████▏  | 72/101 [00:00<00:00, 167.79 examples/s]Tokenizing eval dataset:  94%|█████████▍| 95/101 [00:00<00:00, 153.51 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 138.92 examples/s]
+Truncating eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 101/101 [00:00<00:00, 5050.49 examples/s]
+/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/utils/save_and_load.py:356: UserWarning: Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.
+  warnings.warn("Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.")
+
+2026-06-04 03:21:48 | schema-linking-qwen-baseline_24 | worker_0 | INFO | worker.py:644 | {'loss': 0.1541, 'grad_norm': nan, 'learning_rate': 3.8060233744356634e-07, 'num_tokens': 3764.0, 'mean_token_accuracy': 0.48000000417232513, 'epoch': 0.0547945205479452}
+{'loss': 0.0845, 'grad_norm': 5.260727882385254, 'learning_rate': 3.0547650421285216e-07, 'num_tokens': 10664.0, 'mean_token_accuracy': 0.343439981341362, 'epoch': 0.1643835616438356}
+{'eval_loss': nan, 'eval_runtime': 11.2506, 'eval_samples_per_second': 8.977, 'eval_steps_per_second': 2.311, 'eval_num_tokens': 10664.0, 'eval_mean_token_accuracy': 0.7130082914462457, 'epoch': 0.1643835616438356}
+{'loss': 0.2315, 'grad_norm': 4.133386611938477, 'learning_rate': 2.3837118562592799e-07, 'num_tokens': 18376.0, 'mean_token_accuracy': 0.6971158161759377, 'epoch': 0.273972602739726}
+{'loss': 1.2084, 'grad_norm': 0.0, 'learning_rate': 1.7940102999393194e-07, 'num_tokens': 26568.0, 'mean_token_accuracy': 0.10040983557701111, 'epoch': 0.3835616438356164}
+{'eval_loss': nan, 'eval_runtime': 11.2857, 'eval_samples_per_second': 8.949, 'eval_steps_per_second': 2.304, 'eval_num_tokens': 26568.0, 'eval_mean_token_accuracy': 0.7130082914462457, 'epoch': 0.3835616438356164}
+{'loss': 0.1318, 'grad_norm': 1.090302586555481, 'learning_rate': 1.286667868385627e-07, 'num_tokens': 33811.0, 'mean_token_accuracy': 0.47656794637441635, 'epoch': 0.4931506849315068}
+{'loss': 0.2162, 'grad_norm': 3.528628349304199, 'learning_rate': 8.625513476320291e-08, 'num_tokens': 41758.0, 'mean_token_accuracy': 0.5772790312767029, 'epoch': 0.6027397260273972}
+{'eval_loss': nan, 'eval_runtime': 11.2862, 'eval_samples_per_second': 8.949, 'eval_steps_per_second': 2.304, 'eval_num_tokens': 41758.0, 'eval_mean_token_accuracy': 0.7130082914462457, 'epoch': 0.6027397260273972}
+{'loss': 0.2512, 'grad_norm': 8.461629867553711, 'learning_rate': 5.223853336398632e-08, 'num_tokens': 48759.0, 'mean_token_accuracy': 0.22458333522081375, 'epoch': 0.7123287671232876}
+{'loss': 0.1502, 'grad_norm': 12.127846717834473, 'learning_rate': 2.6675099433787212e-08, 'num_tokens': 56249.0, 'mean_token_accuracy': 0.23257211595773697, 'epoch': 0.821917808219178}
+{'eval_loss': nan, 'eval_runtime': 11.2884, 'eval_samples_per_second': 8.947, 'eval_steps_per_second': 2.303, 'eval_num_tokens': 56249.0, 'eval_mean_token_accuracy': 0.7130082914462457, 'epoch': 0.821917808219178}
+{'loss': 0.2186, 'grad_norm': 6.940732479095459, 'learning_rate': 9.608507670659239e-09, 'num_tokens': 63990.0, 'mean_token_accuracy': 0.4615008234977722, 'epoch': 0.9315068493150684}
+{'loss': 0.1281, 'grad_norm': 0.0, 'learning_rate': 1.0679160603449533e-09, 'num_tokens': 68840.0, 'mean_token_accuracy': 0.37833333015441895, 'epoch': 1.0}
+{'eval_loss': nan, 'eval_runtime': 11.499, 'eval_samples_per_second': 8.783, 'eval_steps_per_second': 2.261, 'eval_num_tokens': 68840.0, 'eval_mean_token_accuracy': 0.7130082914462457, 'epoch': 1.0}
+{'train_runtime': 1677.7703, 'train_samples_per_second': 0.045, 'train_steps_per_second': 0.011, 'train_loss': 0.28393491004642685, 'epoch': 1.0}
+
+2026-06-04 03:21:48 | schema-linking-qwen-baseline_24 | worker_0 | ERROR | worker.py:646 | /opt/conda/envs/cse234/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:1348: UserWarning: Model has `tie_word_embeddings=True` and a tied layer is part of the adapter, but `ensure_weight_tying` is not set to True. This can lead to complications, for example when merging the adapter or converting your model to formats other than safetensors. Check the discussion here: https://github.com/huggingface/peft/issues/2777
+  warnings.warn(msg)
+Map:   0%|          | 0/73 [00:00<?, ? examples/s]Map: 100%|██████████| 73/73 [00:00<00:00, 1413.34 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2859.32 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 2858.22 examples/s]
+Tokenizing train dataset:   0%|          | 0/73 [00:00<?, ? examples/s]Tokenizing train dataset:  23%|██▎       | 17/73 [00:00<00:00, 144.75 examples/s]Tokenizing train dataset:  53%|█████▎    | 39/73 [00:00<00:00, 130.64 examples/s]Tokenizing train dataset:  75%|███████▌  | 55/73 [00:00<00:00, 134.25 examples/s]Tokenizing train dataset:  95%|█████████▍| 69/73 [00:00<00:00, 134.83 examples/s]Tokenizing train dataset: 100%|██████████| 73/73 [00:00<00:00, 113.84 examples/s]
+Truncating train dataset:   0%|          | 0/73 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 73/73 [00:00<00:00, 2114.72 examples/s]
+Tokenizing eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Tokenizing eval dataset:  18%|█▊        | 18/101 [00:00<00:00, 162.24 examples/s]Tokenizing eval dataset:  43%|████▎     | 43/101 [00:00<00:00, 159.41 examples/s]Tokenizing eval dataset:  63%|██████▎   | 64/101 [00:00<00:00, 169.74 examples/s]Tokenizing eval dataset:  86%|████████▌ | 87/101 [00:00<00:00, 156.01 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 138.52 examples/s]
+Truncating eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 101/101 [00:00<00:00, 4021.35 examples/s]
+/opt/conda/envs/cse234/lib/python3.12/site-packages/peft/utils/save_and_load.py:356: UserWarning: Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.
+  warnings.warn("Setting `save_embedding_layers` to `True` as embedding layers found in `target_modules`.")
+

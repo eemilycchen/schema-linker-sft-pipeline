@@ -1,0 +1,23 @@
+2026-06-04 15:22:42 | schema-linking-qwen-baseline_30 | worker_0 | INFO | worker.py:644 | {'loss': 1.2301, 'grad_norm': 8.716317176818848, 'learning_rate': 1.25e-06, 'num_tokens': 7223.0, 'mean_token_accuracy': 0.4742772877216339, 'epoch': 0.10526315789473684}
+{'loss': 1.3206, 'grad_norm': 8.520411491394043, 'learning_rate': 3.7500000000000005e-06, 'num_tokens': 14971.0, 'mean_token_accuracy': 0.5595785826444626, 'epoch': 0.21052631578947367}
+{'eval_loss': nan, 'eval_runtime': 9.9659, 'eval_samples_per_second': 10.135, 'eval_steps_per_second': 2.609, 'eval_num_tokens': 14971.0, 'eval_mean_token_accuracy': 0.615430996968196, 'epoch': 0.21052631578947367}
+{'loss': 0.4253, 'grad_norm': 8.345035552978516, 'learning_rate': 6.25e-06, 'num_tokens': 23149.0, 'mean_token_accuracy': 0.10000000149011612, 'epoch': 0.3157894736842105}
+{'loss': 0.9959, 'grad_norm': 5.584011554718018, 'learning_rate': 8.750000000000001e-06, 'num_tokens': 29902.0, 'mean_token_accuracy': 0.5332590565085411, 'epoch': 0.42105263157894735}
+{'eval_loss': nan, 'eval_runtime': 10.1194, 'eval_samples_per_second': 9.981, 'eval_steps_per_second': 2.569, 'eval_num_tokens': 29902.0, 'eval_mean_token_accuracy': 0.644090338395192, 'epoch': 0.42105263157894735}
+{'loss': 1.0727, 'grad_norm': 6.850922584533691, 'learning_rate': 9.998810135399545e-06, 'num_tokens': 37263.0, 'mean_token_accuracy': 0.4006168991327286, 'epoch': 0.5263157894736842}
+{'loss': 0.7986, 'grad_norm': 10.26409912109375, 'learning_rate': 9.989294616193018e-06, 'num_tokens': 43103.0, 'mean_token_accuracy': 0.5184480026364326, 'epoch': 0.631578947368421}
+{'eval_loss': nan, 'eval_runtime': 10.1222, 'eval_samples_per_second': 9.978, 'eval_steps_per_second': 2.569, 'eval_num_tokens': 43103.0, 'eval_mean_token_accuracy': 0.6535697739857894, 'epoch': 0.631578947368421}
+{'loss': 0.488, 'grad_norm': 6.957976341247559, 'learning_rate': 9.970281691111598e-06, 'num_tokens': 51125.0, 'mean_token_accuracy': 0.328777477145195, 'epoch': 0.7368421052631579}
+{'loss': 0.1097, 'grad_norm': 4.118022918701172, 'learning_rate': 9.941807552338805e-06, 'num_tokens': 58831.0, 'mean_token_accuracy': 0.23529411852359772, 'epoch': 0.8421052631578947}
+{'eval_loss': nan, 'eval_runtime': 10.1261, 'eval_samples_per_second': 9.974, 'eval_steps_per_second': 2.568, 'eval_num_tokens': 58831.0, 'eval_mean_token_accuracy': 0.686438663647725, 'epoch': 0.8421052631578947}
+{'loss': 0.0977, 'grad_norm': 6.9775309562683105, 'learning_rate': 9.903926402016153e-06, 'num_tokens': 66413.0, 'mean_token_accuracy': 0.1180555522441864, 'epoch': 0.9473684210526315}
+{'train_runtime': 1239.683, 'train_samples_per_second': 0.061, 'train_steps_per_second': 0.015, 'train_loss': 0.7034742267508256, 'num_tokens': 70487.0, 'mean_token_accuracy': 0.22549019753932953, 'epoch': 1.0}
+
+2026-06-04 15:22:42 | schema-linking-qwen-baseline_30 | worker_0 | ERROR | worker.py:646 | Map:   0%|          | 0/76 [00:00<?, ? examples/s]Map: 100%|██████████| 76/76 [00:00<00:00, 1555.42 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 3137.40 examples/s]
+Map:   0%|          | 0/101 [00:00<?, ? examples/s]Map: 100%|██████████| 101/101 [00:00<00:00, 3007.61 examples/s]
+Tokenizing train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Tokenizing train dataset:  22%|██▏       | 17/76 [00:00<00:00, 145.94 examples/s]Tokenizing train dataset:  53%|█████▎    | 40/76 [00:00<00:00, 189.45 examples/s]Tokenizing train dataset:  80%|████████  | 61/76 [00:00<00:00, 192.21 examples/s]Tokenizing train dataset: 100%|██████████| 76/76 [00:00<00:00, 146.68 examples/s]
+Truncating train dataset:   0%|          | 0/76 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 76/76 [00:00<00:00, 2401.95 examples/s]
+Tokenizing eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Tokenizing eval dataset:  19%|█▉        | 19/101 [00:00<00:00, 176.52 examples/s]Tokenizing eval dataset:  37%|███▋      | 37/101 [00:00<00:00, 169.45 examples/s]Tokenizing eval dataset:  56%|█████▋    | 57/101 [00:00<00:00, 177.73 examples/s]Tokenizing eval dataset:  78%|███████▊  | 79/101 [00:00<00:00, 187.86 examples/s]Tokenizing eval dataset:  97%|█████████▋| 98/101 [00:00<00:00, 179.83 examples/s]Tokenizing eval dataset: 100%|██████████| 101/101 [00:00<00:00, 155.14 examples/s]
+Truncating eval dataset:   0%|          | 0/101 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 101/101 [00:00<00:00, 5188.05 examples/s]
+

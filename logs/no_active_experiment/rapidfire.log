@@ -1,0 +1,62 @@
+2026-05-29 16:55:44 | no_active_experiment | schema-linking-qwen-baseline | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-29 16:55:44 | no_active_experiment | schema-linking-qwen-baseline | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline
+2026-05-29 17:21:08 | no_active_experiment | schema-linking-qwen-baseline_1 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-29 17:21:08 | no_active_experiment | schema-linking-qwen-baseline_1 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_1
+2026-05-29 22:43:35 | no_active_experiment | schema-linking-qwen-baseline_2 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-29 22:43:35 | no_active_experiment | schema-linking-qwen-baseline_2 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_2
+2026-05-30 13:57:06 | no_active_experiment | schema-linking-qwen-baseline_3 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 13:57:06 | no_active_experiment | schema-linking-qwen-baseline_3 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_3
+2026-05-30 15:36:12 | no_active_experiment | schema-linking-qwen-baseline_4 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:36:12 | no_active_experiment | schema-linking-qwen-baseline_4 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_4
+2026-05-30 15:47:40 | no_active_experiment | schema-linking-qwen-baseline_5 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:47:40 | no_active_experiment | schema-linking-qwen-baseline_5 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_5
+2026-05-30 15:57:35 | no_active_experiment | schema-linking-qwen-baseline_6 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 15:57:35 | no_active_experiment | schema-linking-qwen-baseline_6 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_6
+2026-05-30 16:04:22 | no_active_experiment | schema-linking-qwen-baseline_7 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-30 16:04:22 | no_active_experiment | schema-linking-qwen-baseline_7 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_7
+2026-05-31 15:52:42 | no_active_experiment | schema-linking-qwen-baseline_8 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-31 15:52:42 | no_active_experiment | schema-linking-qwen-baseline_8 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_8
+2026-05-31 15:59:34 | no_active_experiment | schema-linking-qwen-baseline_9 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-31 15:59:34 | no_active_experiment | schema-linking-qwen-baseline_9 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_9
+2026-05-31 21:59:49 | no_active_experiment | schema-linking-qwen-baseline_10 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-31 21:59:49 | no_active_experiment | schema-linking-qwen-baseline_10 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_10
+2026-05-31 22:08:05 | no_active_experiment | schema-linking-qwen-baseline_11 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-31 22:08:05 | no_active_experiment | schema-linking-qwen-baseline_11 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_11
+2026-05-31 22:24:15 | no_active_experiment | schema-linking-qwen-baseline_12 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-05-31 22:24:15 | no_active_experiment | schema-linking-qwen-baseline_12 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_12
+2026-06-01 22:48:52 | no_active_experiment | schema-linking-qwen-baseline_13 | WARNING | metric_rfmetric_manager.py:57 | Failed to initialize MLflowMetricLogger: MLflow server not available at http://127.0.0.1:8852. MLflow logging will be disabled. MLflow logging is disabled.
+2026-06-01 22:49:58 | no_active_experiment | schema-linking-qwen-baseline_14 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-01 22:49:58 | no_active_experiment | schema-linking-qwen-baseline_14 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_14
+2026-06-01 23:51:46 | no_active_experiment | schema-linking-qwen-baseline_15 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-01 23:51:46 | no_active_experiment | schema-linking-qwen-baseline_15 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_15
+2026-06-02 16:00:21 | no_active_experiment | schema-linking-qwen-baseline_16 | WARNING | metric_rfmetric_manager.py:57 | Failed to initialize MLflowMetricLogger: MLflow server not available at http://127.0.0.1:8852. MLflow logging will be disabled. MLflow logging is disabled.
+2026-06-02 16:03:30 | no_active_experiment | schema-linking-qwen-baseline_17 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-02 16:03:30 | no_active_experiment | schema-linking-qwen-baseline_17 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_17
+2026-06-02 22:52:42 | no_active_experiment | schema-linking-qwen-baseline_18 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-02 22:52:42 | no_active_experiment | schema-linking-qwen-baseline_18 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_18
+2026-06-03 17:24:00 | no_active_experiment | schema-linking-qwen-baseline_19 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-03 17:24:00 | no_active_experiment | schema-linking-qwen-baseline_19 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_19
+2026-06-03 19:00:29 | no_active_experiment | schema-linking-qwen-baseline_20 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-03 19:00:29 | no_active_experiment | schema-linking-qwen-baseline_20 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_20
+2026-06-03 22:54:30 | no_active_experiment | schema-linking-qwen-baseline_21 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-03 22:54:30 | no_active_experiment | schema-linking-qwen-baseline_21 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_21
+2026-06-03 23:04:31 | no_active_experiment | schema-linking-qwen-baseline_22 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-03 23:04:31 | no_active_experiment | schema-linking-qwen-baseline_22 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_22
+2026-06-03 23:05:58 | no_active_experiment | schema-linking-qwen-baseline_23 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-03 23:05:58 | no_active_experiment | schema-linking-qwen-baseline_23 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_23
+2026-06-03 23:31:17 | no_active_experiment | schema-linking-qwen-baseline_24 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-03 23:31:17 | no_active_experiment | schema-linking-qwen-baseline_24 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_24
+2026-06-04 03:21:52 | no_active_experiment | schema-linking-qwen-baseline_25 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 03:21:52 | no_active_experiment | schema-linking-qwen-baseline_25 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_25
+2026-06-04 10:40:51 | no_active_experiment | schema-linking-qwen-baseline_26 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 10:40:51 | no_active_experiment | schema-linking-qwen-baseline_26 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_26
+2026-06-04 14:19:49 | no_active_experiment | schema-linking-qwen-baseline_27 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 14:19:49 | no_active_experiment | schema-linking-qwen-baseline_27 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_27
+2026-06-04 14:21:27 | no_active_experiment | schema-linking-qwen-baseline_28 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 14:21:27 | no_active_experiment | schema-linking-qwen-baseline_28 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_28
+2026-06-04 14:57:29 | no_active_experiment | schema-linking-qwen-baseline_29 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 14:57:29 | no_active_experiment | schema-linking-qwen-baseline_29 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_29
+2026-06-04 15:01:13 | no_active_experiment | schema-linking-qwen-baseline_30 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 15:01:13 | no_active_experiment | schema-linking-qwen-baseline_30 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_30
+2026-06-04 15:51:27 | no_active_experiment | schema-linking-qwen-baseline_31 | INFO | metric_rfmetric_manager.py:55 | Initialized MLflowMetricLogger: rf_mlflow
+2026-06-04 15:51:27 | no_active_experiment | schema-linking-qwen-baseline_31 | INFO | metric_rfmetric_manager.py:119 | Creating MLflow experiment: schema-linking-qwen-baseline_31
