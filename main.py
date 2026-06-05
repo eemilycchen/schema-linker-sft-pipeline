@@ -1,8 +1,25 @@
 import argparse
 import json
+import os, re
+import requests
+import zipfile
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
+
+file_id = '1uzXbnyA1yM13bvXVPgwqT2pNBbblp363'
+uuid = '8b388a6d-eef6-445a-8541-bc250286e492'
+
+url = f'https://drive.usercontent.google.com/download?id={file_id}&export=download&confirm=t&uuid={uuid}'
+response = requests.get(url)
+with open('checkpoint.zip', 'wb') as f:
+    f.write(response.content)
+print('Downloaded checkpoint.zip')
+zip_path = 'checkpoint.zip'
+extract_to = './'
+with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_to)
+print('zip file extracted')
 
 SYSTEM_PROMPT = '''You are a schema-linking model.\n
 Given a database schema and a natural-language question, output only valid JSON.
@@ -125,8 +142,7 @@ def main():
         preds.append({'question_id': it['question_id'], 'schema_links': links})
     with open(args.output, 'w') as f:
         json.dump(preds, f, indent=2)
-    print(f"Wrote {len(preds)} predictions to {args.output}")
-
+    print(f"\nWrote {len(preds)} predictions to {args.output}")
 
 if __name__ == '__main__':
     main()
